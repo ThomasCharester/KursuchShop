@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f6c75c68044bf1b6970945e4d753dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  querySender: {fileID: 406569388}
 --- !u!4 &128075851
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +169,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5663119024554938434, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
   m_PrefabInstance: {fileID: 1678123018129888629}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &406569388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7096553834435019198, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+  m_PrefabInstance: {fileID: 1678123018129888629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406569387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5804fcd54ab3f9c4ebdca4e258dc9b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +411,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4799994654776416973, guid: b5d855a02f966ac459cb54a049e928b3, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4799994654776416973, guid: b5d855a02f966ac459cb54a049e928b3, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
@@ -757,6 +769,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7096553834435019198, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: client
+      value: 
+      objectReference: {fileID: 128075850}
     - target: {fileID: 8045604870000195402, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
