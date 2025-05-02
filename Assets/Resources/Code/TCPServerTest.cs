@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine.UI;
+using VContainer;
 
 
 namespace Resources.Code
@@ -13,7 +14,13 @@ public class SimpleTCPClient : MonoBehaviour
     private NetworkStream _stream;
     private Thread _receiveThread;
     private bool _isConnected = false;
-
+    private UIQuerySender _querySender;
+    
+    [Inject]
+    public void Construct(UIQuerySender querySender)
+    {
+        _querySender = querySender;
+    }
     private void Start()
     {
         ConnectToServer("127.0.0.1", 8888);//127.0.0.1
@@ -39,9 +46,6 @@ public class SimpleTCPClient : MonoBehaviour
             _receiveThread = new Thread(ReceiveData);
             _receiveThread.IsBackground = true;
             _receiveThread.Start();
-
-            // Отправляем тестовое сообщение
-            SendMessage("am;Elissia|228|Nan");
         }
         catch (System.Exception e)
         {
@@ -69,15 +73,15 @@ public class SimpleTCPClient : MonoBehaviour
         Debug.Log("Disconnected from server");
     }
 
-    private void SendMessage(string message)
+    public void SendQuery(string query)
     {
         if (!_isConnected) return;
 
         try
         {
-            byte[] data = Encoding.UTF8.GetBytes(message);
+            byte[] data = Encoding.UTF8.GetBytes(query);
             _stream.Write(data, 0, data.Length);
-            Debug.Log($"Sent: {message}");
+            Debug.Log($"Sent: {query}");
         }
         catch (System.Exception e)
         {
@@ -104,6 +108,36 @@ public class SimpleTCPClient : MonoBehaviour
 
                 string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                 Debug.Log($"Received: {receivedMessage}");
+                var queryType = receivedMessage.Split(';')[0];
+                switch (queryType[0])
+                {
+                    case 'l':
+                    {
+                        switch (queryType[1])
+                        {
+                            case 'f':
+                                _querySender.SetExceptionText(receivedMessage.Split(';')[1]);
+                                break;
+                            case 's':
+                                _querySender.ActiveAuthorisePanel(false);
+                                break;
+                        }
+                    }
+                        break;
+                    case 'r':
+                    {
+                        switch (queryType[1])
+                        {
+                            case 'f':
+                                _querySender.SetExceptionText(receivedMessage.Split(';')[1]);
+                                break;
+                            case 's':
+                                _querySender.ActiveAuthorisePanel(false);
+                                break;
+                        }
+                    }
+                        break;
+                }
             }
             catch (System.Exception)
             {
@@ -122,7 +156,7 @@ public class SimpleTCPClient : MonoBehaviour
         // Пример: отправка сообщения по нажатию пробела
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SendMessage("Space pressed!");
+            SendQuery("Space pressed!");
         }
     }
 }
