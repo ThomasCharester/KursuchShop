@@ -11,7 +11,7 @@ public class UISliding : MonoBehaviour, IUIAnimateable
     
     [SerializeField] private bool animateAlways;
     [SerializeField] private bool animating;
-    [SerializeField] private int _targetIndex = 1;
+    private int _targetIndex = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,15 +39,17 @@ public class UISliding : MonoBehaviour, IUIAnimateable
 
     public void StopAnimation()
     {
-        animating = animateAlways;
+        animating = false;
         
-        SwitchTargetIndex();
+        if(!canBeRetargeted) SwitchTargetIndex();
+        
+        if(animateAlways) StartAnimation();
     }
 
     private void SwitchTargetIndex()
     {
         if(!randomizedTarget) _targetIndex++;
-        else _targetIndex = Random.Range(0, positions.Count);
+        else _targetIndex = Random.Range(0, positions.Count).Equals(_targetIndex) ? _targetIndex : _targetIndex + 1;
 
         if(_targetIndex >= positions.Count) _targetIndex = 0; // Намеренно 
     }

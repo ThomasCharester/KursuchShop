@@ -389,6 +389,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1808559692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2355121818668277186, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+  m_PrefabInstance: {fileID: 1678123018129888629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808559698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808559692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e295c006f8229ab4f834107398e1a332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scales:
+  - 1
+  - 0
+  - 3
+  speed: 4
+  randomizedTarget: 1
+  animateAlways: 1
+  animating: 1
+  _targetIndex: 1
 --- !u!1001 &1812316915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -593,6 +619,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2005147137952477216, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005147137952477216, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005147137952477216, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005147137952477216, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2650006957117409197, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -786,8 +828,36 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6002864314600002233, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: animating
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002864314600002233, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: animateAlways
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002864314600002233, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: canBeRetargeted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002864314600002233, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
       propertyPath: randomizedTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318681315842910307, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2558.591
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318681315842910307, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 635.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318681315842910307, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 639.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318681315842910307, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42.186
       objectReference: {fileID: 0}
     - target: {fileID: 7096553834435019198, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
       propertyPath: client
@@ -812,7 +882,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2355121818668277186, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1808559698}
   m_SourcePrefab: {fileID: 100100000, guid: 89873f7fad60bfe43a2b9d907257a930, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
