@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 
 namespace Resources.Code.DataStructures
 {
-    public class PlantMedicines: MonoBehaviour
+    public class MedicineDisease: MonoBehaviour
     {
-        [SerializeField] public int plantId;
+        [SerializeField] public int diseaseId;
         [SerializeField] public int medicineId;
     }
 }

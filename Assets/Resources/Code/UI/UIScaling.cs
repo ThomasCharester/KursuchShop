@@ -7,7 +7,7 @@ public class UIScaling : MonoBehaviour, IUIAnimateable
     [SerializeField] private float speed = 1.0f;
     [SerializeField] private bool randomizedTarget;
     [SerializeField] private bool animateAlways;
-    
+
     [SerializeField] private bool animating;
     [SerializeField] private int _targetIndex = 1;
 
@@ -29,30 +29,28 @@ public class UIScaling : MonoBehaviour, IUIAnimateable
     public void StopAnimation()
     {
         animating = false;
-        
+
         SwitchTargetIndex();
-        
-        if(animateAlways) StartAnimation();
+
+        if (animateAlways) StartAnimation();
     }
 
     public void UpdateAnimation()
     {
         transform.localScale = Vector3.Lerp(transform.localScale,
             new Vector3(scales[_targetIndex], scales[_targetIndex], scales[_targetIndex]), Time.deltaTime * speed);
-        
-        if(Mathf.Abs(transform.localScale.x) - Mathf.Abs(scales[_targetIndex]) > 5f)
-        {
+        bool direction = transform.localScale.x > scales[_targetIndex];
+        if ((direction && transform.localScale.x < scales[_targetIndex] + 0.1f) ||
+            (!direction && transform.localScale.x > scales[_targetIndex] - 0.1f))
             StopAnimation();
-            Debug.Log("Banana");
-        }
     }
+
     private void SwitchTargetIndex()
     {
-        Debug.Log("Apple");
-        if(!randomizedTarget) _targetIndex++;
+        if (!randomizedTarget) _targetIndex++;
         else _targetIndex = Random.Range(0, scales.Count).Equals(_targetIndex) ? _targetIndex : _targetIndex + 1;
 
-        if(_targetIndex >= scales.Count) _targetIndex = 0; // Намеренно 
+        if (_targetIndex >= scales.Count) _targetIndex = 0; // Намеренно 
         Debug.Log(_targetIndex);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Resources.Code;
+using Resources.Code.DataStructures;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -16,6 +17,9 @@ public class UIQuerySender : MonoBehaviour
     
     [SerializeField] private GameObject authorizationPanel;
     [SerializeField] private SimpleTCPClient client;
+    
+    [SerializeField] private GameObject gridContainer;
+    [SerializeField] private GameObject plantGridElement;
 
     private Queue<UICommand> _command = new();
     private static UIQuerySender _instance;
@@ -62,4 +66,12 @@ public class UIQuerySender : MonoBehaviour
     }
     public void ActiveAuthorisePanel(bool active) => authorizationPanel.SetActive(active);
     public void SetExceptionText(string text) => exceptionText.text = text;
+    public void ActivateGridContainer(bool active) => gridContainer.gameObject.SetActive(active);
+    public void AddGridElementPlant(Plant plant)
+    {
+        var plantElement = Instantiate(plantGridElement, gridContainer.transform);
+
+        plantElement.gameObject.GetComponent<NameField>().field.text = plant.name;
+        plantElement.gameObject.GetComponent<IdField>().field.text = plant.plantId.ToString();
+    }
 }
