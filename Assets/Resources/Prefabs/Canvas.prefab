@@ -2894,6 +2894,8 @@ MonoBehaviour:
   exceptionText: {fileID: 4775841338285244601}
   authorizationPanel: {fileID: 2635932573544843797}
   client: {fileID: 0}
+  gridContainer: {fileID: 666795650528961523}
+  plantGridElement: {fileID: 4340808224694642755, guid: 530b7e3f547d53646bc2ead63fef6ab5, type: 3}
 --- !u!1 &5697332607454782744
 GameObject:
   m_ObjectHideFlags: 0
@@ -4948,6 +4950,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb88793697b3f8e44b58b6af8c115e54, type: 3}
+--- !u!1 &666795650528961523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8284112663082689262, guid: fb88793697b3f8e44b58b6af8c115e54, type: 3}
+  m_PrefabInstance: {fileID: 8914870579234210077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3862286651457219827 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5633548692024798702, guid: fb88793697b3f8e44b58b6af8c115e54, type: 3}

@@ -10,6 +10,8 @@ public class UIScaling : MonoBehaviour, IUIAnimateable
 
     [SerializeField] private bool animating;
     [SerializeField] private int _targetIndex = 1;
+    
+    private bool _dying = false;
 
     void Start()
     {
@@ -28,6 +30,8 @@ public class UIScaling : MonoBehaviour, IUIAnimateable
 
     public void StopAnimation()
     {
+        if(_dying) Destroy(this);
+        
         animating = false;
 
         SwitchTargetIndex();
@@ -52,5 +56,12 @@ public class UIScaling : MonoBehaviour, IUIAnimateable
 
         if (_targetIndex >= scales.Count) _targetIndex = 0; // Намеренно 
         Debug.Log(_targetIndex);
+    }
+
+    public void DIE()
+    {
+        _targetIndex = 0;
+        animating = true;
+        _dying = false;
     }
 }

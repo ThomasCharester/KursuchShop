@@ -119,9 +119,22 @@ namespace Resources.Code
                         {
                             switch (queryType[1])
                             {
-                                case 'f':
+                                case 'o':
+                                    switch (queryType[2])
+                                    {
+                                        case 'f':
+                                            UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                                UICommandType.SetExceptionText));
+                                            break;
+                                        case 's':
+                                            UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                                UICommandType.AuthoriseDeactivate));
+                                            break;
+                                    }
+                                    break;
+                                case 'p':
                                     UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
-                                        UICommandType.SetExceptionText));
+                                        UICommandType.ShowPlantList));
                                     break;
                                 case 's':
                                     UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
@@ -145,6 +158,7 @@ namespace Resources.Code
                             }
                         }
                             break;
+                        
                     }
                 }
                 catch (System.Exception ex)

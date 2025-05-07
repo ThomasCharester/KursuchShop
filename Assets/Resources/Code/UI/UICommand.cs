@@ -25,6 +25,9 @@ namespace Resources.Code
                 case UICommandType.AuthoriseDeactivate:
                     UIQuerySender.Instance.ActiveAuthorisePanel(false);
                     break;
+                case UICommandType.ShowPlantList:
+                    UIQuerySender.Instance.ShowPlantsGrid(Value);
+                    break;
             }
         }
 

@@ -5,6 +5,6 @@ namespace Resources.Code.DataStructures
 {
     public class NameField : MonoBehaviour
     {
-        [SerializeField] public TextMeshProUGUI field;
+        [SerializeField] public TMP_InputField field;
     }
 }
