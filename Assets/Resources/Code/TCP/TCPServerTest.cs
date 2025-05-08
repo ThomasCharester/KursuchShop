@@ -112,7 +112,7 @@ namespace Resources.Code
 
                     string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     Debug.Log($"Received: {receivedMessage}");
-                    var queryType = receivedMessage.Split(';')[0];
+                    var queryType = receivedMessage.Split(DataParsingExtension.QuerySplitter)[0];
                     switch (queryType[0])
                     {
                         case 'l':
@@ -123,21 +123,26 @@ namespace Resources.Code
                                     switch (queryType[2])
                                     {
                                         case 'f':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.SetExceptionText));
                                             break;
                                         case 's':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
                                             break;
                                     }
+
                                     break;
                                 case 'p':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowPlantList));
                                     break;
                                 case 's':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.AuthoriseDeactivate));
                                     break;
                             }
@@ -148,17 +153,18 @@ namespace Resources.Code
                             switch (queryType[1])
                             {
                                 case 'f':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.SetExceptionText));
                                     break;
                                 case 's':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(receivedMessage.Split(';')[1],
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.AuthoriseActivate));
                                     break;
                             }
                         }
                             break;
-                        
                     }
                 }
                 catch (System.Exception ex)
@@ -179,7 +185,7 @@ namespace Resources.Code
             // Пример: отправка сообщения по нажатию пробела
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SendQuery("Space pressed!");
+                SendQuery("ppl;");
             }
         }
     }

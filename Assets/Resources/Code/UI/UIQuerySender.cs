@@ -69,9 +69,13 @@ public class UIQuerySender : MonoBehaviour
         client.SendQuery($"r;\'{login}\',\'{password}\',\'{adminKey}\'");
     }
 
+    public void SendGetAllPlantsQuery()
+    {
+        client.SendQuery("ppl;");
+    }
     public void ActiveAuthorisePanel(bool active) => authorizationPanel.SetActive(active);
     public void SetExceptionText(string text) => exceptionText.text = text;
-    public void ActivateGridContainer(bool active) => gridContainer.gameObject.SetActive(active);
+    public void ActivateGridContainer(bool active) => gridContainer.GetComponent<UISliding>().StartAnimation(active);
 
     public void ClearGridContainer()
     {
@@ -102,14 +106,19 @@ public class UIQuerySender : MonoBehaviour
 
     public void ShowPlantsGrid(String plants)
     {
+        if(plants.Length == 0) return;
+        
         ActivateGridContainer(true);
         ClearGridContainer();
         foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
         {
             var plantElement = Instantiate(plantGridElement, gridContainer.transform).GetComponent<Plant>();
-            plantElement.name = plant.Split(DataParsingExtension.ValueSplitter)[1];
+                plantElement.name = plant.Split(DataParsingExtension.ValueSplitter)[1];
             plantElement.plantId = int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]);
-            AddGridElementPlantShow(plantElement);
+            
+            plantElement.GetComponent<VerticalContainerPanels>().panels[0].SetActive(true);
+            plantElement.GetComponent<NameText>().field.text = plantElement.name;
+            plantElement.GetComponent<IdText>().field.text = plantElement.plantId.ToString();
         }
     }
 }
