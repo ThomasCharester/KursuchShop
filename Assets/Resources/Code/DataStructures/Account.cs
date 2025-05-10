@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace Resources.Code.DataStructures
 {
-    public class Account : MonoBehaviour
+    public class Account 
     {
-        [SerializeField] public String login;
-        [SerializeField] public String password;
-        [SerializeField] public String adminKey;
+        public String login;
+        public String password;
+        public bool sv_cheats;
 
-        public void SetValues(string login, string password, string adminKey)
+        public void SetValues(string login, string password, bool sv_cheats)
         {
             this.login = login;
             this.password = password;
-            this.adminKey = adminKey;
+            this.sv_cheats = sv_cheats;
         }
     }
 }

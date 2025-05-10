@@ -2536,7 +2536,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7096553834435019198}
         m_TargetAssemblyTypeName: UIQuerySender, Assembly-CSharp
-        m_MethodName: SendGetAllPlantsQuery
+        m_MethodName: ShowPlants
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

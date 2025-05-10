@@ -21,7 +21,7 @@ namespace Resources.Code
 
         public static void SetAccount(Account account)
         {
-            
+            _account = account;
         }
     }
 }

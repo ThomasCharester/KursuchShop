@@ -132,6 +132,11 @@ namespace Resources.Code
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
                                             break;
+                                        case 'v':
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                UICommandType.AuthoriseDeactivate));
+                                            break;
                                     }
 
                                     break;

@@ -13,6 +13,8 @@ namespace Resources.Code
         public static readonly char ValueSplitter = ',';
         public static readonly char QuerySplitter = ';';
         public static readonly char AdditionalQuerySplitter = '|';
+        public static readonly String AdminSymbol = "A";
+        public static readonly String UserSymbol = "U";
 
         public static readonly String ATableName = "Accounts";
         public static readonly String AKTableName = "adminKeys";
@@ -32,23 +34,24 @@ namespace Resources.Code
 
         public static String AccountToString(this Account account)
         {
-            return $"{account.login}{ValueSplitter}{account.password}{ValueSplitter}{account.adminKey}";
+            return $"{account.login}{ValueSplitter}{account.password}{ValueSplitter}{account.sv_cheats}";
         }
 
         public static String AccountToStringDB(this Account account)
         {
-            return $"\'{account.login}\'{ValueSplitter}\'{account.password}\'{ValueSplitter}\'{account.adminKey}\'";
+            return $"\'{account.login}\'{ValueSplitter}\'{account.password}\'{ValueSplitter}\'{(account.sv_cheats ? AdminSymbol:UserSymbol)}\'";
         }
 
         public static void StringToAccount(this String accountStr, Account account)
         {
             account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1],
-                accountStr.Split(ValueSplitter)[2]);
+                accountStr.Split(ValueSplitter)[2] == AdminSymbol);
         }
 
         public static void StringToAccountLP(this String accountStr, Account account)
         {
-            account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1], "NAN");
+            account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1],
+                accountStr.Split(ValueSplitter)[2] == AdminSymbol);
         }
 
         public static String AccountsToString(this List<Account> accounts)
@@ -157,7 +160,8 @@ namespace Resources.Code
         public static string DosagesToString(this List<Dosage> dosages)
         {
             return string.Join(AdditionalQuerySplitter.ToString(), dosages.Select(d => d.DosageToString()));
-        }// Для Diseases
+        } // Для Diseases
+
         public static void StringToDisease(this String diseaseStr, Disease disease)
         {
             var parts = diseaseStr.Split(ValueSplitter);

@@ -25,7 +25,8 @@ public class UIQuerySender : MonoBehaviour
 
     private Queue<UICommand> _command = new();
     private static UIQuerySender _instance;
-
+    private float _cooldown = 0f;
+    private float _maxCooldown = 0.5f;
     public static UIQuerySender Instance
     {
         get { return _instance; }
@@ -39,12 +40,14 @@ public class UIQuerySender : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (_command.Count > 0)
+        if (_cooldown < 0f && _command.Count > 0)
         {
+            _cooldown = _maxCooldown;
             _command.Dequeue().Execute();
         }
+        _cooldown -= Time.fixedDeltaTime;
     }
 
     public void AddCommand(UICommand command) => _command.Enqueue(command);
@@ -54,7 +57,12 @@ public class UIQuerySender : MonoBehaviour
         string login = inputFieldLoginLogin.text;
         string password = inputFieldLoginPassword.text;
 
-        client.SendQuery($"l;\'{login}\',\'{password}\'");
+        AddCommand(new UICommand($"l;\'{login}\',\'{password}\'",UICommandType.SendQuery));
+    }
+
+    public void SendQuery(string query)
+    {
+        SimpleTCPClient.Instance.SendQuery(query);
     }
 
     public void SendRegisterQuery()
@@ -66,12 +74,12 @@ public class UIQuerySender : MonoBehaviour
         if (adminKey.Length == 0)
             adminKey = "NAN";
 
-        client.SendQuery($"r;\'{login}\',\'{password}\',\'{adminKey}\'");
+        AddCommand(new UICommand($"r;\'{login}\',\'{password}\',\'{adminKey}\'",UICommandType.SendQuery));
     }
 
     public void SendGetAllPlantsQuery()
     {
-        client.SendQuery("ppl;");
+        AddCommand(new UICommand("ppl;", UICommandType.SendQuery));
     }
     public void ActiveAuthorisePanel(bool active) => authorizationPanel.SetActive(active);
     public void SetExceptionText(string text) => exceptionText.text = text;
@@ -95,21 +103,34 @@ public class UIQuerySender : MonoBehaviour
     {
         var plantElement = Instantiate(plantGridElement, gridContainer.transform);
         plantElement.GetComponent<VerticalContainerPanels>().panels[1].SetActive(true);
+        plantElement.GetComponent<UIScaling>().StartAnimation();
     }
 
+    private bool _editMode = false;
     public void StartPlantAdding()
     {
-        ActivateGridContainer(true);
-        ClearGridContainer();
-        AddGridElementPlantAdd();
+        _editMode = true;
+        SendGetAllPlantsQuery();
+    }
+    public void ShowPlants()
+    {
+        _editMode = false;
+        SendGetAllPlantsQuery();
     }
 
+    public void HidePlants()
+    {
+        _editMode = false;
+        ActivateGridContainer(false);
+        ClearGridContainer();
+    }
     public void ShowPlantsGrid(String plants)
     {
         if(plants.Length == 0) return;
         
         ActivateGridContainer(true);
         ClearGridContainer();
+        
         foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
         {
             var plantElement = Instantiate(plantGridElement, gridContainer.transform).GetComponent<Plant>();
@@ -119,6 +140,9 @@ public class UIQuerySender : MonoBehaviour
             plantElement.GetComponent<VerticalContainerPanels>().panels[0].SetActive(true);
             plantElement.GetComponent<NameText>().field.text = plantElement.name;
             plantElement.GetComponent<IdText>().field.text = plantElement.plantId.ToString();
+            
+            plantElement.GetComponent<UIScaling>().StartAnimation();
         }
+        if(_editMode) AddGridElementPlantAdd();
     }
 }

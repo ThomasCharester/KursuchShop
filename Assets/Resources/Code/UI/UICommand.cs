@@ -28,6 +28,9 @@ namespace Resources.Code
                 case UICommandType.ShowPlantList:
                     UIQuerySender.Instance.ShowPlantsGrid(Value);
                     break;
+                case UICommandType.SendQuery:
+                    UIQuerySender.Instance.SendQuery(Value);
+                    break;
             }
         }
 
