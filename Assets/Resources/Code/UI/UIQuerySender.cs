@@ -10,19 +10,26 @@ using VContainer;
 
 public class UIQuerySender : MonoBehaviour
 {
+    [Header("Authorization")]
     [SerializeField] private TMP_InputField inputFieldLoginLogin;
     [SerializeField] private TMP_InputField inputFieldLoginPassword;
     [SerializeField] private TMP_InputField inputFieldRegisterLogin;
     [SerializeField] private TMP_InputField inputFieldRegisterPassword;
     [SerializeField] private TMP_InputField inputFieldAdminKey;
     [SerializeField] private TMP_Text exceptionText;
-
+    
+    [Header("Panels")]
     [SerializeField] private GameObject authorizationPanel;
-    [SerializeField] private SimpleTCPClient client;
-
+    [SerializeField] private GameObject controlPanel;
     [SerializeField] private GameObject gridContainer;
+    [SerializeField] private GameObject editButtonsPanel;
+
+    [Header("ElementGrid")]
     [SerializeField] private GameObject plantGridElement;
 
+    [Header("Misc")]
+    [SerializeField] private SimpleTCPClient client;
+    
     private Queue<UICommand> _command = new();
     private static UIQuerySender _instance;
     private float _cooldown = 0f;
@@ -105,7 +112,10 @@ public class UIQuerySender : MonoBehaviour
         plantElement.GetComponent<VerticalContainerPanels>().panels[1].SetActive(true);
         plantElement.GetComponent<UIScaling>().StartAnimation();
     }
-
+    public void ShowControlPanel(bool active) => controlPanel.SetActive(active);
+    
+    public void ShowEditButtons(bool active) => editButtonsPanel.SetActive(active);
+    
     private bool _editMode = false;
     public void StartPlantAdding()
     {
@@ -118,11 +128,26 @@ public class UIQuerySender : MonoBehaviour
         SendGetAllPlantsQuery();
     }
 
-    public void HidePlants()
+    public void HideGridContainer()
     {
         _editMode = false;
         ActivateGridContainer(false);
         ClearGridContainer();
+    }
+    public void SwitchGridContainer()
+    {
+        bool active = !gridContainer.activeSelf;
+        ActivateGridContainer(active);
+        ClearGridContainer();
+    }
+
+    public void EnterGridEditMode(bool active)
+    {
+        _editMode = active;
+    }
+    public void EnterAdminMode()
+    {
+        controlPanel.SetActive(true);
     }
     public void ShowPlantsGrid(String plants)
     {
@@ -135,7 +160,7 @@ public class UIQuerySender : MonoBehaviour
         {
             var plantElement = Instantiate(plantGridElement, gridContainer.transform).GetComponent<Plant>();
                 plantElement.name = plant.Split(DataParsingExtension.ValueSplitter)[1];
-            plantElement.plantId = int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]);
+                plantElement.plantId = int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]);
             
             plantElement.GetComponent<VerticalContainerPanels>().panels[0].SetActive(true);
             plantElement.GetComponent<NameText>().field.text = plantElement.name;

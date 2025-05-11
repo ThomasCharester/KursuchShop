@@ -7,5 +7,6 @@ namespace Resources.Code
         AuthoriseDeactivate,
         ShowPlantList,
         SendQuery,
+        MakeAdmin,
     }
 }

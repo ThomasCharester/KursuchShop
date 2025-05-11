@@ -13,8 +13,7 @@ namespace Resources.Code
         public static readonly char ValueSplitter = ',';
         public static readonly char QuerySplitter = ';';
         public static readonly char AdditionalQuerySplitter = '|';
-        public static readonly String AdminSymbol = "A";
-        public static readonly String UserSymbol = "U";
+        public static readonly String UserSymbol = "NAN";
 
         public static readonly String ATableName = "Accounts";
         public static readonly String AKTableName = "adminKeys";
@@ -39,19 +38,19 @@ namespace Resources.Code
 
         public static String AccountToStringDB(this Account account)
         {
-            return $"\'{account.login}\'{ValueSplitter}\'{account.password}\'{ValueSplitter}\'{(account.sv_cheats ? AdminSymbol:UserSymbol)}\'";
+            return
+                $"\'{account.login}\'{ValueSplitter}\'{account.password}\'{ValueSplitter}\'{(account.sv_cheats ? "A" : UserSymbol)}\'";
         }
 
-        public static void StringToAccount(this String accountStr, Account account)
+        public static Account StringToAccount(this String accountStr)
         {
-            account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1],
-                accountStr.Split(ValueSplitter)[2] == AdminSymbol);
+            return new Account(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1],
+                accountStr.Split(ValueSplitter)[2] != UserSymbol);
         }
 
         public static void StringToAccountLP(this String accountStr, Account account)
         {
-            account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1],
-                accountStr.Split(ValueSplitter)[2] == AdminSymbol);
+            account.SetValues(accountStr.Split(ValueSplitter)[0], accountStr.Split(ValueSplitter)[1], false);
         }
 
         public static String AccountsToString(this List<Account> accounts)

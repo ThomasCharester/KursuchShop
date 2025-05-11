@@ -4,13 +4,13 @@ namespace Resources.Code
 {
     public class UserSessionService
     {
-        private static UserSessionService _instance;
-
-        public static UserSessionService Instance
-        {
-            get { return _instance; }
-            private set { }
-        }
+        // private static UserSessionService _instance;
+        //
+        // public static UserSessionService Instance
+        // {
+        //     get { return _instance; }
+        //     private set { }
+        // }
         private static Account _account;
 
         public static Account UserAccount
@@ -22,6 +22,11 @@ namespace Resources.Code
         public static void SetAccount(Account account)
         {
             _account = account;
+        }
+
+        public static bool isAdmin()
+        {
+            return _account.sv_cheats;
         }
     }
 }

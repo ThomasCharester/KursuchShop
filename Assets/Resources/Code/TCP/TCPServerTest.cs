@@ -131,11 +131,13 @@ namespace Resources.Code
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
+                                            UserSessionService.SetAccount(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1].StringToAccount());
                                             break;
                                         case 'v':
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
+                                            UserSessionService.UserAccount.sv_cheats = true;
                                             break;
                                     }
 

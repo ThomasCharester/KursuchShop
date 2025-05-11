@@ -31,6 +31,9 @@ namespace Resources.Code
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
+                case UICommandType.MakeAdmin:
+                    UIQuerySender.Instance.EnterAdminMode();
+                    break;
             }
         }
 
