@@ -30,6 +30,10 @@ namespace Resources.Code
         public const string PlantMedicinesTable = "PlantMedicines";
         public const string DosagesTable = "Dosages";
 
+        public static Account StringToAccount(String account)
+        {
+            
+        }
         public static String DBReadable(this String str)
         {
             return '\'' + str + '\'';

@@ -16,7 +16,7 @@ namespace Resources.Code
         {
             switch (Type)
             {
-                case UICommandType.SetExceptionText:
+                case UICommandType.ShowException:
                     UIQuerySender.Instance.ShowException(Value);
                     break;
                 case UICommandType.AuthoriseActivate:

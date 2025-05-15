@@ -2,7 +2,7 @@ namespace Resources.Code
 {
     public enum UICommandType
     {
-        SetExceptionText,
+        ShowException,
         AuthoriseActivate,
         AuthoriseDeactivate,
         ShowGoodList,

@@ -129,7 +129,7 @@ namespace Resources.Code
                                         case 'f':
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                                UICommandType.SetExceptionText));
+                                                UICommandType.ShowException));
                                             break;
                                         case 'a':
                                             UIQuerySender.Instance.AddCommand(new UICommand(
@@ -167,7 +167,7 @@ namespace Resources.Code
                                 case 'f':
                                     UIQuerySender.Instance.AddCommand(new UICommand(
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                        UICommandType.SetExceptionText));
+                                        UICommandType.ShowException));
                                     break;
                                 case 's':
                                     UIQuerySender.Instance.AddCommand(new UICommand(
@@ -176,6 +176,11 @@ namespace Resources.Code
                                     break;
                             }
                         }
+                            break;
+                        case 'e':
+                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                UICommandType.ShowException));
                             break;
                     }
                 }

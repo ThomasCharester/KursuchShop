@@ -8,13 +8,10 @@ namespace Resources.Code
         [Header("UI Elements")]
         [SerializeField] private TMP_Text _exceptionText;
         
-        private UISliding _sliding;
+        [SerializeField] private UISliding _sliding;
         
         public void SetExceptionText(string exceptionText) => _exceptionText.text = exceptionText;
-        void Start()
-        {
-            _sliding = GetComponent<UISliding>();
-        }
+
         public void Show()
         {
             _sliding.StartAnimation(true);
