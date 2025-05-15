@@ -9,21 +9,31 @@ namespace Resources.Code
 
         [Header("Modify")] [SerializeField] private TMP_InputField inputFieldLogin;
         [SerializeField] private TMP_InputField inputFieldPassword;
-        [SerializeField] private TMP_InputField inputFieldAdminKey;
         [Header("Labels")] [SerializeField] private TMP_Text login;
         [SerializeField] private TMP_Text admin;
 
+        private bool _hidden = true;
+        public bool Hidden => _hidden;
+
         public void SendModifyRequest()
         {
+            // if (inputFieldLogin.text == "" && inputFieldPassword.text == "")
+            // {
+            //     UIQuerySender.Instance.AddCommand(new UICommand("Login or password is empty",
+            //         UICommandType.ShowException));
+            // }
+
             UIQuerySender.Instance.AddCommand(new UICommand(
-                "as;" + inputFieldLogin.text.DBReadable() + DataParsingExtension.ValueSplitter +
-                inputFieldPassword.text.DBReadable() + DataParsingExtension.ValueSplitter +
-                inputFieldAdminKey.text.DBReadable(),
+                "as;" + (inputFieldLogin.text != ""
+                    ? inputFieldLogin.text.DBReadable()
+                    : UserSessionService.UserAccount.Login.DBReadable()) + DataParsingExtension.ValueSplitter +
+                (inputFieldPassword.text != ""
+                    ? inputFieldPassword.text.DBReadable()
+                    : UserSessionService.UserAccount.Password.DBReadable()),
                 UICommandType.SendQuery));
 
             inputFieldLogin.text = "";
             inputFieldPassword.text = "";
-            inputFieldAdminKey.text = "";
         }
 
         void Start()
@@ -34,28 +44,43 @@ namespace Resources.Code
         public void Show()
         {
             _sliding.StartAnimation(true);
-            login.text = UserSessionService.UserAccount.login;
-            admin.text = UserSessionService.UserAccount.sv_cheats ? "Admin" : "User";
+            Clear();
+            _hidden = false;
             //gameObject.SetActive(true);
         }
 
         public void Hide()
         {
             _sliding.StartAnimation(false);
+            _hidden = true;
             //gameObject.SetActive(false);
         }
 
         public void Clear()
         {
-            //
-            login.text = UserSessionService.UserAccount.login;
-            admin.text = UserSessionService.UserAccount.sv_cheats ? "Admin" : "User";
+            login.text = UserSessionService.UserAccount.Login;
+            admin.text = UserSessionService.UserAccount.IsSeller ? "Seller" :
+                UserSessionService.UserAccount.sv_cheats ? "Admin" : "User";
         }
 
         public void Toggle(bool show)
         {
             _sliding.StartAnimation(show);
+            if (show)
+                Clear();
+            
+
             //gameObject.SetActive(show);
+            _hidden = !show;
+        }
+
+        public void Toggle()
+        {
+            _hidden = !_hidden;
+            _sliding.StartAnimation();
+
+            if (_hidden)
+                Clear();
         }
     }
 }

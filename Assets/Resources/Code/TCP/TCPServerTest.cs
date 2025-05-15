@@ -30,10 +30,6 @@ namespace Resources.Code
             ConnectToServer("127.0.0.1", 8888); //127.0.0.1
         }
 
-        public void ConnectToServer()
-        {
-            ConnectToServer("127.0.0.1", 8888);
-        }
         private void OnDestroy()
         {
             Disconnect();
@@ -132,6 +128,15 @@ namespace Resources.Code
                                                 UICommandType.ShowException));
                                             break;
                                         case 'a':
+                                            UserSessionService.UserAccount.sv_cheats = true;
+                                            
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                UICommandType.AuthoriseDeactivate));
+                                            break;
+                                        case 'd':
+                                            UserSessionService.UserAccount.IsSeller = true;
+                                            
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
@@ -142,6 +147,7 @@ namespace Resources.Code
                                                 UICommandType.AuthoriseDeactivate));
                                             break;
                                         case 's':
+                                            UserSessionService.SetAccount(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1].StringSToAccount());
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
@@ -181,6 +187,24 @@ namespace Resources.Code
                             UIQuerySender.Instance.AddCommand(new UICommand(
                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                 UICommandType.ShowException));
+                            break;
+                        case 'a':
+                            switch (queryType[1])
+                            {
+                                case 's':
+                                    UserSessionService.UserAccount.Login =
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
+                                            .Split(DataParsingExtension.ValueSplitter)[0];
+                                    UserSessionService.UserAccount.Password =
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
+                                            .Split(DataParsingExtension.ValueSplitter)[1];
+                                    
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                        UICommandType.RefreshAccountInfo));
+                                    break;
+                            }
+
                             break;
                     }
                 }

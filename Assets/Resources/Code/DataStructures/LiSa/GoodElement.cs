@@ -51,6 +51,10 @@ namespace Resources.Code.DataStructures.LiSa
         {
             gameObject.SetActive(show);
         }
+        public void Toggle()
+        {
+            _uiScaling.StartAnimation();
+        }
 
         public void ToggleEditMode(bool edit)
         {

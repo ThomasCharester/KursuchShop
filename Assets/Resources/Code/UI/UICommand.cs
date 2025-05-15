@@ -28,6 +28,9 @@ namespace Resources.Code
                 case UICommandType.ActivateShop:
                     UIQuerySender.Instance.ActivateShop();
                     break;
+                case UICommandType.RefreshAccountInfo:
+                    UIQuerySender.Instance.RefreshAccountInfo();
+                    break;
                 case UICommandType.ShowGoodList:
                     UIQuerySender.Instance.ShowGoods(Value);
                     break;

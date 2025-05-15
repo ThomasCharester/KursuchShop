@@ -41,8 +41,11 @@ namespace Resources.Code
         {
             // _sliding.StartAnimation(show);
             gameObject.SetActive(show);
+        }       
+        public void Toggle()
+        {
+            _sliding.StartAnimation();
         }
-
         public void SendLoginQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(

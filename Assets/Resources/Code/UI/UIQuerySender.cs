@@ -17,6 +17,7 @@ public class UIQuerySender : MonoBehaviour
     [SerializeField] private ControlPanel controlPanel;
     [SerializeField] private GridContainer gridContainer;
     [SerializeField] private ExceptionPanel exceptionPanel;
+    [SerializeField] private AccountPanel accountPanel;
 
     [Header("Misc")]
     [SerializeField] private SimpleTCPClient client;
@@ -67,7 +68,10 @@ public class UIQuerySender : MonoBehaviour
     {
         gridContainer.StartGoodsEdit(goods);
     }
-
+    public void RefreshAccountInfo()
+    {
+        accountPanel.Clear();
+    }
     public void Reconnect()
     {
         // SimpleTCPClient.Instance.ConnectToServer();
@@ -81,10 +85,16 @@ public class UIQuerySender : MonoBehaviour
         SendGoodsRequest();
     }
 
-    public void ActivateAccount()
+    public void HidePanels()
     {
         gridContainer.Hide();
-        
+        accountPanel.Hide(); 
+        exceptionPanel.Hide();
+    }
+    public void ToggleAccount()
+    {
+        accountPanel.Toggle(accountPanel.Hidden);
+        gridContainer.Toggle(accountPanel.Hidden);
     }
     public void ContinueGoodsAdding()
     {

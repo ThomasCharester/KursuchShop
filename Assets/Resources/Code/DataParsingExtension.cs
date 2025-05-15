@@ -30,9 +30,17 @@ namespace Resources.Code
         public const string PlantMedicinesTable = "PlantMedicines";
         public const string DosagesTable = "Dosages";
 
-        public static Account StringToAccount(String account)
+        public static Account StringSToAccount(this String account)
         {
-            
+            return new Account(account.Split(ValueSplitter)[0], account.Split(ValueSplitter)[1], false);
+        }
+        public static String AccountToStringS(this Account account)
+        {
+            return account.Login + ValueSplitter + account.Password;
+        }
+        public static String AccountToString(this Account account)
+        {
+            return account.Login + ValueSplitter + account.Password + ValueSplitter + account.AdminKey;
         }
         public static String DBReadable(this String str)
         {

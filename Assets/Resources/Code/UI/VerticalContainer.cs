@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Resources.Code
 {
-    public class GridContainer : MonoBehaviour, IUIElement
+    public class VerticalContainer: MonoBehaviour, IUIElement
     {
         [Header("Prefabs")] 
         [SerializeField] private GoodElement goodPrefab;

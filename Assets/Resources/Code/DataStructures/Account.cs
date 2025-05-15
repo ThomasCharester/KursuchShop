@@ -5,21 +5,18 @@ namespace Resources.Code.DataStructures
 {
     public class Account 
     {
-        public String login;
-        public String password;
+        public String Login;
+        public String Password;
+        public String AdminKey = "";
         public bool sv_cheats;
+        public bool IsSeller = false;
 
-        public Account(string login, string password, bool sv_cheats)
+        public Account(string login = "NAN", string password = "NAN", bool sv_cheats = false)
         {
-            this.login = login;
-            this.password = password;
+            Login = login;
+            Password = password;
             this.sv_cheats = sv_cheats;
         }
-        public void SetValues(string login, string password, bool sv_cheats)
-        {
-            this.login = login;
-            this.password = password;
-            this.sv_cheats = sv_cheats;
-        }
+
     }
 }

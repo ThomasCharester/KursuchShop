@@ -8,6 +8,7 @@ namespace Resources.Code
         ShowGoodList,
         SendQuery,
         MakeAdmin,
+        RefreshAccountInfo,
         ActivateShop
     }
 }

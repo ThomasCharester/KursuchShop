@@ -6,5 +6,6 @@ namespace Resources.Code
         public void Hide();
         public void Show();
         public void Toggle(bool show);
+        public void Toggle();
     }
 }
