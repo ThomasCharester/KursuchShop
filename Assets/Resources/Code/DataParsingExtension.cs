@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Resources.Code.DataStructures;
+using Resources.Code.DataStructures.LiSa;
 using UnityEditor.PackageManager;
 
 namespace Resources.Code
@@ -13,12 +14,10 @@ namespace Resources.Code
         public static readonly char ValueSplitter = ',';
         public static readonly char QuerySplitter = ';';
         public static readonly char AdditionalQuerySplitter = '|';
-        public static readonly String UserSymbol = "NAN";
+
 
         public static readonly String ATableName = "Accounts";
-        public static readonly String AKTableName = "adminKeys";
-
-        public static readonly String ATTableName = "AquireTypes";
+        public static readonly String AKTableName = "AdminKeys";
         public static readonly String GATableName = "Games";
         public static readonly String PMTableName = "PaymentMethods";
         public static readonly String STableName = "Sellers";
@@ -30,6 +29,21 @@ namespace Resources.Code
         public const string MedicineDiseasesTable = "MedicineDiseases";
         public const string PlantMedicinesTable = "PlantMedicines";
         public const string DosagesTable = "Dosages";
-    }
 
+        public static String DBReadable(this String str)
+        {
+            return '\'' + str + '\'';
+        }
+
+        public static String GoodToString(this Good good)
+        {
+            return good.goodName.DBReadable() + ValueSplitter
+                                              + good.sellerName.DBReadable() + ValueSplitter
+                                              + good.gameName.DBReadable() + ValueSplitter
+                                              + good.description.DBReadable() + ValueSplitter
+                                              + good.paymentMethod.DBReadable() + ValueSplitter
+                                              + good.stock + ValueSplitter
+                                              + good.price;
+        }
+    }
 }

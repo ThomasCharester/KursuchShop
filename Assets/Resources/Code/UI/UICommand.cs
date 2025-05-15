@@ -17,16 +17,19 @@ namespace Resources.Code
             switch (Type)
             {
                 case UICommandType.SetExceptionText:
-                    UIQuerySender.Instance.SetExceptionText(Value);
+                    UIQuerySender.Instance.ShowException(Value);
                     break;
                 case UICommandType.AuthoriseActivate:
-                    UIQuerySender.Instance.ActiveAuthorisePanel(true);
+                    UIQuerySender.Instance.ToggleAuthorisePanel(true);
                     break;
                 case UICommandType.AuthoriseDeactivate:
-                    UIQuerySender.Instance.ActiveAuthorisePanel(false);
+                    UIQuerySender.Instance.ToggleAuthorisePanel(false);
                     break;
-                case UICommandType.ShowPlantList:
-                    UIQuerySender.Instance.ShowPlantsGrid(Value);
+                case UICommandType.ActivateShop:
+                    UIQuerySender.Instance.ActivateShop();
+                    break;
+                case UICommandType.ShowGoodList:
+                    UIQuerySender.Instance.ShowGoods(Value);
                     break;
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);

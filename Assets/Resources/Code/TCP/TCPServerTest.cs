@@ -30,6 +30,10 @@ namespace Resources.Code
             ConnectToServer("127.0.0.1", 8888); //127.0.0.1
         }
 
+        public void ConnectToServer()
+        {
+            ConnectToServer("127.0.0.1", 8888);
+        }
         private void OnDestroy()
         {
             Disconnect();
@@ -127,30 +131,31 @@ namespace Resources.Code
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.SetExceptionText));
                                             break;
-                                        case 's':
+                                        case 'a':
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
-                                            UserSessionService.SetAccount(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1].StringToAccount());
                                             break;
                                         case 'v':
                                             UIQuerySender.Instance.AddCommand(new UICommand(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.AuthoriseDeactivate));
-                                            UserSessionService.UserAccount.sv_cheats = true;
+                                            break;
+                                        case 's':
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                UICommandType.ActivateShop));
                                             break;
                                     }
 
                                     break;
-                                case 'p':
+                                case 't':
                                     UIQuerySender.Instance.AddCommand(new UICommand(
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                        UICommandType.ShowPlantList));
-                                    break;
-                                case 's':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(
-                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                        UICommandType.AuthoriseDeactivate));
+                                        UICommandType.ShowGoodList));
                                     break;
                             }
                         }

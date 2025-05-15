@@ -5,27 +5,18 @@ using Resources.Code.DataStructures;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using VContainer;
 
 public class UIQuerySender : MonoBehaviour
 {
-    [Header("Authorization")]
-    [SerializeField] private TMP_InputField inputFieldLoginLogin;
-    [SerializeField] private TMP_InputField inputFieldLoginPassword;
-    [SerializeField] private TMP_InputField inputFieldRegisterLogin;
-    [SerializeField] private TMP_InputField inputFieldRegisterPassword;
-    [SerializeField] private TMP_InputField inputFieldAdminKey;
-    [SerializeField] private TMP_Text exceptionText;
     
     [Header("Panels")]
-    [SerializeField] private GameObject authorizationPanel;
-    [SerializeField] private GameObject controlPanel;
-    [SerializeField] private GameObject gridContainer;
-    [SerializeField] private GameObject editButtonsPanel;
-
-    [Header("ElementGrid")]
-    [SerializeField] private GameObject plantGridElement;
+    [SerializeField] private AuthorisationPanel authorizationPanel;
+    [SerializeField] private ControlPanel controlPanel;
+    [SerializeField] private GridContainer gridContainer;
+    [SerializeField] private ExceptionPanel exceptionPanel;
 
     [Header("Misc")]
     [SerializeField] private SimpleTCPClient client;
@@ -59,115 +50,58 @@ public class UIQuerySender : MonoBehaviour
 
     public void AddCommand(UICommand command) => _command.Enqueue(command);
 
-    public void SendLoginQuery()
-    {
-        string login = inputFieldLoginLogin.text;
-        string password = inputFieldLoginPassword.text;
-
-        AddCommand(new UICommand($"l;\'{login}\',\'{password}\'",UICommandType.SendQuery));
-    }
-
     public void SendQuery(string query)
     {
         SimpleTCPClient.Instance.SendQuery(query);
     }
+    public void ToggleAuthorisePanel(bool active) => authorizationPanel.Toggle(active);
 
-    public void SendRegisterQuery()
+    public void ShowException(string exceptionText)
     {
-        string login = inputFieldRegisterLogin.text;
-        string password = inputFieldRegisterPassword.text;
-        string adminKey = inputFieldAdminKey.text;
-
-        if (adminKey.Length == 0)
-            adminKey = "NAN";
-
-        AddCommand(new UICommand($"r;\'{login}\',\'{password}\',\'{adminKey}\'",UICommandType.SendQuery));
+        exceptionPanel.SetExceptionText(exceptionText);
+        exceptionPanel.Show();
     }
-
-    public void SendGetAllPlantsQuery()
+    public void ToggleGridContainer(bool active) => gridContainer.Toggle(active);
+    public void ToggleControlPanel(bool active) => controlPanel.Toggle(active);
+    public void StartGoodsAdding(String goods)
     {
-        AddCommand(new UICommand("ppl;", UICommandType.SendQuery));
-    }
-    public void ActiveAuthorisePanel(bool active) => authorizationPanel.SetActive(active);
-    public void SetExceptionText(string text) => exceptionText.text = text;
-    public void ActivateGridContainer(bool active) => gridContainer.GetComponent<UISliding>().StartAnimation(active);
-
-    public void ClearGridContainer()
-    {
-        foreach (var child in gridContainer.GetComponentsInChildren<UIScaling>())
-            child.DIE();
+        gridContainer.StartGoodsEdit(goods);
     }
 
-    public void AddGridElementPlantShow(Plant plant)
+    public void Reconnect()
     {
-        var plantElement = Instantiate(plantGridElement, gridContainer.transform);
-        plantElement.GetComponent<VerticalContainerPanels>().panels[0].SetActive(true);
-        plantElement.GetComponent<NameText>().field.text = plant.name;
-        plantElement.GetComponent<IdText>().field.text = plant.plantId.ToString();
+        // SimpleTCPClient.Instance.ConnectToServer();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ActivateShop()
+    {
+        gridContainer.Show();
+        controlPanel.Show();
+        
+        SendGoodsRequest();
     }
 
-    public void AddGridElementPlantAdd()
+    public void ActivateAccount()
     {
-        var plantElement = Instantiate(plantGridElement, gridContainer.transform);
-        plantElement.GetComponent<VerticalContainerPanels>().panels[1].SetActive(true);
-        plantElement.GetComponent<UIScaling>().StartAnimation();
+        gridContainer.Hide();
+        
     }
-    public void ShowControlPanel(bool active) => controlPanel.SetActive(active);
-    
-    public void ShowEditButtons(bool active) => editButtonsPanel.SetActive(active);
-    
-    private bool _editMode = false;
-    public void StartPlantAdding()
+    public void ContinueGoodsAdding()
     {
-        _editMode = true;
-        SendGetAllPlantsQuery();
+        gridContainer.ContinueGoodsEdit();
     }
-    public void ShowPlants()
+    public void ShowGoods(String goods)
     {
-        _editMode = false;
-        SendGetAllPlantsQuery();
+        gridContainer.ShowGoods(goods);
     }
 
-    public void HideGridContainer()
-    {
-        _editMode = false;
-        ActivateGridContainer(false);
-        ClearGridContainer();
-    }
-    public void SwitchGridContainer()
-    {
-        bool active = !gridContainer.activeSelf;
-        ActivateGridContainer(active);
-        ClearGridContainer();
-    }
-
-    public void EnterGridEditMode(bool active)
-    {
-        _editMode = active;
-    }
     public void EnterAdminMode()
     {
-        controlPanel.SetActive(true);
+        controlPanel.Show();
     }
-    public void ShowPlantsGrid(String plants)
+
+    public void SendGoodsRequest()
     {
-        if(plants.Length == 0) return;
-        
-        ActivateGridContainer(true);
-        ClearGridContainer();
-        
-        foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
-        {
-            var plantElement = Instantiate(plantGridElement, gridContainer.transform).GetComponent<Plant>();
-                plantElement.name = plant.Split(DataParsingExtension.ValueSplitter)[1];
-                plantElement.plantId = int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]);
-            
-            plantElement.GetComponent<VerticalContainerPanels>().panels[0].SetActive(true);
-            plantElement.GetComponent<NameText>().field.text = plantElement.name;
-            plantElement.GetComponent<IdText>().field.text = plantElement.plantId.ToString();
-            
-            plantElement.GetComponent<UIScaling>().StartAnimation();
-        }
-        if(_editMode) AddGridElementPlantAdd();
+        AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
     }
 }

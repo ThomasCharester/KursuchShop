@@ -36,11 +36,11 @@ public class UISliding : MonoBehaviour, IUIAnimateable
         animating = true;
         if(canBeRetargeted) SwitchTargetIndex();
     }
-    public void StartAnimation(bool startEnd)
+    public void StartAnimation(bool start)
     {
         animating = true;
 
-        if (startEnd) _targetIndex = 1;
+        if (start) _targetIndex = 1;
         else _targetIndex = 0;
     }
 

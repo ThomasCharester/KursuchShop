@@ -5,8 +5,9 @@ namespace Resources.Code
         SetExceptionText,
         AuthoriseActivate,
         AuthoriseDeactivate,
-        ShowPlantList,
+        ShowGoodList,
         SendQuery,
         MakeAdmin,
+        ActivateShop
     }
 }
