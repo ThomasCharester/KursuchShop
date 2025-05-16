@@ -43,7 +43,7 @@ namespace Resources.Code
         }
         public void ContinueAccountsEdit()
         {
-            AccountElement temp = Instantiate(accountPrefab, transform);
+            AccountElement temp = Instantiate(accountAddPrefab, transform);
             temp.ToggleEditMode(true);
         }
 
