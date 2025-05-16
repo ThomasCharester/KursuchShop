@@ -9,6 +9,7 @@ namespace Resources.Code
         SendQuery,
         MakeAdmin,
         RefreshAccountInfo,
-        ActivateShop
+        ActivateShop,
+        ShowAccountList
     }
 }

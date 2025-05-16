@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Resources.Code
 {
@@ -10,10 +11,7 @@ namespace Resources.Code
         private bool _hidden = true;
         public bool Hidden => _hidden;
 
-        public void SendModifyRequest()
-        {
-           
-        }
+        [SerializeField] public VerticalContainer verticalContainer;
 
         void Start()
         {
@@ -37,7 +35,7 @@ namespace Resources.Code
 
         public void Clear()
         {
-            
+            verticalContainer.Clear();
         }
 
         public void Toggle(bool show)

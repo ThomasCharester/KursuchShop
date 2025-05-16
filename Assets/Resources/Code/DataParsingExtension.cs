@@ -42,6 +42,10 @@ namespace Resources.Code
         {
             return account.Login + ValueSplitter + account.Password + ValueSplitter + account.AdminKey;
         }
+        public static String AccountToStringDB(this Account account)
+        {
+            return account.Login.DBReadable() + ValueSplitter + account.Password.DBReadable() + ValueSplitter + account.AdminKey.DBReadable();
+        }
         public static String DBReadable(this String str)
         {
             return '\'' + str + '\'';

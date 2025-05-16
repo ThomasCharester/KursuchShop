@@ -163,6 +163,11 @@ namespace Resources.Code
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowGoodList));
                                     break;
+                                case 'a':
+                                    UIQuerySender.Instance.AddCommand(new UICommand(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                        UICommandType.ShowAccountList));
+                                    break;
                             }
                         }
                             break;

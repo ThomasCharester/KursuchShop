@@ -34,6 +34,9 @@ namespace Resources.Code
                 case UICommandType.ShowGoodList:
                     UIQuerySender.Instance.ShowGoods(Value);
                     break;
+                case UICommandType.ShowAccountList:
+                    UIQuerySender.Instance.ShowAccounts(Value);
+                    break;
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);
                     break;

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,8 +18,10 @@ namespace Resources.Code.DataStructures.LiSa
         [SerializeField] private TMP_Text textLogin;
         [SerializeField] private TMP_Text textPassword;
         [SerializeField] private TMP_Text textAdminKey;
-        
+
         [SerializeField] private UIScaling _uiScaling;
+
+        public bool modifiyng = true;
 
         private void Start()
         {
@@ -44,6 +47,7 @@ namespace Resources.Code.DataStructures.LiSa
         {
             gameObject.SetActive(show);
         }
+
         public void Toggle()
         {
             _uiScaling.StartAnimation();
@@ -62,19 +66,33 @@ namespace Resources.Code.DataStructures.LiSa
             textAdminKey.text = account.AdminKey;
         }
 
-        public void SetInputValues()
+        // public void SetInputValues()
+        // {
+        //     account.Login = inputFieldLogin.text;
+        //     account.Password = inputFieldPassword.text;
+        //     account.AdminKey = inputFieldAdminKey.text;
+        // }
+
+        public String FormOutputValue()
         {
-            account.Login = inputFieldLogin.text;
-            account.Password = inputFieldPassword.text;
-            account.AdminKey = inputFieldAdminKey.text;
+            return (inputFieldLogin.text == "" ? account.Login : inputFieldLogin.text).DBReadable()
+                   + DataParsingExtension.ValueSplitter
+                   + (inputFieldPassword.text == "" ? account.Password : inputFieldPassword.text).DBReadable()
+                   + DataParsingExtension.ValueSplitter
+                   + (inputFieldAdminKey.text == "" ? account.AdminKey : inputFieldLogin.text).DBReadable();
         }
 
         public void SendModifyQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"aa;" + account.AccountToString(),
+                $"am;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + account.AccountToStringDB(),
                 UICommandType.SendQuery));
-            UIQuerySender.Instance.ContinueGoodsAdding();
+        }
+        public void SendDeleteQuery()
+        {
+            UIQuerySender.Instance.AddCommand(new UICommand(
+                $"ad;" + account.AccountToString(),
+                UICommandType.SendQuery));
         }
     }
 }

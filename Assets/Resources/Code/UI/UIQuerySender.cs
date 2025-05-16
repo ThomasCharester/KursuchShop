@@ -18,6 +18,7 @@ public class UIQuerySender : MonoBehaviour
     [SerializeField] private GridContainer gridContainer;
     [SerializeField] private ExceptionPanel exceptionPanel;
     [SerializeField] private AccountPanel accountPanel;
+    [SerializeField] private AdminPanel adminPanel;
 
     [Header("Misc")]
     [SerializeField] private SimpleTCPClient client;
@@ -95,6 +96,18 @@ public class UIQuerySender : MonoBehaviour
     {
         accountPanel.Toggle(accountPanel.Hidden);
         gridContainer.Toggle(accountPanel.Hidden);
+        
+        if(accountPanel.Hidden)
+            adminPanel.Toggle(true);
+    }
+
+    public void ToggleAdminPanel()
+    {
+        adminPanel.Toggle(adminPanel.Hidden);
+        gridContainer.Toggle(adminPanel.Hidden);
+        
+        if(adminPanel.Hidden)
+            accountPanel.Toggle(true);
     }
     public void ContinueGoodsAdding()
     {
@@ -103,6 +116,10 @@ public class UIQuerySender : MonoBehaviour
     public void ShowGoods(String goods)
     {
         gridContainer.ShowGoods(goods);
+    }
+    public void ShowAccounts(String accounts)
+    {
+        adminPanel.verticalContainer.ShowAccounts(accounts);
     }
 
     public void EnterAdminMode()
@@ -113,5 +130,9 @@ public class UIQuerySender : MonoBehaviour
     public void SendGoodsRequest()
     {
         AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
+    }
+    public void SendAccountsRequest()
+    {
+        AddCommand(new UICommand("al;", UICommandType.SendQuery));
     }
 }
