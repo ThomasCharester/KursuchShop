@@ -90,6 +90,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accountPrefab: {fileID: 4990284920304523328, guid: e547c8d05f23d924f98e438968d48cc7, type: 3}
+  accountAddPrefab: {fileID: 396482607687721363, guid: 3c4decd7a33206149b264b8d0fcb85d1, type: 3}
+  gamePrefab: {fileID: 8177320935000460625, guid: 11fa44cd056258d4c8dbd1bee9d9c5c3, type: 3}
+  gameAddPrefab: {fileID: 2536982880467095469, guid: 0e07673afbd2ce044afe4336677ab7a1, type: 3}
+  pmPrefab: {fileID: 3970078486212288395, guid: df32eedf2c0df5b4bbcf1be5f7e733bd, type: 3}
+  pmAddPrefab: {fileID: 5457213910765719329, guid: 33171aff22a76214da74b4911eff5a89, type: 3}
+  sellerPrefab: {fileID: 8442493347342970572, guid: 3c8198de8e6b2984b900280a775e2d0a, type: 3}
+  sellerAddPrefab: {fileID: 5689811561439740806, guid: 9d705534a7332a74d8627e820990f692, type: 3}
+  adminKeyPrefab: {fileID: 4767694376127882309, guid: 4efbfffb1738b854c9a22df0dc3105b7, type: 3}
+  adminKeyAddPrefab: {fileID: 3588914857806349708, guid: 14053c9193f0f034780176a4b4ab75ea, type: 3}
+  goodPrefab: {fileID: 8684661860063686716, guid: 9cf97126df0d2e54ab58069c00a6ef41, type: 3}
 --- !u!114 &1045802624487583746
 MonoBehaviour:
   m_ObjectHideFlags: 0

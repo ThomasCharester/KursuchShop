@@ -1080,7 +1080,7 @@ MonoBehaviour:
   scales:
   - 0
   - 1
-  speed: 1
+  speed: 5
   randomizedTarget: 0
   animateAlways: 0
   animating: 0

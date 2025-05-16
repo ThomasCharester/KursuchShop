@@ -46,20 +46,18 @@ namespace Resources.Code
         {
             return account.Login.DBReadable() + ValueSplitter + account.Password.DBReadable() + ValueSplitter + account.AdminKey.DBReadable();
         }
+        public static String GoodToString(this Good good)
+        {
+            return good.goodName.DBReadable() + ValueSplitter + good.sellerName.DBReadable() + ValueSplitter + good.gameName.DBReadable();
+        }
         public static String DBReadable(this String str)
         {
             return '\'' + str + '\'';
         }
 
-        public static String GoodToString(this Good good)
+        public static String SellerToString(this Seller seller)
         {
-            return good.goodName.DBReadable() + ValueSplitter
-                                              + good.sellerName.DBReadable() + ValueSplitter
-                                              + good.gameName.DBReadable() + ValueSplitter
-                                              + good.description.DBReadable() + ValueSplitter
-                                              + good.paymentMethod.DBReadable() + ValueSplitter
-                                              + good.stock + ValueSplitter
-                                              + good.price;
+            return seller.Name.DBReadable() + ValueSplitter + seller.Login.DBReadable() + ValueSplitter + seller.Rate;
         }
     }
 }

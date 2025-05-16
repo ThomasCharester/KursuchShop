@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Resources.Code;
 using Resources.Code.DataStructures;
+using Resources.Code.DataStructures.LiSa;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,8 +15,8 @@ public class UIQuerySender : MonoBehaviour
     
     [Header("Panels")]
     [SerializeField] private AuthorisationPanel authorizationPanel;
+    [SerializeField] private GoodsPanel goodsPanel;
     [SerializeField] private ControlPanel controlPanel;
-    [SerializeField] private GridContainer gridContainer;
     [SerializeField] private ExceptionPanel exceptionPanel;
     [SerializeField] private AccountPanel accountPanel;
     [SerializeField] private AdminPanel adminPanel;
@@ -26,7 +27,7 @@ public class UIQuerySender : MonoBehaviour
     private Queue<UICommand> _command = new();
     private static UIQuerySender _instance;
     private float _cooldown = 0f;
-    private float _maxCooldown = 0.5f;
+    private float _maxCooldown = 0.1f;
     public static UIQuerySender Instance
     {
         get { return _instance; }
@@ -37,6 +38,11 @@ public class UIQuerySender : MonoBehaviour
     void Start()
     {
         _instance = this;
+        
+        controlPanel.Hide();
+        goodsPanel.Hide();
+        accountPanel.Hide();
+        adminPanel.Hide();
     }
 
     // Update is called once per frame
@@ -52,10 +58,7 @@ public class UIQuerySender : MonoBehaviour
 
     public void AddCommand(UICommand command) => _command.Enqueue(command);
 
-    public void SendQuery(string query)
-    {
-        SimpleTCPClient.Instance.SendQuery(query);
-    }
+    public void SendQuery(string query) => SimpleTCPClient.Instance.SendQuery(query);
     public void ToggleAuthorisePanel(bool active) => authorizationPanel.Toggle(active);
 
     public void ShowException(string exceptionText)
@@ -63,76 +66,63 @@ public class UIQuerySender : MonoBehaviour
         exceptionPanel.SetExceptionText(exceptionText);
         exceptionPanel.Show();
     }
-    public void ToggleGridContainer(bool active) => gridContainer.Toggle(active);
-    public void ToggleControlPanel(bool active) => controlPanel.Toggle(active);
-    public void StartGoodsAdding(String goods)
-    {
-        gridContainer.StartGoodsEdit(goods);
-    }
-    public void RefreshAccountInfo()
-    {
-        accountPanel.Clear();
-    }
+    public void RefreshAccountInfo() => accountPanel.Clear();
     public void Reconnect()
     {
-        // SimpleTCPClient.Instance.ConnectToServer();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ActivateShop()
     {
-        gridContainer.Show();
+        goodsPanel.Show();
         controlPanel.Show();
+        controlPanel.ToggleAccountMenu(true);
         
         SendGoodsRequest();
     }
 
     public void HidePanels()
     {
-        gridContainer.Hide();
+        goodsPanel.Hide();
         accountPanel.Hide(); 
         exceptionPanel.Hide();
     }
     public void ToggleAccount()
     {
         accountPanel.Toggle(accountPanel.Hidden);
-        gridContainer.Toggle(accountPanel.Hidden);
+        goodsPanel.Toggle(accountPanel.Hidden);
         
         if(accountPanel.Hidden)
-            adminPanel.Toggle(true);
+            adminPanel.Toggle(false);
     }
 
     public void ToggleAdminPanel()
     {
         adminPanel.Toggle(adminPanel.Hidden);
-        gridContainer.Toggle(adminPanel.Hidden);
+        goodsPanel.Toggle(adminPanel.Hidden);
         
         if(adminPanel.Hidden)
-            accountPanel.Toggle(true);
+            accountPanel.Toggle(false);
     }
-    public void ContinueGoodsAdding()
-    {
-        gridContainer.ContinueGoodsEdit();
-    }
-    public void ShowGoods(String goods)
-    {
-        gridContainer.ShowGoods(goods);
-    }
-    public void ShowAccounts(String accounts)
-    {
-        adminPanel.verticalContainer.ShowAccounts(accounts);
-    }
+    public void ContinueAccountsAdding() => adminPanel.verticalContainer.ContinueAccountsEdit();
+    public void ContinueGamesAdding() => adminPanel.verticalContainer.ContinueGamesEdit();
+    public void ContinuePaymentMethods() => adminPanel.verticalContainer.ContinuePaymentMethodsEdit();
+    public void ContinueSellersAdding() => adminPanel.verticalContainer.ContinueSellersEdit();
+    public void ContinueAdminKeyAdding() => adminPanel.verticalContainer.ContinueAdminKeyEdit();
+    public void ShowGoods(String goods) => goodsPanel.gridContainer.ShowGoods(goods);
+    public void ShowGoodsAP(String goods)=> adminPanel.verticalContainer.ShowGoods(goods);
+    public void ShowAccounts(String accounts) => adminPanel.verticalContainer.StartAccountsEdit(accounts);
+    public void ShowGames(String games) => adminPanel.verticalContainer.StartGamesEdit(games);
+    public void ShowSellers(String games) => adminPanel.verticalContainer.StartSellersEdit(games);
+    public void ShowPaymentMethods(String games) => adminPanel.verticalContainer.StartPaymentMethodsEdit(games);
+    public void ShowAdminKeys(String adminKeys) => adminPanel.verticalContainer.StartAdminKey(adminKeys);
+    public void EnterAdminMode() => controlPanel.ToggleAdminMenu(true);
+    public void EnterSellerMode() => controlPanel.ToggleSellerMenu(true);
 
-    public void EnterAdminMode()
-    {
-        controlPanel.Show();
-    }
-
-    public void SendGoodsRequest()
-    {
-        AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
-    }
-    public void SendAccountsRequest()
-    {
-        AddCommand(new UICommand("al;", UICommandType.SendQuery));
-    }
+    public void SendGamesRequest() => AddCommand(new UICommand("ggl;", UICommandType.SendQuery));
+    public void SendGoodsRequest() => AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
+    public void SendGoodsAPRequest() => AddCommand(new UICommand("gtpl;", UICommandType.SendQuery));
+    public void SendSellersRequest() => AddCommand(new UICommand("gsl;", UICommandType.SendQuery));
+    public void SendAccountsRequest() => AddCommand(new UICommand("al;", UICommandType.SendQuery));
+    public void SendPaymentMethodsRequest() => AddCommand(new UICommand("gpl;", UICommandType.SendQuery));
+    public void SendAdminKeysRequest() => AddCommand(new UICommand("akl;", UICommandType.SendQuery));
 }

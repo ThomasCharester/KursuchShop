@@ -1,10 +1,9 @@
 using System;
-using UnityEngine;
 
-namespace Resources.Code.DataStructures
+namespace Resources.Code.DataStructures.LiSa
 {
-    public class AdminKey: MonoBehaviour
+    public struct AdminKey
     {
-        [SerializeField] public String adminKey;
+        public String adminKey;
     }
 }
