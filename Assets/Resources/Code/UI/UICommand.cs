@@ -44,6 +44,9 @@ namespace Resources.Code
                 case UICommandType.ContinueAccountAdding:
                     UIQuerySender.Instance.ContinueAccountsAdding();
                     break;
+                case UICommandType.ContinueGoodsAdding:
+                    UIQuerySender.Instance.ContinueGoodsAdding();
+                    break;
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
@@ -58,6 +61,12 @@ namespace Resources.Code
                     break;
                 case UICommandType.SendGoodsAPRequest:
                     UIQuerySender.Instance.SendGoodsAPRequest();
+                    break;
+                case UICommandType.ShowGoodListEdit:
+                    UIQuerySender.Instance.ShowGoodsEdit(Value);
+                    break;
+                case UICommandType.SendGoodsEditRequest:
+                    UIQuerySender.Instance.SendGoodsEditRequest();
                     break;
                 case UICommandType.MakeAdmin:
                     UIQuerySender.Instance.EnterAdminMode();

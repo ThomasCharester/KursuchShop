@@ -167,6 +167,11 @@ namespace Resources.Code
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                 UICommandType.ShowGoodListAP));
                                             break;
+                                        case 's':
+                                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                                receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                UICommandType.ShowGoodListEdit));
+                                            break;
                                     }
                                 }
                                     break;
@@ -319,6 +324,20 @@ namespace Resources.Code
                                             {
                                                 case 'd':
                                                     UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsAPRequest));
+                                                    break;
+                                            }
+                                            break;
+                                        case 's':
+                                            switch (queryType[3])
+                                            {
+                                                case 'd':
+                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    break;
+                                                case 'm':
+                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    break;
+                                                case 'a':
+                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                             }
                                             break;

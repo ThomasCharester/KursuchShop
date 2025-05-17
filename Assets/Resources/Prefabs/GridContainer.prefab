@@ -135,4 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goodPrefab: {fileID: 1188919456564891341, guid: 684570adbc825284aaf0ba926ea31a21, type: 3}
-  _sliding: {fileID: 4184618827799625289}
+  goodEditPrefab: {fileID: 1188919456564891341, guid: 5305f8b647fb00b44841d3048eb8727b, type: 3}

@@ -28,6 +28,9 @@ namespace Resources.Code
         ShowAdminKeysList,
         ContinueAdminKeysAdding,
         SendGoodsAPRequest,
-        ShowGoodListAP
+        ShowGoodListAP,
+        SendGoodsEditRequest,
+        ShowGoodListEdit,
+        ContinueGoodsAdding
     }
 }
