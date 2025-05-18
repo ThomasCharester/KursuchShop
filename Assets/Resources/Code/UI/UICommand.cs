@@ -56,6 +56,15 @@ namespace Resources.Code
                 case UICommandType.SendGoodsRequest:
                     UIQuerySender.Instance.SendGoodsRequest();
                     break;
+                case UICommandType.ShowGood:
+                    UIQuerySender.Instance.ShowGood(Value);
+                    break;
+                case UICommandType.ShowGoodEdit:
+                    UIQuerySender.Instance.ShowGoodEdit(Value);
+                    break;
+                case UICommandType.ShowGoodAdd:
+                    UIQuerySender.Instance.ShowGoodAdd();
+                    break;
                 case UICommandType.ShowGoodListAP:
                     UIQuerySender.Instance.ShowGoodsAP(Value);
                     break;

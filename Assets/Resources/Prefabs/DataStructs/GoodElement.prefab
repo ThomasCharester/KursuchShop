@@ -805,3 +805,4 @@ MonoBehaviour:
   textPaymentMethod: {fileID: 0}
   textPrice: {fileID: 3071379207522479274}
   textStock: {fileID: 0}
+  Editable: 0

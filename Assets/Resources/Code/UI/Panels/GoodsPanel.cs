@@ -12,6 +12,8 @@ namespace Resources.Code.DataStructures.LiSa
             base.Show();
             
             Clear();
+            
+            UIQuerySender.Instance.SendGoodsRequest();
         }
 
         public void Clear()
@@ -24,6 +26,8 @@ namespace Resources.Code.DataStructures.LiSa
             base.Toggle(show);
             
             Clear();
+            
+            if(show) UIQuerySender.Instance.SendGoodsRequest();
         }
 
         public new void Toggle()

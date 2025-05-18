@@ -34,22 +34,29 @@ namespace Resources.Code
         {
             return new Account(account.Split(ValueSplitter)[0], account.Split(ValueSplitter)[1], false);
         }
+
         public static String AccountToStringS(this Account account)
         {
             return account.Login + ValueSplitter + account.Password;
         }
+
         public static String AccountToString(this Account account)
         {
             return account.Login + ValueSplitter + account.Password + ValueSplitter + account.AdminKey;
         }
+
         public static String AccountToStringDB(this Account account)
         {
-            return account.Login.DBReadable() + ValueSplitter + account.Password.DBReadable() + ValueSplitter + account.AdminKey.DBReadable();
+            return account.Login.DBReadable() + ValueSplitter + account.Password.DBReadable() + ValueSplitter +
+                   account.AdminKey.DBReadable();
         }
-        public static String GoodToString(this Good good)
+
+        public static String GoodToStringS(this Good good)
         {
-            return good.goodName.DBReadable() + ValueSplitter + good.sellerName.DBReadable() + ValueSplitter + good.gameName.DBReadable();
+            return good.goodName.DBReadable() + ValueSplitter + good.sellerName.DBReadable() + ValueSplitter +
+                   good.gameName.DBReadable();
         }
+
         public static String DBReadable(this String str)
         {
             return '\'' + str + '\'';
@@ -58,6 +65,28 @@ namespace Resources.Code
         public static String SellerToString(this Seller seller)
         {
             return seller.Name.DBReadable() + ValueSplitter + seller.Login.DBReadable() + ValueSplitter + seller.Rate;
+        }
+
+        public static String GoodToString(this Good good)
+        {
+            return good.goodName.DBReadable() + ValueSplitter
+                                              + good.sellerName.DBReadable() + ValueSplitter
+                                              + good.gameName.DBReadable() + ValueSplitter
+                                              + good.description.DBReadable() + ValueSplitter
+                                              + good.paymentMethod.DBReadable() + ValueSplitter
+                                              + good.price + ValueSplitter
+                                              + good.stock;
+        }
+        public static void StringToGood(this Good good, string goodStr)
+        {
+            var values = goodStr.Split(ValueSplitter);
+            good.goodName = values[0];
+            good.sellerName = values[1];
+            good.gameName = values[2];
+            good.description = values[3];
+            good.paymentMethod = values[4];
+            good.price = int.Parse(values[5]);
+            good.stock = int.Parse(values[6]);
         }
     }
 }

@@ -31,6 +31,9 @@ namespace Resources.Code
         ShowGoodListAP,
         SendGoodsEditRequest,
         ShowGoodListEdit,
-        ContinueGoodsAdding
+        ContinueGoodsAdding,
+        ShowGood,
+        ShowGoodEdit,
+        ShowGoodAdd
     }
 }

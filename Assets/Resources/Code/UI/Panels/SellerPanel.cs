@@ -23,6 +23,8 @@ namespace Resources.Code.Panels
             base.Toggle(show);
             
             Clear();
+            
+            if(show) UIQuerySender.Instance.SendGoodsEditRequest();
         }
 
         public new void Toggle()

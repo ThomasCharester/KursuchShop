@@ -40,7 +40,7 @@ namespace Resources.Code
 
             foreach (var good in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                GoodElement temp = Instantiate(goodEditPrefab, transform);
+                GoodElement temp = Instantiate(goodPrefab, transform);
                 temp.good.goodName = good.Split(DataParsingExtension.ValueSplitter)[0];
                 temp.good.sellerName = good.Split(DataParsingExtension.ValueSplitter)[1];
                 temp.good.gameName = good.Split(DataParsingExtension.ValueSplitter)[2];
@@ -50,6 +50,7 @@ namespace Resources.Code
                 temp.good.stock = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[6]);
                 
                 temp.UpdateTextValues();
+                temp.Editable = true;
                 
                 children.Add(temp);
             }

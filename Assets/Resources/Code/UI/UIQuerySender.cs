@@ -4,6 +4,7 @@ using Resources.Code;
 using Resources.Code.DataStructures;
 using Resources.Code.DataStructures.LiSa;
 using Resources.Code.Panels;
+using Resources.Code.UI.Panels;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,6 +21,7 @@ public class UIQuerySender : MonoBehaviour
     [SerializeField] private AccountPanel accountPanel;
     [SerializeField] private AdminPanel adminPanel;
     [SerializeField] private SellerPanel sellerPanel;
+    [SerializeField] private GoodPanel goodPanel;
 
     [Header("Misc")] [SerializeField] private SimpleTCPClient client;
 
@@ -81,8 +83,6 @@ public class UIQuerySender : MonoBehaviour
         goodsPanel.Show();
         controlPanel.Show();
         controlPanel.ToggleAccountMenu(true);
-
-        SendGoodsRequest();
     }
 
     public void HidePanels()
@@ -126,8 +126,8 @@ public class UIQuerySender : MonoBehaviour
             adminPanel.Hide();
         }
 
-        sellerPanel.Toggle(adminPanel.Hidden);
-        goodsPanel.Toggle(adminPanel.Hidden);
+        sellerPanel.Toggle(sellerPanel.Hidden);
+        goodsPanel.Toggle(sellerPanel.Hidden);
     }
 
     public void ContinueAccountsAdding() => adminPanel.verticalContainer.ContinueAccountsEdit();
@@ -142,6 +142,42 @@ public class UIQuerySender : MonoBehaviour
     }
 
     public void ShowGoods(String goods) => goodsPanel.gridContainer.ShowGoods(goods);
+    public void ShowGood(String goodStr)
+    {
+        goodPanel.good.StringToGood(goodStr);
+        goodPanel.ToggleEditMode(false);
+        goodPanel.UpdateTextValues();
+        goodPanel.Show();
+    }
+    public void ShowGoodEdit(String goodStr)
+    {
+        goodPanel.good.StringToGood(goodStr);
+        goodPanel.ToggleEditMode(true);
+        goodPanel.AddMode = false;
+        goodPanel.UpdateInputFieldsValues();
+        goodPanel.Show();
+    }
+    public void ShowGood(Good good)
+    {
+        goodPanel.good = good;
+        goodPanel.ToggleEditMode(false);
+        goodPanel.Show();
+        goodPanel.UpdateTextValues();
+    }
+    public void ShowGoodEdit(Good good)
+    {
+        goodPanel.good = good;
+        goodPanel.ToggleEditMode(true);
+        goodPanel.AddMode = false;
+        goodPanel.Show();
+        goodPanel.UpdateInputFieldsValues();
+    }
+    public void ShowGoodAdd()
+    {
+        goodPanel.ToggleEditMode(true);
+        goodPanel.AddMode = true;
+        goodPanel.Show();
+    }
     public void ShowGoodsAP(String goods) => adminPanel.verticalContainer.ShowGoods(goods);
     public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);
     public void ShowAccounts(String accounts) => adminPanel.verticalContainer.StartAccountsEdit(accounts);

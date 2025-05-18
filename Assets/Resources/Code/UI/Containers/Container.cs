@@ -11,7 +11,11 @@ namespace Resources.Code
         public void Clear()
         {
             foreach (var child in children)
+            {
                 child.Clear();
+                child.transform.SetParent(UIQuerySender.Instance.transform, true);
+            }
+            children.Clear();
         }
     }
 }

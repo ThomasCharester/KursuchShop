@@ -24,7 +24,7 @@ namespace Resources.Code.DataStructures.LiSa
         public void SendDeleteQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gtpd;" + good.GoodToString(),
+                $"gtpd;" + good.GoodToStringS(),
                 UICommandType.SendQuery));
         }
     }
