@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Resources.Code.UI.DataStructures
 {
-    public class DataStructureElement : MonoBehaviour, IUIElement
+    public class DataStructureElement : MonoBehaviour
     {
         [SerializeField] public UIScaling _uiScaling;
         

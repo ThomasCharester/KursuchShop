@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIScaling : MonoBehaviour, IUIAnimateable
+public class UIScaling : MonoBehaviour
 {
     [SerializeField] private List<float> scales = new();
     [SerializeField] private float speed = 1.0f;

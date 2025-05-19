@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UISliding : MonoBehaviour, IUIAnimateable
+public class UISliding : MonoBehaviour
 {
     [SerializeField] private List<RectTransform> positions;
 
