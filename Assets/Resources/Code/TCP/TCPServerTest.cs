@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using VContainer;
 
 
 namespace Resources.Code
@@ -27,7 +26,7 @@ namespace Resources.Code
         private void Start()
         {
             _instance = this;
-            ConnectToServer("127.0.0.1", 8888); //127.0.0.1
+            ConnectToServer("127.0.0.1", 8080); //127.0.0.1
         }
 
         private void OnDestroy()

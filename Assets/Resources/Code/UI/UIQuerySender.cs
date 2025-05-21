@@ -10,7 +10,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
-using VContainer;
 
 public class UIQuerySender : MonoBehaviour
 {
