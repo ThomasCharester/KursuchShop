@@ -10,21 +10,21 @@ namespace Resources.Code
     {
         [Header("Prefabs")] [SerializeField] private AccountElement accountPrefab;
         [SerializeField] private AccountAddElement accountAddPrefab;
-        [SerializeField] private GameElement gamePrefab;
-        [SerializeField] private GameAddElement gameAddPrefab;
-        [SerializeField] private PaymentMethodElement pmPrefab;
-        [SerializeField] private PaymentAddMethod pmAddPrefab;
-        [SerializeField] private SellerElement sellerPrefab;
-        [SerializeField] private SellerAddElement sellerAddPrefab;
+        [SerializeField] private DiseaseElement diseasePrefab;
+        [SerializeField] private DiseaseAddElement diseaseAddPrefab;
+        [SerializeField] private MedicineElement mPrefab;
+        [SerializeField] private MedicineAdd mAddPrefab;
+        [SerializeField] private PlantElement plantPrefab;
+        [SerializeField] private PlantAddElement plantAddPrefab;
         [SerializeField] private AdminKeyElement adminKeyPrefab;
         [SerializeField] private AdminKeyAddElement adminKeyAddPrefab;
-        [SerializeField] private GoodElementAP goodPrefab;
+        [SerializeField] private PlantDiseaseElement goodPrefab;
 
         public void ShowAccounts(String accounts)
         {
-            if (accounts.Length == 0) return;
-
             Clear();
+
+            if (accounts.Length == 0) return;
 
             foreach (var account in accounts.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -46,17 +46,20 @@ namespace Resources.Code
 
             ContinueAccountsEdit();
         }
+
         public void ContinueAccountsEdit() => children.Add(Instantiate(accountAddPrefab, transform));
-        public void ShowGames(String games)
-        {
-            if (games.Length == 0) return;
 
+        public void ShowDiseases(String diseases)
+        {
             Clear();
 
-            foreach (var gameName in games.Split(DataParsingExtension.AdditionalQuerySplitter))
+            if (diseases.Length == 0) return;
+
+            foreach (var disease in diseases.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                GameElement temp = Instantiate(gamePrefab, transform);
-                temp.game.gameName = gameName;
+                DiseaseElement temp = Instantiate(diseasePrefab, transform);
+                temp.Disease.Id = int.Parse(disease.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.Disease.DiseaseName = disease.Split(DataParsingExtension.ValueSplitter)[1];
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
@@ -65,74 +68,78 @@ namespace Resources.Code
             }
         }
 
-        public void StartGamesEdit(String games)
+        public void StartDiseasesEdit(String diseases)
         {
-            ShowGames(games);
+            ShowDiseases(diseases);
 
-            ContinueGamesEdit();
+            ContinueDiseaseEdit();
         }
 
-        public void ContinueGamesEdit() => children.Add(Instantiate(gameAddPrefab, transform));
-        public void ShowPaymentMethods(String paymentMethods)
-        {
-            if (paymentMethods.Length == 0) return;
+        public void ContinueDiseaseEdit() => children.Add(Instantiate(diseaseAddPrefab, transform));
 
+        public void ShowMedicines(String medicines)
+        {
             Clear();
 
-            foreach (var methodName in paymentMethods.Split(DataParsingExtension.AdditionalQuerySplitter))
+            if (medicines.Length == 0) return;
+
+
+            foreach (var medicine in medicines.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                PaymentMethodElement temp = Instantiate(pmPrefab, transform);
-                temp.paymentMethod.methodName = methodName;
+                MedicineElement temp = Instantiate(mPrefab, transform);
+                temp.Medicine.Id = int.Parse(medicine.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.Medicine.MedicineName = medicine.Split(DataParsingExtension.ValueSplitter)[1];
+                temp.Medicine.Concentration = int.Parse(medicine.Split(DataParsingExtension.ValueSplitter)[2]);
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
-                
+
                 children.Add(temp);
             }
         }
 
-        public void StartPaymentMethodsEdit(String methods)
+        public void StartMedicinesEdit(String medicines)
         {
-            ShowPaymentMethods(methods);
+            ShowMedicines(medicines);
 
-            ContinuePaymentMethodsEdit();
+            ContinueMedicinesEdit();
         }
 
-        public void ContinuePaymentMethodsEdit() => children.Add(Instantiate(pmAddPrefab, transform));
+        public void ContinueMedicinesEdit() => children.Add(Instantiate(mAddPrefab, transform));
 
-        public void ShowSellers(String sellers)
+        public void ShowPlants(String plants)
         {
-            if (sellers.Length == 0) return;
-
             Clear();
 
-            foreach (var seller in sellers.Split(DataParsingExtension.AdditionalQuerySplitter))
+            if (plants.Length == 0) return;
+
+            foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                SellerElement temp = Instantiate(sellerPrefab, transform);
-                temp.seller.Name = seller.Split(DataParsingExtension.ValueSplitter)[0];
-                temp.seller.Login = seller.Split(DataParsingExtension.ValueSplitter)[1];
-                temp.seller.Rate = int.Parse(seller.Split(DataParsingExtension.ValueSplitter)[2]);
+                PlantElement temp = Instantiate(plantPrefab, transform);
+                temp.Plant.Id = int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.Plant.PlantName = plant.Split(DataParsingExtension.ValueSplitter)[1];
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
-                
+
                 children.Add(temp);
             }
         }
 
-        public void StartSellersEdit(String accounts)
+        public void StartPlantsEdit(String plants)
         {
-            ShowSellers(accounts);
+            ShowPlants(plants);
 
-            ContinueSellersEdit();
+            ContinuePlantsEdit();
         }
 
-        public void ContinueSellersEdit() => children.Add(Instantiate(sellerAddPrefab, transform));
+        public void ContinuePlantsEdit() => children.Add(Instantiate(plantAddPrefab, transform));
+
         public void ShowAdminKey(String adminKeys)
         {
-            if (adminKeys.Length == 0) return;
-
             Clear();
+
+            if (adminKeys.Length == 0) return;
 
             foreach (var adminKey in adminKeys.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -141,7 +148,7 @@ namespace Resources.Code
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
-                
+
                 children.Add(temp);
             }
         }
@@ -154,18 +161,19 @@ namespace Resources.Code
         }
 
         public void ContinueAdminKeyEdit() => children.Add(Instantiate(adminKeyAddPrefab, transform));
-        public void ShowGoods(String goods)
-        {
-            if (goods.Length == 0) return;
 
+        public void ShowPlantsDiseases(String goods)
+        {
             Clear();
 
-            foreach (var seller in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
+            if (goods.Length == 0) return;
+
+            foreach (var plantDisease in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                GoodElementAP temp = Instantiate(goodPrefab, transform);
-                temp.good.goodName = seller.Split(DataParsingExtension.ValueSplitter)[0];
-                temp.good.sellerName = seller.Split(DataParsingExtension.ValueSplitter)[1];
-                temp.good.gameName = seller.Split(DataParsingExtension.ValueSplitter)[2];
+                PlantDiseaseElement temp = Instantiate(goodPrefab, transform);
+                temp.PlantDisease.PlantId = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.PlantDisease.DiseaseId = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[1]);
+                temp.PlantDisease.Id = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[2]);
 
                 temp.UpdateTextValues();
 

@@ -44,26 +44,17 @@ namespace Resources.Code
                 case UICommandType.ContinueAccountAdding:
                     UIQuerySender.Instance.ContinueAccountsAdding();
                     break;
-                case UICommandType.ContinueGoodsAdding:
+                case UICommandType.ContinuePlantsDiseasesAdding:
                     UIQuerySender.Instance.ContinueGoodsAdding();
                     break;
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
                 case UICommandType.ShowGoodList:
-                    UIQuerySender.Instance.ShowGoods(Value);
+                    // UIQuerySender.Instance.ShowPlantsDiseases(Value);
                     break;
                 case UICommandType.SendGoodsRequest:
                     UIQuerySender.Instance.SendGoodsRequest();
-                    break;
-                case UICommandType.ShowGood:
-                    UIQuerySender.Instance.ShowGood(Value);
-                    break;
-                case UICommandType.ShowGoodEdit:
-                    UIQuerySender.Instance.ShowGoodEdit(Value);
-                    break;
-                case UICommandType.ShowGoodAdd:
-                    UIQuerySender.Instance.ShowGoodAdd();
                     break;
                 case UICommandType.ShowGoodListAP:
                     UIQuerySender.Instance.ShowGoodsAP(Value);
@@ -72,7 +63,7 @@ namespace Resources.Code
                     UIQuerySender.Instance.SendGoodsAPRequest();
                     break;
                 case UICommandType.ShowGoodListEdit:
-                    UIQuerySender.Instance.ShowGoodsEdit(Value);
+                    // UIQuerySender.Instance.ShowGoodsEdit(Value);
                     break;
                 case UICommandType.SendGoodsEditRequest:
                     UIQuerySender.Instance.SendGoodsEditRequest();
@@ -80,35 +71,32 @@ namespace Resources.Code
                 case UICommandType.MakeAdmin:
                     UIQuerySender.Instance.EnterAdminMode();
                     break;
-                case UICommandType.MakeSeller:
-                    UIQuerySender.Instance.EnterSellerMode();
+                case UICommandType.SendDiseasesRequest:
+                    UIQuerySender.Instance.SendDiseasesRequest();
                     break;
-                case UICommandType.SendGamesRequest:
-                    UIQuerySender.Instance.SendGamesRequest();
+                case UICommandType.ShowDiseasesList:
+                    UIQuerySender.Instance.ShowDiseases(Value);
                     break;
-                case UICommandType.ShowGamesList:
-                    UIQuerySender.Instance.ShowGames(Value);
+                case UICommandType.ContinueDiseasesAdding:
+                    UIQuerySender.Instance.ContinueDiseasesAdding();
                     break;
-                case UICommandType.ContinueGamesAdding:
-                    UIQuerySender.Instance.ContinueGamesAdding();
+                case UICommandType.SendMedicineRequest:
+                    UIQuerySender.Instance.SendMedicineRequest();
                     break;
-                case UICommandType.SendPaymentMethodsRequest:
-                    UIQuerySender.Instance.SendPaymentMethodsRequest();
+                case UICommandType.ShowMedicineList:
+                    UIQuerySender.Instance.ShowMedicines(Value);
                     break;
-                case UICommandType.ShowPaymentMethodsList:
-                    UIQuerySender.Instance.ShowPaymentMethods(Value);
+                case UICommandType.ContinueMedicinesAdding:
+                    UIQuerySender.Instance.ContinueMedicinesAdding();
                     break;
-                case UICommandType.ContinuePaymentMethodsAdding:
-                    UIQuerySender.Instance.ContinuePaymentMethods();
+                case UICommandType.SendPlantsRequest:
+                    UIQuerySender.Instance.SendPlantsRequest();
                     break;
-                case UICommandType.SendSellersRequest:
-                    UIQuerySender.Instance.SendSellersRequest();
+                case UICommandType.ShowPlantsList:
+                    UIQuerySender.Instance.ShowPlants(Value);
                     break;
-                case UICommandType.ShowSellersList:
-                    UIQuerySender.Instance.ShowSellers(Value);
-                    break;
-                case UICommandType.ContinueSellersAdding:
-                    UIQuerySender.Instance.ContinueSellersAdding();
+                case UICommandType.ContinuePlantsAdding:
+                    UIQuerySender.Instance.ContinuePlantsAdding();
                     break;
                 case UICommandType.SendAdminKeysRequest:
                     UIQuerySender.Instance.SendAdminKeysRequest();

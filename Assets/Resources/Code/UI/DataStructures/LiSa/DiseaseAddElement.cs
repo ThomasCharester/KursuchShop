@@ -2,34 +2,35 @@ using System;
 using Resources.Code.UI.DataStructures;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class GameAddElement : DataStructureElement
+    public class DiseaseAddElement : DataStructureElement
     {
-        [SerializeField] private TMP_InputField inputFieldGameName;
+        [SerializeField] private TMP_InputField inputFieldDiseaseName;
 
         public String FormOutputValue()
         {
-            if (inputFieldGameName.text == "")
+            if (inputFieldDiseaseName.text == "")
             {
                 UIQuerySender.Instance.AddCommand(new UICommand("Field is empty",
                     UICommandType.ShowException));
             }
 
-            return inputFieldGameName.text.DBReadable();
+            return inputFieldDiseaseName.text.DBReadable();
         }
 
         public void SendAddQuery()
         {
-            if (!inputFieldGameName.enabled) return;
+            if (!inputFieldDiseaseName.enabled) return;
 
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gga;" + FormOutputValue(),
+                $"pda;" + FormOutputValue(),
                 UICommandType.SendQuery));
-            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ContinueGamesAdding));
+            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ContinueDiseasesAdding));
 
-            inputFieldGameName.enabled = false;
+            inputFieldDiseaseName.enabled = false;
         }
     }
 }

@@ -169,9 +169,9 @@ GameObject:
   - component: {fileID: 3620408650435244986}
   - component: {fileID: 768342564992510401}
   - component: {fileID: 8667654621793698384}
-  - component: {fileID: 2536982880467095469}
+  - component: {fileID: 5689811561439740806}
   m_Layer: 5
-  m_Name: GameAddElement
+  m_Name: PlantAddElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ RectTransform:
   m_GameObject: {fileID: 2169146858088920096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2957387206589985022}
@@ -255,7 +255,7 @@ MonoBehaviour:
   animateAlways: 0
   animating: 0
   _targetIndex: 1
---- !u!114 &2536982880467095469
+--- !u!114 &5689811561439740806
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,11 +264,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2169146858088920096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e21789e4fa41acbbe7d90dd1258633, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ab6a284db9741a4ac6e819c992ed2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputFieldGameName: {fileID: 7094357342766635405}
   _uiScaling: {fileID: 8667654621793698384}
+  inputFieldName: {fileID: 7094357342766635405}
 --- !u!1 &3489333235714400066
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2536982880467095469}
-        m_TargetAssemblyTypeName: Resources.Code.DataStructures.LiSa.GameAddElement,
+      - m_Target: {fileID: 5689811561439740806}
+        m_TargetAssemblyTypeName: Resources.Code.DataStructures.LiSa.SellerAddElement,
           Assembly-CSharp
         m_MethodName: SendAddQuery
         m_Mode: 1
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 2092176890271428941}
   - component: {fileID: 7094357342766635405}
   m_Layer: 5
-  m_Name: gameName
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

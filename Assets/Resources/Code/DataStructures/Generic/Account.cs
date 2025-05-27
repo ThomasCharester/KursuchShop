@@ -9,7 +9,6 @@ namespace Resources.Code.DataStructures
         public String Password;
         public String AdminKey = "";
         public bool sv_cheats;
-        public bool IsSeller = false;
 
         public Account(string login = "NAN", string password = "NAN", bool sv_cheats = false)
         {

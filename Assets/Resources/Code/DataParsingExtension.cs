@@ -51,10 +51,13 @@ namespace Resources.Code
                    account.AdminKey.DBReadable();
         }
 
-        public static String GoodToStringS(this Good good)
+        public static String GoodToStringS(this PlantDisease plantDisease)
         {
-            return good.goodName.DBReadable() + ValueSplitter + good.sellerName.DBReadable() + ValueSplitter +
-                   good.gameName.DBReadable();
+            return plantDisease.PlantId.ToString() 
+                   + ValueSplitter 
+                   + plantDisease.DiseaseId.ToString() 
+                   + ValueSplitter 
+                   + plantDisease.Id.ToString();
         }
 
         public static String DBReadable(this String str)
@@ -62,31 +65,9 @@ namespace Resources.Code
             return '\'' + str + '\'';
         }
 
-        public static String SellerToString(this Seller seller)
+        public static String PlantToString(this Plant plant)
         {
-            return seller.Name.DBReadable() + ValueSplitter + seller.Login.DBReadable() + ValueSplitter + seller.Rate;
-        }
-
-        public static String GoodToString(this Good good)
-        {
-            return good.goodName.DBReadable() + ValueSplitter
-                                              + good.sellerName.DBReadable() + ValueSplitter
-                                              + good.gameName.DBReadable() + ValueSplitter
-                                              + good.description.DBReadable() + ValueSplitter
-                                              + good.paymentMethod.DBReadable() + ValueSplitter
-                                              + good.price + ValueSplitter
-                                              + good.stock;
-        }
-        public static void StringToGood(this Good good, string goodStr)
-        {
-            var values = goodStr.Split(ValueSplitter);
-            good.goodName = values[0];
-            good.sellerName = values[1];
-            good.gameName = values[2];
-            good.description = values[3];
-            good.paymentMethod = values[4];
-            good.price = int.Parse(values[5]);
-            good.stock = int.Parse(values[6]);
+            return plant.PlantName.DBReadable();
         }
     }
 }

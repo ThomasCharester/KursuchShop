@@ -2,21 +2,24 @@ using System;
 using Resources.Code.UI.DataStructures;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class GameElement : DataStructureElement
+    public class DiseaseElement : DataStructureElement
     {
-        public Game game = new();
+        public Disease Disease = new();
         [SerializeField] private GameObject inputPanel;
         [SerializeField] private GameObject outputPanel;
 
-        [SerializeField] private TMP_InputField inputFieldGameName;
-        [SerializeField] private TMP_Text textGameName;
+        [SerializeField] private TMP_InputField inputFieldDiseaseName;
+        [SerializeField] private TMP_Text textDiseaseName;
+        [SerializeField] private TMP_Text id;
 
         public void UpdateTextValues()
         {
-            textGameName.text = game.gameName;
+            textDiseaseName.text = Disease.DiseaseName;
+            id.text = Disease.Id.ToString();
         }
 
         public void ToggleEditMode(bool edit)
@@ -26,20 +29,20 @@ namespace Resources.Code.DataStructures.LiSa
         }
         public String FormOutputValue()
         {
-            return (inputFieldGameName.text == "" ? game.gameName : inputFieldGameName.text).DBReadable();
+            return (inputFieldDiseaseName.text == "" ? Disease.DiseaseName : inputFieldDiseaseName.text).DBReadable();
         }
 
         public void SendModifyQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"ggm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + game.gameName.DBReadable(),
+                $"pdm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + Disease.DiseaseName.DBReadable(),
                 UICommandType.SendQuery));
         }
 
         public void SendDeleteQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"ggd;" + game.gameName.DBReadable(),
+                $"pdd;" + Disease.Id,
                 UICommandType.SendQuery));
         }
     }

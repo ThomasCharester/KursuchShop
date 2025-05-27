@@ -169,9 +169,9 @@ GameObject:
   - component: {fileID: 3620408650435244986}
   - component: {fileID: 768342564992510401}
   - component: {fileID: 8667654621793698384}
-  - component: {fileID: 3588914857806349708}
+  - component: {fileID: 2536982880467095469}
   m_Layer: 5
-  m_Name: AdminKeyAddElement
+  m_Name: DiseaseAddElement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   animateAlways: 0
   animating: 0
   _targetIndex: 1
---- !u!114 &3588914857806349708
+--- !u!114 &2536982880467095469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,11 +264,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2169146858088920096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c063703104a942d4a6986adeff0fa053, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e21789e4fa41acbbe7d90dd1258633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _uiScaling: {fileID: 8667654621793698384}
-  inputFieldAdminKey: {fileID: 7094357342766635405}
+  inputFieldDiseaseName: {fileID: 7094357342766635405}
 --- !u!1 &3489333235714400066
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3588914857806349708}
-        m_TargetAssemblyTypeName: Resources.Code.DataStructures.AdminKeyAddElement,
+      - m_Target: {fileID: 2536982880467095469}
+        m_TargetAssemblyTypeName: Resources.Code.DataStructures.LiSa.GameAddElement,
           Assembly-CSharp
         m_MethodName: SendAddQuery
         m_Mode: 1
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 2092176890271428941}
   - component: {fileID: 7094357342766635405}
   m_Layer: 5
-  m_Name: adminKey
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

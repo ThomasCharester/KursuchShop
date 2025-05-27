@@ -4,7 +4,6 @@ using Resources.Code;
 using Resources.Code.DataStructures;
 using Resources.Code.DataStructures.LiSa;
 using Resources.Code.Panels;
-using Resources.Code.UI.Panels;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,7 +19,6 @@ public class UIQuerySender : MonoBehaviour
     [SerializeField] private AccountPanel accountPanel;
     [SerializeField] private AdminPanel adminPanel;
     [SerializeField] private SellerPanel sellerPanel;
-    [SerializeField] private GoodPanel goodPanel;
 
     [Header("Misc")] [SerializeField] private SimpleTCPClient client;
 
@@ -130,9 +128,9 @@ public class UIQuerySender : MonoBehaviour
     }
 
     public void ContinueAccountsAdding() => adminPanel.verticalContainer.ContinueAccountsEdit();
-    public void ContinueGamesAdding() => adminPanel.verticalContainer.ContinueGamesEdit();
-    public void ContinuePaymentMethods() => adminPanel.verticalContainer.ContinuePaymentMethodsEdit();
-    public void ContinueSellersAdding() => adminPanel.verticalContainer.ContinueSellersEdit();
+    public void ContinueDiseasesAdding() => adminPanel.verticalContainer.ContinueDiseaseEdit();
+    public void ContinueMedicinesAdding() => adminPanel.verticalContainer.ContinueMedicinesEdit();
+    public void ContinuePlantsAdding() => adminPanel.verticalContainer.ContinuePlantsEdit();
     public void ContinueAdminKeyAdding() => adminPanel.verticalContainer.ContinueAdminKeyEdit();
 
     public void ContinueGoodsAdding()
@@ -140,62 +138,25 @@ public class UIQuerySender : MonoBehaviour
         // Скрыть панель редактирования + обновить список товаров
     }
 
-    public void ShowGoods(String goods) => goodsPanel.gridContainer.ShowGoods(goods);
-    public void ShowGood(String goodStr)
-    {
-        goodPanel.good.StringToGood(goodStr);
-        goodPanel.ToggleEditMode(false);
-        goodPanel.UpdateTextValues();
-        goodPanel.Show();
-    }
-    public void ShowGoodEdit(String goodStr)
-    {
-        goodPanel.good.StringToGood(goodStr);
-        goodPanel.ToggleEditMode(true);
-        goodPanel.AddMode = false;
-        goodPanel.UpdateInputFieldsValues();
-        goodPanel.Show();
-    }
-    public void ShowGood(Good good)
-    {
-        goodPanel.good = good;
-        goodPanel.ToggleEditMode(false);
-        goodPanel.Show();
-        goodPanel.UpdateTextValues();
-    }
-    public void ShowGoodEdit(Good good)
-    {
-        goodPanel.good = good;
-        goodPanel.ToggleEditMode(true);
-        goodPanel.AddMode = false;
-        goodPanel.Show();
-        goodPanel.UpdateInputFieldsValues();
-    }
-    public void ShowGoodAdd()
-    {
-        goodPanel.ToggleEditMode(true);
-        goodPanel.AddMode = true;
-        goodPanel.Show();
-    }
-    public void ShowGoodsAP(String goods) => adminPanel.verticalContainer.ShowGoods(goods);
-    public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);
+    // public void ShowPlantsDiseases(String goods) => goodsPanel.gridContainer.ShowPlantsDiseases(goods);
+    public void ShowGoodsAP(String goods) => adminPanel.verticalContainer.ShowPlantsDiseases(goods);
+    // public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);
     public void ShowAccounts(String accounts) => adminPanel.verticalContainer.StartAccountsEdit(accounts);
-    public void ShowGames(String games) => adminPanel.verticalContainer.StartGamesEdit(games);
-    public void ShowSellers(String games) => adminPanel.verticalContainer.StartSellersEdit(games);
-    public void ShowPaymentMethods(String games) => adminPanel.verticalContainer.StartPaymentMethodsEdit(games);
+    public void ShowDiseases(String games) => adminPanel.verticalContainer.StartDiseasesEdit(games);
+    public void ShowPlants(String games) => adminPanel.verticalContainer.StartPlantsEdit(games);
+    public void ShowMedicines(String games) => adminPanel.verticalContainer.StartMedicinesEdit(games);
     public void ShowAdminKeys(String adminKeys) => adminPanel.verticalContainer.StartAdminKey(adminKeys);
     public void EnterAdminMode() => controlPanel.ToggleAdminMenu(true);
-    public void EnterSellerMode() => controlPanel.ToggleSellerMenu(true);
 
-    public void SendGamesRequest() => AddCommand(new UICommand("ggl;", UICommandType.SendQuery));
+    public void SendDiseasesRequest() => AddCommand(new UICommand("pdl;", UICommandType.SendQuery));
     public void SendGoodsRequest() => AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
     public void SendGoodsAPRequest() => AddCommand(new UICommand("gtpl;", UICommandType.SendQuery));
 
     public void SendGoodsEditRequest() =>
-        AddCommand(new UICommand("gtsl;" + UserSessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
+        AddCommand(new UICommand("gtsl;" + SessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
 
-    public void SendSellersRequest() => AddCommand(new UICommand("gsl;", UICommandType.SendQuery));
+    public void SendMedicineRequest() => AddCommand(new UICommand("pml;", UICommandType.SendQuery));
+    public void SendPlantsRequest() => AddCommand(new UICommand("ppl;", UICommandType.SendQuery));
     public void SendAccountsRequest() => AddCommand(new UICommand("al;", UICommandType.SendQuery));
-    public void SendPaymentMethodsRequest() => AddCommand(new UICommand("gpl;", UICommandType.SendQuery));
     public void SendAdminKeysRequest() => AddCommand(new UICommand("akl;", UICommandType.SendQuery));
 }

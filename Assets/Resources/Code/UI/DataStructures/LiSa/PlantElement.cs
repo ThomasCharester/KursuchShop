@@ -6,41 +6,44 @@ using UnityEngine.Serialization;
 
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class PaymentMethodElement: DataStructureElement
+    public class PlantElement: DataStructureElement
     {
-        public PaymentMethod paymentMethod = new();
+        public Plant Plant = new();
         [SerializeField] private GameObject inputPanel;
         [SerializeField] private GameObject outputPanel;
 
-        [SerializeField] private TMP_InputField inputFieldMethodName;
-        [SerializeField] private TMP_Text textMethodName;
+        [SerializeField] private TMP_InputField inputFieldName;
 
-        public void UpdateTextValues()
-        {
-            textMethodName.text = paymentMethod.methodName;
-        }
-
+        [SerializeField] private TMP_Text textName;
+        [SerializeField] private TMP_Text id;
+        
         public void ToggleEditMode(bool edit)
         {
             inputPanel.SetActive(edit);
             outputPanel.SetActive(!edit);
         }
+
+        public void UpdateTextValues()
+        {
+            textName.text = Plant.PlantName;
+            id.text = Plant.Id.ToString();
+        }
+        
         public String FormOutputValue()
         {
-            return (inputFieldMethodName.text == "" ? paymentMethod.methodName : inputFieldMethodName.text).DBReadable();
+            return (inputFieldName.text == "" ? Plant.PlantName : inputFieldName.text).DBReadable();
         }
 
         public void SendModifyQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gpm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + paymentMethod.methodName.DBReadable(),
+                $"ppm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + Plant.PlantToString(),
                 UICommandType.SendQuery));
         }
-
         public void SendDeleteQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gpd;" + paymentMethod.methodName.DBReadable(),
+                $"ppd;" + Plant.Id,
                 UICommandType.SendQuery));
         }
     }
