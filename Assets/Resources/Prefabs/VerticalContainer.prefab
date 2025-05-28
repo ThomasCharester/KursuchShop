@@ -99,7 +99,12 @@ MonoBehaviour:
   plantAddPrefab: {fileID: 5689811561439740806, guid: 9d705534a7332a74d8627e820990f692, type: 3}
   adminKeyPrefab: {fileID: 4767694376127882309, guid: 4efbfffb1738b854c9a22df0dc3105b7, type: 3}
   adminKeyAddPrefab: {fileID: 3588914857806349708, guid: 14053c9193f0f034780176a4b4ab75ea, type: 3}
-  goodPrefab: {fileID: 8684661860063686716, guid: 9cf97126df0d2e54ab58069c00a6ef41, type: 3}
+  pdPrefab: {fileID: 8684661860063686716, guid: 9cf97126df0d2e54ab58069c00a6ef41, type: 3}
+  pdaPrefab: {fileID: 3381932893434569121, guid: c494eb76ff2b6774792200b2f88f429e, type: 3}
+  pmPrefab: {fileID: 5378262562679709912, guid: c3048fb78a9e4da4d9df976c7df987f4, type: 3}
+  pmaPrefab: {fileID: 3639452379922877270, guid: 017b6edf3009eb643bea067ebbc2ed74, type: 3}
+  mdPrefab: {fileID: 742617414193124038, guid: 09fa686f083e65a48a33902dcd00b761, type: 3}
+  mdaPrefab: {fileID: 744940045813419616, guid: 0b86f5261d7d55c4b8367d2d340d9fd8, type: 3}
 --- !u!114 &1045802624487583746
 MonoBehaviour:
   m_ObjectHideFlags: 0

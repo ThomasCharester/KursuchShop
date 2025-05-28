@@ -18,7 +18,12 @@ namespace Resources.Code
         [SerializeField] private PlantAddElement plantAddPrefab;
         [SerializeField] private AdminKeyElement adminKeyPrefab;
         [SerializeField] private AdminKeyAddElement adminKeyAddPrefab;
-        [SerializeField] private PlantDiseaseElement goodPrefab;
+        [SerializeField] private PlantDiseaseElement pdPrefab;
+        [SerializeField] private PlantDiseaseAddElement pdaPrefab;
+        [SerializeField] private PlantMedicineElement pmPrefab;
+        [SerializeField] private PlantMedicineAddElement pmaPrefab;
+        [SerializeField] private MedicineDiseaseElement mdPrefab;
+        [SerializeField] private MedicineDiseaseAddElement mdaPrefab;
 
         public void ShowAccounts(String accounts)
         {
@@ -170,15 +175,78 @@ namespace Resources.Code
 
             foreach (var plantDisease in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
-                PlantDiseaseElement temp = Instantiate(goodPrefab, transform);
+                PlantDiseaseElement temp = Instantiate(pdPrefab, transform);
                 temp.PlantDisease.PlantId = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[0]);
                 temp.PlantDisease.DiseaseId = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[1]);
-                temp.PlantDisease.Id = int.Parse(plantDisease.Split(DataParsingExtension.ValueSplitter)[2]);
 
                 temp.UpdateTextValues();
 
                 children.Add(temp);
             }
         }
+
+        public void StartPlantsDiseasesEdit(String plantsDiseases)
+        {
+            ShowPlantsDiseases(plantsDiseases);
+
+            ContinuePlantsDiseasesEdit();
+        }
+
+        public void ContinuePlantsDiseasesEdit() => children.Add(Instantiate(pdaPrefab, transform));
+        public void ShowPlantsMedicines(String medicine)
+        {
+            Clear();
+
+            if (medicine.Length == 0) return;
+            
+            foreach (var plantMedicine in medicine.Split(DataParsingExtension.AdditionalQuerySplitter))
+            {
+                PlantMedicineElement temp = Instantiate(pmPrefab, transform);
+                temp.PlantMedicine.PlantId = int.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.PlantMedicine.MedicineId = int.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[1]);
+
+                temp.UpdateTextValues();
+
+                children.Add(temp);
+            }
+        }
+
+        public void StartPlantsMedicinesEdit(String plantsMedicines)
+        {
+            ShowPlantsMedicines(plantsMedicines);
+
+            ContinuePlantsMedicinesEdit();
+        }
+
+        public void ContinuePlantsMedicinesEdit() => children.Add(Instantiate(pmaPrefab, transform));
+        public void ShowMedicinesDiseases(String medicine)
+        {
+            Clear();
+
+            if (medicine.Length == 0) return;
+            
+            foreach (var plantMedicine in medicine.Split(DataParsingExtension.AdditionalQuerySplitter))
+            {
+                MedicineDiseaseElement temp = Instantiate(mdPrefab, transform);
+                temp.MedicineDisease.DiseaseId = int.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[0]);
+                temp.MedicineDisease.MedicineId = int.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[1]);
+                temp.MedicineDisease.MinDosage = float.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[2]);
+                temp.MedicineDisease.MaxDosage = float.Parse(plantMedicine.Split(DataParsingExtension.ValueSplitter)[3]);
+
+                temp.UpdateTextValues();
+
+                children.Add(temp);
+            }
+        }
+
+        public void StartMedicinesDiseasesEdit(String medicinesDiseases)
+        {
+            ShowMedicinesDiseases(medicinesDiseases);
+
+            ContinueMedicinesDiseasesEdit();
+        }
+
+        public void ContinueMedicinesDiseasesEdit() => children.Add(Instantiate(mdaPrefab, transform));
+
     }
 }

@@ -1,10 +1,8 @@
-﻿using System;
-
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class PlantDisease
+    public struct PlantMedicine
     {
         public int PlantId;
-        public int DiseaseId;
+        public int MedicineId;
     }
 }

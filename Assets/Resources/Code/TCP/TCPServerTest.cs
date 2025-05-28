@@ -128,26 +128,29 @@ namespace Resources.Code
                                         case 'a':
                                             SessionService.UserAccount.sv_cheats = true;
 
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
                                             UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.MakeAdmin));
                                             break;
                                         case 'v':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
                                             break;
                                         case 's':
                                             SessionService.SetAccount(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
                                                     .StringSToAccount());
-                                            
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ActivateShop));
+
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.ActivateShop));
                                             break;
                                     }
 
                                     break;
                                 case 't':
                                 {
-                                    
                                     switch (queryType[2])
                                     {
                                         case 'd':
@@ -172,7 +175,8 @@ namespace Resources.Code
                                     UIQuerySender.Instance.AddCommand(new UICommand(
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowDiseasesList));
-                                    SessionService.UpdateDiseases(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    SessionService.UpdateDiseases(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                     break;
                                 case 'a':
                                     UIQuerySender.Instance.AddCommand(new UICommand(
@@ -180,16 +184,52 @@ namespace Resources.Code
                                         UICommandType.ShowAccountList));
                                     break;
                                 case 'm':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(
-                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                        UICommandType.ShowMedicineList));
-                                    SessionService.UpdateMedicines(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    if (queryType.Length < 3)
+                                    {
+                                        UIQuerySender.Instance.AddCommand(new UICommand(
+                                            receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                            UICommandType.ShowMedicineList));
+                                        SessionService.UpdateMedicines(
+                                            receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    }
+                                    else
+                                        switch (queryType[2])
+                                        {
+                                            case 'd':
+                                                UIQuerySender.Instance.AddCommand(new UICommand(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                    UICommandType.ShowMedicinesDiseasesList));
+                                                break;
+                                            case 'm':
+                                                UIQuerySender.Instance.AddCommand(new UICommand(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                    UICommandType.ShowPlantsMedicinesList));
+                                                break;
+                                        }
                                     break;
                                 case 'p':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(
-                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
-                                        UICommandType.ShowPlantsList));
-                                    SessionService.UpdatePlants(receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    if (queryType.Length < 3)
+                                    {
+                                        UIQuerySender.Instance.AddCommand(new UICommand(
+                                            receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                            UICommandType.ShowPlantsList));
+                                        SessionService.UpdatePlants(
+                                            receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    }
+                                    else
+                                        switch (queryType[2])
+                                        {
+                                            case 'd':
+                                                UIQuerySender.Instance.AddCommand(new UICommand(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                    UICommandType.ShowPlantsDiseasesList));
+                                                break;
+                                            case 'm':
+                                                UIQuerySender.Instance.AddCommand(new UICommand(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
+                                                    UICommandType.ShowPlantsMedicinesList));
+                                                break;
+                                        }
                                     break;
                                 case 'k':
                                     UIQuerySender.Instance.AddCommand(new UICommand(
@@ -233,11 +273,7 @@ namespace Resources.Code
                                     UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.RefreshAccountInfo));
                                     break;
                                 case 'm':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAccountRequest));
-                                    break;
                                 case 'a':
-                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAccountRequest));
-                                    break;
                                 case 'd':
                                     UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAccountRequest));
                                     break;
@@ -245,15 +281,13 @@ namespace Resources.Code
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
-                                            break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
-                                            break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendAdminKeysRequest));
                                             break;
                                     }
+
                                     break;
                             }
 
@@ -265,79 +299,140 @@ namespace Resources.Code
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendDiseasesRequest));
-                                            break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendDiseasesRequest));
-                                            break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendDiseasesRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendDiseasesRequest));
                                             break;
                                     }
+
                                     break;
                                 case 'm':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendMedicineRequest));
+                                            if (queryType.Length == 3)
+                                                UIQuerySender.Instance.AddCommand(
+                                                    new UICommand(UICommandType.SendMedicineRequest));
+                                            else
+                                                switch (queryType[3])
+                                                {
+                                                    case 'm':
+                                                    case 'a':
+                                                    case 'd':
+                                                        UIQuerySender.Instance.AddCommand(
+                                                            new UICommand(UICommandType.SendMedicinesDiseasesRequest));
+                                                        break;
+                                                }
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendMedicineRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendMedicineRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendMedicineRequest));
+                                            if (queryType.Length == 3)
+                                                UIQuerySender.Instance.AddCommand(
+                                                    new UICommand(UICommandType.SendMedicineRequest));
+                                            else
+                                                switch (queryType[3])
+                                                {
+                                                    case 'm':
+                                                    case 'a':
+                                                    case 'd':
+                                                        UIQuerySender.Instance.AddCommand(
+                                                            new UICommand(UICommandType.SendMedicinesDiseasesRequest));
+                                                        break;
+                                                }
                                             break;
                                     }
+
                                     break;
                                 case 'p':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPlantsRequest));
+                                            if (queryType.Length == 3)
+                                                UIQuerySender.Instance.AddCommand(
+                                                    new UICommand(UICommandType.SendPlantsRequest));
+                                            else
+                                                switch (queryType[3])
+                                                {
+                                                    case 'm':
+                                                    case 'a':
+                                                    case 'd':
+                                                        UIQuerySender.Instance.AddCommand(
+                                                            new UICommand(UICommandType.SendPlantsMedicinesRequest));
+                                                        break;
+                                                }
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPlantsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendPlantsRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPlantsRequest));
+                                            if (queryType.Length == 3)
+                                                UIQuerySender.Instance.AddCommand(
+                                                    new UICommand(UICommandType.SendPlantsRequest));
+                                            else
+                                                switch (queryType[3])
+                                                {
+                                                    case 'm':
+                                                    case 'a':
+                                                    case 'd':
+                                                        UIQuerySender.Instance.AddCommand(
+                                                            new UICommand(UICommandType.SendPlantsDiseasesRequest));
+                                                        break;
+                                                }
+
                                             break;
                                     }
+
                                     break;
                                 case 't':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'p':
                                             switch (queryType[3])
                                             {
                                                 case 'd':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsAPRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsAPRequest));
                                                     break;
                                             }
+
                                             break;
                                         case 's':
                                             switch (queryType[3])
                                             {
                                                 case 'd':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                                 case 'm':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                                 case 'a':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                             }
+
                                             break;
                                     }
+
                                     break;
                             }
 

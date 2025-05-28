@@ -6,7 +6,7 @@ namespace Resources.Code.UI.DataStructures
     {
         [SerializeField] public UIScaling _uiScaling;
         
-        private void Start()
+        protected void Start()
         {
             _uiScaling.StartAnimation();
         }

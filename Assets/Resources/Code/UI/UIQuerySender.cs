@@ -131,6 +131,9 @@ public class UIQuerySender : MonoBehaviour
     public void ContinueDiseasesAdding() => adminPanel.verticalContainer.ContinueDiseaseEdit();
     public void ContinueMedicinesAdding() => adminPanel.verticalContainer.ContinueMedicinesEdit();
     public void ContinuePlantsAdding() => adminPanel.verticalContainer.ContinuePlantsEdit();
+    public void ContinuePlantsDiseasesAdding() => adminPanel.verticalContainer.ContinuePlantsDiseasesEdit();
+    public void ContinuePlantsMedicinesAdding() => adminPanel.verticalContainer.ContinuePlantsMedicinesEdit();
+    public void ContinueMedicinesDiseasesAdding() => adminPanel.verticalContainer.ContinueMedicinesDiseasesEdit();
     public void ContinueAdminKeyAdding() => adminPanel.verticalContainer.ContinueAdminKeyEdit();
 
     public void ContinueGoodsAdding()
@@ -139,15 +142,22 @@ public class UIQuerySender : MonoBehaviour
     }
 
     // public void ShowPlantsDiseases(String goods) => goodsPanel.gridContainer.ShowPlantsDiseases(goods);
-    public void ShowGoodsAP(String goods) => adminPanel.verticalContainer.ShowPlantsDiseases(goods);
+    public void ShowGoodsAP(String plantsDiseases) =>
+        adminPanel.verticalContainer.StartPlantsDiseasesEdit(plantsDiseases);
     // public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);
     public void ShowAccounts(String accounts) => adminPanel.verticalContainer.StartAccountsEdit(accounts);
     public void ShowDiseases(String games) => adminPanel.verticalContainer.StartDiseasesEdit(games);
+    public void ShowPlantsDiseases(String plantsDiseases) => adminPanel.verticalContainer.StartPlantsDiseasesEdit(plantsDiseases);
+    public void ShowPlantsMedicines(String plantsDiseases) => adminPanel.verticalContainer.StartPlantsMedicinesEdit(plantsDiseases);
+    public void ShowMedicinesDiseases(String medicineDiseases) => adminPanel.verticalContainer.StartMedicinesDiseasesEdit(medicineDiseases);
     public void ShowPlants(String games) => adminPanel.verticalContainer.StartPlantsEdit(games);
     public void ShowMedicines(String games) => adminPanel.verticalContainer.StartMedicinesEdit(games);
     public void ShowAdminKeys(String adminKeys) => adminPanel.verticalContainer.StartAdminKey(adminKeys);
     public void EnterAdminMode() => controlPanel.ToggleAdminMenu(true);
 
+    public void SendPlantsDiseasesRequest() => AddCommand(new UICommand("ppdl;", UICommandType.SendQuery));
+    public void SendPlantsMedicinesRequest() => AddCommand(new UICommand("ppml;", UICommandType.SendQuery));
+    public void SendMedicinesDiseasesRequest() => AddCommand(new UICommand("pmdl;", UICommandType.SendQuery));
     public void SendDiseasesRequest() => AddCommand(new UICommand("pdl;", UICommandType.SendQuery));
     public void SendGoodsRequest() => AddCommand(new UICommand("gtl;", UICommandType.SendQuery));
     public void SendGoodsAPRequest() => AddCommand(new UICommand("gtpl;", UICommandType.SendQuery));

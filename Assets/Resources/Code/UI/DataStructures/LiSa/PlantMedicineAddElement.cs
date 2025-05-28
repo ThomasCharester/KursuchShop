@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Resources.Code.UI.DataStructures;
 using TMPro;
@@ -7,18 +7,18 @@ using UnityEngine.Serialization;
 
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class PlantDiseaseAddElement : DataStructureElement
+    public class PlantMedicineAddElement: DataStructureElement
     {
         [SerializeField] private TMP_Dropdown dropdownPlantName;
-        [SerializeField] private TMP_Dropdown dropdownDiseaseName;
+        [SerializeField] private TMP_Dropdown dropdownMedicineName;
 
         public void Start()
         {
             base.Start();
             dropdownPlantName.AddOptions(SessionService.Plants.Select(x => x.PlantName).ToList());
             dropdownPlantName.RefreshShownValue();
-            dropdownDiseaseName.AddOptions(SessionService.Diseases.Select(x => x.DiseaseName).ToList());
-            dropdownDiseaseName.RefreshShownValue();
+            dropdownMedicineName.AddOptions(SessionService.Medicines.Select(x => x.MedicineName).ToList());
+            dropdownMedicineName.RefreshShownValue();
         }
 
         public String FormOutputValue()
@@ -30,7 +30,7 @@ namespace Resources.Code.DataStructures.LiSa
             // }
 
             return dropdownPlantName.value.ToString() + DataParsingExtension.ValueSplitter +
-                   dropdownDiseaseName.value.ToString();
+                   dropdownMedicineName.value.ToString();
         }
 
         public void SendAddQuery()
@@ -38,12 +38,12 @@ namespace Resources.Code.DataStructures.LiSa
             if (!dropdownPlantName.enabled) return;
 
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"ppda;" + FormOutputValue(),
+                $"ppma;" + FormOutputValue(),
                 UICommandType.SendQuery));
-            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ContinuePlantsDiseasesAdding));
+            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ContinuePlantsMedicinesAdding));
 
             dropdownPlantName.enabled = false;
-            dropdownDiseaseName.enabled = false;
+            dropdownMedicineName.enabled = false;
         }
     }
 }

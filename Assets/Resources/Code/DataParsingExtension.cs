@@ -51,13 +51,23 @@ namespace Resources.Code
                    account.AdminKey.DBReadable();
         }
 
-        public static String GoodToStringS(this PlantDisease plantDisease)
+        public static String PlantDiseaseToString(this PlantDisease plantDisease)
         {
             return plantDisease.PlantId.ToString() 
                    + ValueSplitter 
-                   + plantDisease.DiseaseId.ToString() 
+                   + plantDisease.DiseaseId.ToString();
+        }
+        public static String PlantMedicineToString(this PlantMedicine plantMedicine)
+        {
+            return plantMedicine.PlantId.ToString() 
                    + ValueSplitter 
-                   + plantDisease.Id.ToString();
+                   + plantMedicine.MedicineId.ToString();
+        }
+        public static String MedicineDiseaseToStringS(this MedicineDisease medicineDisease)
+        {
+            return medicineDisease.DiseaseId.ToString()
+                   + ValueSplitter
+                   + medicineDisease.MedicineId.ToString() ;
         }
 
         public static String DBReadable(this String str)

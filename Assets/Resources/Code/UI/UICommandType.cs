@@ -30,6 +30,14 @@ namespace Resources.Code
         ShowGoodListAP,
         SendGoodsEditRequest,
         ShowGoodListEdit,
-        ContinuePlantsDiseasesAdding
+        SendPlantsDiseasesRequest,
+        ShowPlantsDiseasesList,
+        ContinuePlantsDiseasesAdding,
+        SendPlantsMedicinesRequest,
+        ShowPlantsMedicinesList,
+        ContinuePlantsMedicinesAdding,
+        SendMedicinesDiseasesRequest,
+        ShowMedicinesDiseasesList,
+        ContinueMedicinesDiseasesAdding
     }
 }

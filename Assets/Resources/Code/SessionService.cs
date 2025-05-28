@@ -14,6 +14,7 @@ namespace Resources.Code
         {
             _plants.Clear();
 
+            _plants.Add(new Plant(0,""));
             if (plants.Length != 0)
                 foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
                     _plants.Add(new Plant(int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]),
@@ -28,6 +29,7 @@ namespace Resources.Code
         {
             _diseases.Clear();
 
+            _diseases.Add(new Disease(0,""));
             if (diseases.Length != 0)
                 foreach (var disease in diseases.Split(DataParsingExtension.AdditionalQuerySplitter))
                     _diseases.Add(new Disease(int.Parse(disease.Split(DataParsingExtension.ValueSplitter)[0]),
@@ -43,6 +45,7 @@ namespace Resources.Code
         {
             _medicines.Clear();
 
+            _medicines.Add(new Medicine(0,"",0));
             if (medicines.Length != 0)
                 foreach (var medicine in medicines.Split(DataParsingExtension.AdditionalQuerySplitter))
                     _medicines.Add(new Medicine(int.Parse(medicine.Split(DataParsingExtension.ValueSplitter)[0]),

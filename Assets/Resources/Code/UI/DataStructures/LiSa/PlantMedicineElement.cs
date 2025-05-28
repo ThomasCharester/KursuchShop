@@ -1,4 +1,3 @@
-using System;
 using Resources.Code.UI.DataStructures;
 using TMPro;
 using UnityEngine;
@@ -6,23 +5,23 @@ using UnityEngine.Serialization;
 
 namespace Resources.Code.DataStructures.LiSa
 {
-    public class PlantDiseaseElement: DataStructureElement
+    public class PlantMedicineElement: DataStructureElement
     {
-        public PlantDisease PlantDisease = new();
+        public PlantMedicine PlantMedicine = new();
 
         [SerializeField] private TMP_Text plantName;
-        [SerializeField] private TMP_Text diseaseName;
+        [SerializeField] private TMP_Text medicineName;
 
         public void UpdateTextValues()
         {
-            plantName.text = SessionService.Plants[PlantDisease.PlantId].PlantName;
-            diseaseName.text = SessionService.Diseases[PlantDisease.DiseaseId].DiseaseName;
+            plantName.text = SessionService.Plants[PlantMedicine.PlantId].PlantName;
+            medicineName.text = SessionService.Medicines[PlantMedicine.MedicineId].MedicineName;
         }
         
         public void SendDeleteQuery()
         {
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"ppdd;" + PlantDisease.PlantDiseaseToString(),
+                $"ppmd;" + PlantMedicine.PlantMedicineToString(),
                 UICommandType.SendQuery));
         }
     }

@@ -44,9 +44,6 @@ namespace Resources.Code
                 case UICommandType.ContinueAccountAdding:
                     UIQuerySender.Instance.ContinueAccountsAdding();
                     break;
-                case UICommandType.ContinuePlantsDiseasesAdding:
-                    UIQuerySender.Instance.ContinueGoodsAdding();
-                    break;
                 case UICommandType.SendQuery:
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
@@ -106,6 +103,33 @@ namespace Resources.Code
                     break;
                 case UICommandType.ContinueAdminKeysAdding:
                     UIQuerySender.Instance.ContinueAdminKeyAdding();
+                    break;
+                case UICommandType.SendPlantsDiseasesRequest:
+                    UIQuerySender.Instance.SendPlantsDiseasesRequest();
+                    break;
+                case UICommandType.ShowPlantsDiseasesList:
+                    UIQuerySender.Instance.ShowPlantsDiseases(Value);
+                    break;
+                case UICommandType.ContinuePlantsDiseasesAdding:
+                    UIQuerySender.Instance.ContinuePlantsDiseasesAdding();
+                    break;
+                case UICommandType.SendPlantsMedicinesRequest:
+                    UIQuerySender.Instance.SendPlantsMedicinesRequest();
+                    break;
+                case UICommandType.ShowPlantsMedicinesList:
+                    UIQuerySender.Instance.ShowPlantsMedicines(Value);
+                    break;
+                case UICommandType.ContinuePlantsMedicinesAdding:
+                    UIQuerySender.Instance.ContinuePlantsMedicinesAdding();
+                    break;
+                case UICommandType.SendMedicinesDiseasesRequest:
+                    UIQuerySender.Instance.SendMedicinesDiseasesRequest();
+                    break;
+                case UICommandType.ShowMedicinesDiseasesList:
+                    UIQuerySender.Instance.ShowMedicinesDiseases(Value);
+                    break;
+                case UICommandType.ContinueMedicinesDiseasesAdding:
+                    UIQuerySender.Instance.ContinueMedicinesDiseasesAdding();
                     break;
             }
         }
