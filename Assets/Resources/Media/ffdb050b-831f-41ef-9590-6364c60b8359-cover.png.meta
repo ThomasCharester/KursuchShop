@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9720a0b150f1c974daf8a65cb5eaa2a5
+guid: 8279f9c6994e96c41bf6a206b95ddff0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8907840165580800249
-    second: gator_0
+      213: 524096729006069672
+    second: ffdb050b-831f-41ef-9590-6364c60b8359-cover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gator_0
+      name: ffdb050b-831f-41ef-9590-6364c60b8359-cover_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 220
-        height: 209
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9f086615f610f9b70800000000000000
-      internalID: 8907840165580800249
+      spriteID: a8b41810a22ac4d44a6dc3b0f11ce452
+      internalID: 863259811
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 30c7a15b51869ad458e0b66b323c4fc8
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gator_0: 8907840165580800249
+      ffdb050b-831f-41ef-9590-6364c60b8359-cover_0: 863259811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
