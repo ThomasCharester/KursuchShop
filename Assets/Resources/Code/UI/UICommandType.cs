@@ -38,6 +38,9 @@ namespace Resources.Code
         ContinuePlantsMedicinesAdding,
         SendMedicinesDiseasesRequest,
         ShowMedicinesDiseasesList,
-        ContinueMedicinesDiseasesAdding
+        ContinueMedicinesDiseasesAdding,
+        ShowLoadingPanel,
+        HideLoadingPanel,
+        ShowPlantProcessInfo
     }
 }

@@ -23,6 +23,15 @@ namespace Resources.Code
                 case UICommandType.ShowException:
                     UIQuerySender.Instance.ShowException(Value);
                     break;
+                case UICommandType.ShowPlantProcessInfo:
+                    UIQuerySender.Instance.TogglePlantsProcessPanel(Value);
+                    break;
+                case UICommandType.ShowLoadingPanel:
+                    UIQuerySender.Instance.ShowLoadingPanel();
+                    break;
+                case UICommandType.HideLoadingPanel:
+                    UIQuerySender.Instance.HideLoadingPanel();
+                    break;
                 case UICommandType.AuthoriseActivate:
                     UIQuerySender.Instance.ToggleAuthorisePanel(true);
                     break;
@@ -30,7 +39,7 @@ namespace Resources.Code
                     UIQuerySender.Instance.ToggleAuthorisePanel(false);
                     break;
                 case UICommandType.ActivateShop:
-                    UIQuerySender.Instance.ActivateShop();
+                    UIQuerySender.Instance.ActivateWork();
                     break;
                 case UICommandType.RefreshAccountInfo:
                     UIQuerySender.Instance.RefreshAccountInfo();
@@ -45,6 +54,7 @@ namespace Resources.Code
                     UIQuerySender.Instance.ContinueAccountsAdding();
                     break;
                 case UICommandType.SendQuery:
+                    UIQuerySender.Instance.ShowLoadingPanel();
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
                 case UICommandType.ShowGoodList:

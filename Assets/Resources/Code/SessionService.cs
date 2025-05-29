@@ -7,6 +7,50 @@ namespace Resources.Code
 {
     public class SessionService
     {
+        private static List<PlantDisease> _plantsDiseases = new List<PlantDisease>();
+        public static List<PlantDisease> PlantsDiseases => _plantsDiseases;
+
+        public static void UpdatePlantsDiseases(string plants)
+        {
+            _plantsDiseases.Clear();
+
+            _plantsDiseases.Add(new PlantDisease(0,0));
+            
+            if (plants.Length != 0)
+                foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
+                    _plantsDiseases.Add(new PlantDisease(int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]),
+                        int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[1])));
+        }
+        private static List<PlantMedicine> _plantsMedicines = new List<PlantMedicine>();
+        public static List<PlantMedicine> PlantsMedicines => _plantsMedicines;
+
+        public static void UpdatePlantsMedicines(string plants)
+        {
+            _plantsMedicines.Clear();
+
+            _plantsMedicines.Add(new PlantMedicine(0,0));
+            if (plants.Length != 0)
+                foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
+                    _plantsMedicines.Add(new PlantMedicine(int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]),
+                        int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[1])));
+        }
+        private static List<MedicineDisease> _medicinesDiseases = new List<MedicineDisease>();
+        public static List<MedicineDisease> MedicinesDiseases => _medicinesDiseases;
+
+        public static void UpdateMedicinesDiseases(string plants)
+        {
+            _medicinesDiseases.Clear();
+
+            _medicinesDiseases.Add(new MedicineDisease(0,0,0,0));
+            if (plants.Length != 0)
+                foreach (var plant in plants.Split(DataParsingExtension.AdditionalQuerySplitter))
+                    _medicinesDiseases.Add(new MedicineDisease(
+                        int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[0]),
+                        int.Parse(plant.Split(DataParsingExtension.ValueSplitter)[1]),
+                        float.Parse(plant.Split(DataParsingExtension.ValueSplitter)[2]),
+                        float.Parse(plant.Split(DataParsingExtension.ValueSplitter)[3])));
+        }
+        
         private static List<Plant> _plants = new List<Plant>();
         public static List<Plant> Plants => _plants;
 

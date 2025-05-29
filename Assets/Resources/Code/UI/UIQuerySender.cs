@@ -1,24 +1,28 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using Resources.Code;
 using Resources.Code.DataStructures;
 using Resources.Code.DataStructures.LiSa;
 using Resources.Code.Panels;
+using Resources.Code.UI.Panels;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class UIQuerySender : MonoBehaviour
 {
     [Header("Panels")] [SerializeField] private AuthorisationPanel authorizationPanel;
-    [SerializeField] private GoodsPanel goodsPanel;
+    [FormerlySerializedAs("goodsPanel")] [SerializeField] private DosagePanel dosagePanel;
     [SerializeField] private ControlPanel controlPanel;
     [SerializeField] private ExceptionPanel exceptionPanel;
     [SerializeField] private AccountPanel accountPanel;
     [SerializeField] private AdminPanel adminPanel;
-    [SerializeField] private SellerPanel sellerPanel;
+    [SerializeField] private PlantProcessPanel plantProcessPanel;
+    [SerializeField] private LoadingPanel loadingPanel;
 
     [Header("Misc")] [SerializeField] private SimpleTCPClient client;
 
@@ -39,10 +43,10 @@ public class UIQuerySender : MonoBehaviour
         _instance = this;
 
         controlPanel.Hide();
-        goodsPanel.Hide();
+        dosagePanel.Hide();
         accountPanel.Hide();
         adminPanel.Hide();
-        sellerPanel.Hide();
+        plantProcessPanel.Hide();
     }
 
     // Update is called once per frame
@@ -75,20 +79,22 @@ public class UIQuerySender : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void ActivateShop()
+    public void ActivateWork()
     {
-        goodsPanel.Show();
+        dosagePanel.Show();
         controlPanel.Show();
         controlPanel.ToggleAccountMenu(true);
+        Instance.ShowLoadingPanel();
+        AddCommand(new UICommand("pl;", UICommandType.SendQuery));
     }
 
     public void HidePanels()
     {
-        goodsPanel.Hide();
+        dosagePanel.Hide();
         accountPanel.Hide();
         adminPanel.Hide();
         exceptionPanel.Hide();
-        sellerPanel.Hide();
+        plantProcessPanel.Hide();
     }
 
     public void ToggleAccount()
@@ -96,11 +102,11 @@ public class UIQuerySender : MonoBehaviour
         if (accountPanel.Hidden)
         {
             adminPanel.Hide();
-            sellerPanel.Hide();
+            plantProcessPanel.Hide();
         }
 
         accountPanel.Toggle(accountPanel.Hidden);
-        goodsPanel.Toggle(accountPanel.Hidden);
+        dosagePanel.Toggle(accountPanel.Hidden);
     }
 
     public void ToggleAdminPanel()
@@ -108,23 +114,36 @@ public class UIQuerySender : MonoBehaviour
         if (adminPanel.Hidden)
         {
             accountPanel.Hide();
-            sellerPanel.Hide();
+            plantProcessPanel.Hide();
         }
 
         adminPanel.Toggle(adminPanel.Hidden);
-        goodsPanel.Toggle(adminPanel.Hidden);
+        dosagePanel.Toggle(adminPanel.Hidden);
     }
 
-    public void ToggleSellerPanel()
+    public void TogglePlantsProcessPanel(string info)
     {
-        if (sellerPanel.Hidden)
+        if (plantProcessPanel.Hidden)
         {
             accountPanel.Hide();
             adminPanel.Hide();
         }
 
-        sellerPanel.Toggle(sellerPanel.Hidden);
-        goodsPanel.Toggle(sellerPanel.Hidden);
+        plantProcessPanel.ShowInfo(info);
+        
+        plantProcessPanel.Toggle(plantProcessPanel.Hidden);
+        dosagePanel.Toggle(plantProcessPanel.Hidden);
+    }
+    public void TogglePlantsProcessPanel()
+    {
+        if (plantProcessPanel.Hidden)
+        {
+            accountPanel.Hide();
+            adminPanel.Hide();
+        }
+        
+        plantProcessPanel.Toggle(plantProcessPanel.Hidden);
+        dosagePanel.Toggle(plantProcessPanel.Hidden);
     }
 
     public void ContinueAccountsAdding() => adminPanel.verticalContainer.ContinueAccountsEdit();
@@ -141,15 +160,25 @@ public class UIQuerySender : MonoBehaviour
         // Скрыть панель редактирования + обновить список товаров
     }
 
-    // public void ShowPlantsDiseases(String goods) => goodsPanel.gridContainer.ShowPlantsDiseases(goods);
+    // public void ShowPlantsDiseases(String goods) => dosagePanel.gridContainer.ShowPlantsDiseases(goods);
     public void ShowGoodsAP(String plantsDiseases) =>
         adminPanel.verticalContainer.StartPlantsDiseasesEdit(plantsDiseases);
-    // public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);
+
+    // public void ShowGoodsEdit(String goods) => plantProcessPanel.gridContainer.ShowGoodsEdit(goods);
     public void ShowAccounts(String accounts) => adminPanel.verticalContainer.StartAccountsEdit(accounts);
     public void ShowDiseases(String games) => adminPanel.verticalContainer.StartDiseasesEdit(games);
-    public void ShowPlantsDiseases(String plantsDiseases) => adminPanel.verticalContainer.StartPlantsDiseasesEdit(plantsDiseases);
-    public void ShowPlantsMedicines(String plantsDiseases) => adminPanel.verticalContainer.StartPlantsMedicinesEdit(plantsDiseases);
-    public void ShowMedicinesDiseases(String medicineDiseases) => adminPanel.verticalContainer.StartMedicinesDiseasesEdit(medicineDiseases);
+
+    public void ShowPlantsDiseases(String plantsDiseases) =>
+        adminPanel.verticalContainer.StartPlantsDiseasesEdit(plantsDiseases);
+
+    public void ShowPlantsMedicines(String plantsDiseases) =>
+        adminPanel.verticalContainer.StartPlantsMedicinesEdit(plantsDiseases);
+
+    public void ShowMedicinesDiseases(String medicineDiseases) =>
+        adminPanel.verticalContainer.StartMedicinesDiseasesEdit(medicineDiseases);
+
+    public void ShowLoadingPanel() => loadingPanel.Show();
+    public void HideLoadingPanel() => loadingPanel.Hide();
     public void ShowPlants(String games) => adminPanel.verticalContainer.StartPlantsEdit(games);
     public void ShowMedicines(String games) => adminPanel.verticalContainer.StartMedicinesEdit(games);
     public void ShowAdminKeys(String adminKeys) => adminPanel.verticalContainer.StartAdminKey(adminKeys);
@@ -169,4 +198,53 @@ public class UIQuerySender : MonoBehaviour
     public void SendPlantsRequest() => AddCommand(new UICommand("ppl;", UICommandType.SendQuery));
     public void SendAccountsRequest() => AddCommand(new UICommand("al;", UICommandType.SendQuery));
     public void SendAdminKeysRequest() => AddCommand(new UICommand("akl;", UICommandType.SendQuery));
+
+    public void SendTestPointRequest()
+    {
+        // int pointsCount = Random.Range(1, 5);
+        //
+        // float workRadius = 10.0f;
+        // float dosage = 1.0f;
+        //
+        // StringBuilder output = new();
+        //
+        // output.Append("pz" + DataParsingExtension.AdditionalQuerySplitter);
+        //
+        // for (int i = 0; i < pointsCount; i++)
+        //     output.Append(Random.Range(0, 100).ToString() 
+        //                   + DataParsingExtension.ValueSplitter 
+        //                   + Random.Range(0, 100).ToString()
+        //                   + DataParsingExtension.QuerySplitter);
+        //
+        // output.Remove(output.Length - 1, 1);
+        // output.Append(DataParsingExtension.AdditionalQuerySplitter + dosage.ToString() + DataParsingExtension.AdditionalQuerySplitter);
+        // output.Append(workRadius.ToString());
+        //
+        // AddCommand(new UICommand(output.ToString(), UICommandType.SendQuery));
+        Instance.ShowLoadingPanel();
+        AddCommand(new UICommand("pl;", UICommandType.SendQuery));
+    }
+    public void SendPointRequest(float dosage, string additionalData)
+    {
+        int pointsCount = Random.Range(1, 5);
+
+        float workRadius = 10.0f;
+
+        StringBuilder output = new();
+        
+        output.Append("pz" + DataParsingExtension.AdditionalQuerySplitter);
+        
+        for (int i = 0; i < pointsCount; i++)
+            output.Append(Random.Range(0, 100).ToString() 
+                          + DataParsingExtension.ValueSplitter 
+                          + Random.Range(0, 100).ToString()
+                          + DataParsingExtension.QuerySplitter);
+        
+        output.Remove(output.Length - 1, 1);
+        output.Append(DataParsingExtension.AdditionalQuerySplitter + dosage.ToString() + DataParsingExtension.AdditionalQuerySplitter);
+        output.Append(workRadius.ToString());
+        output.Append(additionalData);
+        
+        AddCommand(new UICommand(output.ToString(), UICommandType.SendQuery));
+    }
 }

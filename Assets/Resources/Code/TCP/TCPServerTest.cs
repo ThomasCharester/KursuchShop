@@ -110,9 +110,17 @@ namespace Resources.Code
 
                     string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     Debug.Log($"Received: {receivedMessage}");
+
+                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.HideLoadingPanel));
+
                     var queryType = receivedMessage.Split(DataParsingExtension.QuerySplitter)[0];
                     switch (queryType[0])
                     {
+                        case 'z':
+                            UIQuerySender.Instance.AddCommand(new UICommand(
+                                receivedMessage,
+                                UICommandType.ShowPlantProcessInfo));
+                            break;
                         case 'l':
                         {
                             switch (queryType[1])
@@ -199,11 +207,15 @@ namespace Resources.Code
                                                 UIQuerySender.Instance.AddCommand(new UICommand(
                                                     receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                     UICommandType.ShowMedicinesDiseasesList));
+                                                SessionService.UpdateMedicinesDiseases(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                                 break;
                                             case 'm':
                                                 UIQuerySender.Instance.AddCommand(new UICommand(
                                                     receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                     UICommandType.ShowPlantsMedicinesList));
+                                                SessionService.UpdatePlantsMedicines(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                                 break;
                                         }
                                     break;
@@ -223,11 +235,15 @@ namespace Resources.Code
                                                 UIQuerySender.Instance.AddCommand(new UICommand(
                                                     receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                     UICommandType.ShowPlantsDiseasesList));
+                                                SessionService.UpdatePlantsDiseases(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                                 break;
                                             case 'm':
                                                 UIQuerySender.Instance.AddCommand(new UICommand(
                                                     receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                                     UICommandType.ShowPlantsMedicinesList));
+                                                SessionService.UpdatePlantsMedicines(
+                                                    receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                                 break;
                                         }
                                     break;

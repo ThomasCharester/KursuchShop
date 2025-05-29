@@ -6,5 +6,13 @@ namespace Resources.Code.DataStructures.LiSa
         public int MedicineId;
         public float MinDosage;
         public float MaxDosage;
+
+        public MedicineDisease(int i, int i1, float f1, float f2)
+        {
+            DiseaseId = i;
+            MedicineId = i1;
+            MinDosage = f1;
+            MaxDosage = f2;
+        }
     }
 }
