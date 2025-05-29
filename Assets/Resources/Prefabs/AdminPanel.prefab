@@ -319,7 +319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Accounts
+  m_text: "\u0410\u043A\u043A\u0430\u0443\u043D\u0442\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Plants Diseases
+  m_text: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F-\u0411\u043E\u043B\u0435\u0437\u043D\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.8
-  m_fontSizeBase: 18.8
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Admin keys
+  m_text: "\u041A\u043B\u044E\u0447\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Diseases
+  m_text: "\u0411\u043E\u043B\u0435\u0437\u043D\u0438"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Plants
+  m_text: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -1798,7 +1798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Plants Medicines
+  m_text: "\u0420\u0430\u0441\u0442\u0435\u043D\u0438\u044F-\u041F\u0440\u0435\u043F\u043F\u0430\u0440\u0430\u0442\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -1825,8 +1825,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.5
-  m_fontSizeBase: 16.5
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Medicines
+  m_text: "\u041F\u0440\u0435\u043F\u043F\u0430\u0440\u0430\u0442\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -2082,8 +2082,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20.7
+  m_fontSizeBase: 20.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Medicines Diseases
+  m_text: "\u0411\u043E\u043B\u0435\u0437\u043D\u0438-\u041F\u0440\u0435\u043F\u043F\u0430\u0440\u0430\u0442\u044B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -2218,8 +2218,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.1
-  m_fontSizeBase: 15.1
+  m_fontSize: 12.9
+  m_fontSizeBase: 12.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -521,7 +521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Submit
+  m_text: "\u0418\u0437\u043C\u0435\u043D\u0438\u0442\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -548,8 +548,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 21.2
+  m_fontSizeBase: 21.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Change your data
+  m_text: "\u0418\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0434\u0430\u043D\u043D\u044B\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Login
+  m_text: "\u041D\u043E\u0432\u044B\u0439 \u043B\u043E\u0433\u0438\u043D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
@@ -2006,7 +2006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Password
+  m_text: "\u041D\u043E\u0432\u044B\u0439 \u043F\u0430\u0440\u043E\u043B\u044C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
   m_sharedMaterial: {fileID: 454708669438002220, guid: 82e94b4617d88f9438b39f5a5d821d9d, type: 2}
