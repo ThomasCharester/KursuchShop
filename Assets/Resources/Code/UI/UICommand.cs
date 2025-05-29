@@ -38,7 +38,7 @@ namespace Resources.Code
                 case UICommandType.AuthoriseDeactivate:
                     UIQuerySender.Instance.ToggleAuthorisePanel(false);
                     break;
-                case UICommandType.ActivateShop:
+                case UICommandType.ActivateWork:
                     UIQuerySender.Instance.ActivateWork();
                     break;
                 case UICommandType.RefreshAccountInfo:

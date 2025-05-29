@@ -8,7 +8,7 @@ namespace Resources.Code
         SendQuery,
         MakeAdmin,
         RefreshAccountInfo,
-        ActivateShop,
+        ActivateWork,
         SendGoodsRequest,
         ShowGoodList,
         SendAccountRequest,

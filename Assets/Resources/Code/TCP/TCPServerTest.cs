@@ -152,7 +152,7 @@ namespace Resources.Code
                                             UIQuerySender.Instance.AddCommand(
                                                 new UICommand(UICommandType.AuthoriseDeactivate));
                                             UIQuerySender.Instance.AddCommand(
-                                                new UICommand(UICommandType.ActivateShop));
+                                                new UICommand(UICommandType.ActivateWork));
                                             break;
                                     }
 

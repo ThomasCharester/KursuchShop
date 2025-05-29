@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Resources.Code.DataStructures;
 using Resources.Code.DataStructures.LiSa;
-using UnityEditor.PackageManager;
 
 namespace Resources.Code
 {

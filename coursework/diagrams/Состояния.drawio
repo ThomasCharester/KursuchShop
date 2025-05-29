@@ -1,0 +1,1055 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Страница — 1" id="UQJAcMo_BjVAv6RoQQlg">
+    <mxGraphModel dx="2985" dy="2035" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-2" target="wPGrvnnDATDa6KnbkLbJ-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-2" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;strokeColor=none;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="120" y="200" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-7" target="wPGrvnnDATDa6KnbkLbJ-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-3" target="wPGrvnnDATDa6KnbkLbJ-17" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="350" />
+              <mxPoint x="300" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-3" value="Отображение панели авторизации" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-5" target="wPGrvnnDATDa6KnbkLbJ-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-5" value="Отображение сообщения об ошибке" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-3" target="wPGrvnnDATDa6KnbkLbJ-7" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="220" as="sourcePoint" />
+            <mxPoint x="490" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-7" target="wPGrvnnDATDa6KnbkLbJ-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-7" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="600" y="200" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-9" value="Пользователь ввёд логин и пароль,&amp;nbsp;&lt;div&gt;затем нажал на кнопку &quot;Login&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="370" y="175" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-10" value="[Логин или пароль неверны]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="620" y="260" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-12" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="600" y="10" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-14" value="[Авторизация успешна]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="620" y="100" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-17" target="wPGrvnnDATDa6KnbkLbJ-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wPGrvnnDATDa6KnbkLbJ-17" target="wPGrvnnDATDa6KnbkLbJ-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-17" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="280" y="520" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-23" value="[Данные для регистрации введены с ошибкой]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="335" y="540" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-25" value="Пользователь ввёд логин, пароль&amp;nbsp;&lt;div&gt;и ключ администратора,&amp;nbsp;&lt;div&gt;затем нажал на кнопку &quot;Register&quot;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="300" y="400" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wPGrvnnDATDa6KnbkLbJ-26" value="[Регистрация успешна]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="110" y="405" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-19" target="bm97h7jrbJDGAF3Q-0La-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-1" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="80" y="680" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-2" target="bm97h7jrbJDGAF3Q-0La-35" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="700" />
+              <mxPoint x="720" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-2" value="Отображение панели товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-2" target="bm97h7jrbJDGAF3Q-0La-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="720" as="sourcePoint" />
+            <mxPoint x="950" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="690" />
+              <mxPoint x="680" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-2" target="bm97h7jrbJDGAF3Q-0La-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="680" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="720" y="680" />
+              <mxPoint x="720" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-6" value="Пользователь закрыл окно&amp;nbsp;&lt;div&gt;с сообщением&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="303" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-7" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;[Программа послала запрос&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;на сервер и получила&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;список товаров]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="130" y="640" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-10" value="В" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="680" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-14" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="600" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-1" target="bm97h7jrbJDGAF3Q-0La-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="700" as="sourcePoint" />
+            <mxPoint x="530" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-206" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-208" target="bm97h7jrbJDGAF3Q-0La-194" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-19" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="320" y="680" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-21" value="[Пользователь не имеет&amp;nbsp;&lt;div&gt;специальных ролей]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="650" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-25" value="Пользователь нажал на кнопку&amp;nbsp;&lt;div&gt;&quot;Refresh&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="780" y="580" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-26" target="bm97h7jrbJDGAF3Q-0La-48" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1251" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-26" value="Отображение панели аккаунта" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1191" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-30" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Account&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="800" y="650" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-31" target="bm97h7jrbJDGAF3Q-0La-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-31" value="В" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="881" y="120" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-33" value="[Програма обновила данные&lt;div&gt;об учётной записи пользователя]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="956" y="90" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-35" value="Б" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="760" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-36" target="wPGrvnnDATDa6KnbkLbJ-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-36" value="Б" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="280" y="10" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-38" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1561" y="120" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-39" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Account&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1371" y="100" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-26" target="bm97h7jrbJDGAF3Q-0La-38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1291" y="50" as="sourcePoint" />
+            <mxPoint x="1641" y="50" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-42" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Reconnect&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="805" y="740" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-47" value="Пользователь ввёл&amp;nbsp;&lt;div&gt;новые логин и пароль&amp;nbsp;&lt;br&gt;&lt;/div&gt;&lt;div&gt;затем нажал на кнопку&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;Submit&quot;, программа изменила&lt;/div&gt;&lt;div&gt;данные пользователя&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1251" y="180" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-48" value="В" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1231" y="320" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-50" target="bm97h7jrbJDGAF3Q-0La-57" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="1020" />
+              <mxPoint x="720" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-50" target="bm97h7jrbJDGAF3Q-0La-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="1030" />
+              <mxPoint x="710" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-50" value="Отображение панели товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-50" target="bm97h7jrbJDGAF3Q-0La-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="1040" as="sourcePoint" />
+            <mxPoint x="950" y="1070" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="1010" />
+              <mxPoint x="710" y="1010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-50" target="bm97h7jrbJDGAF3Q-0La-54" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="1000" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="720" y="1000" />
+              <mxPoint x="720" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-53" value="В" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="990" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-54" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="920" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-55" value="Пользователь нажал на кнопку&amp;nbsp;&lt;div&gt;&quot;Refresh&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="780" y="900" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-56" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Account&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="800" y="970" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-57" value="Б" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1080" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-58" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Reconnect&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="805" y="1060" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-208" target="bm97h7jrbJDGAF3Q-0La-50" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="1020" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-60" value="[Пользователь имеет&amp;nbsp;&lt;div&gt;роль администратора&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="365" y="970" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-61" value="Г" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1150" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-63" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Admin&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="775" y="1130" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1530" y="960" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1580" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-121" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1560" y="1630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-142" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1550" y="1995" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-159" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="2375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-176" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="2730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-65" value="Отображение панели администратора" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1470" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-67" target="bm97h7jrbJDGAF3Q-0La-65" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-67" value="Г" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1160" y="800" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-68" value="[Программа скрыла все панели&lt;br&gt;кроме панели администратора&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1240" y="770" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-72" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Accounts&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1580" y="900" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-74" target="bm97h7jrbJDGAF3Q-0La-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-74" target="bm97h7jrbJDGAF3Q-0La-90" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1810" y="1070" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-74" value="Отображение списка учётных записей" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1740" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-75" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1850" y="800" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-76" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Admin&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="780" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-75" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1600" y="820" as="sourcePoint" />
+            <mxPoint x="1930" y="730" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-79" target="bm97h7jrbJDGAF3Q-0La-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="1000" />
+              <mxPoint x="1830" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-79" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2280.058823529412" y="1040" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2300" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-79" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2040" y="880" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-81" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Modify&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1870" y="900" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-83" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1845" y="1000" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-86" value="[Данные введены некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="860" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-90" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2220" y="1070" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-90" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2040" y="1050" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-92" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Add&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="1070" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-94" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2090" y="1020" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-95" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="1170" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="bm97h7jrbJDGAF3Q-0La-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2060" y="1090" as="sourcePoint" />
+            <mxPoint x="1820" y="1100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2060" y="1170" />
+              <mxPoint x="1790" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-65" target="bm97h7jrbJDGAF3Q-0La-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1570" y="1210" as="sourcePoint" />
+            <mxPoint x="1520" y="1320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1570" y="1260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-98" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Admin keys&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1565" y="1260" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-101" target="bm97h7jrbJDGAF3Q-0La-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-101" target="bm97h7jrbJDGAF3Q-0La-113" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1800" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-101" value="Отображение списка ключей администратора" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1730" y="1230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-104" target="bm97h7jrbJDGAF3Q-0La-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2050" y="1360" />
+              <mxPoint x="1820" y="1360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-104" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2240" y="1260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-104" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2030" y="1240" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-105" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Modify&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1860" y="1260" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-106" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1835" y="1360" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-108" target="bm97h7jrbJDGAF3Q-0La-110" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-108" value="Отображение ошибки" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="1400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-109" value="[Данные введены некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2050" y="1230" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-110" value="Г" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2471" y="1410" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-111" value="Пользователь закрыл&amp;nbsp;&lt;div&gt;панель ошибки&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2330" y="1380" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-113" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-113" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2030" y="1410" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-114" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Add&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="1430" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-115" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="1380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-116" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="1530" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="bm97h7jrbJDGAF3Q-0La-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2050" y="1450" as="sourcePoint" />
+            <mxPoint x="1810" y="1460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2050" y="1530" />
+              <mxPoint x="1780" y="1530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-118" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Sellers&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1565" y="1630" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-121" target="bm97h7jrbJDGAF3Q-0La-124" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-121" target="bm97h7jrbJDGAF3Q-0La-133" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1795" y="1800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-121" value="Отображение списка продавцов" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1725" y="1600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-124" target="bm97h7jrbJDGAF3Q-0La-121" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2045" y="1730" />
+              <mxPoint x="1815" y="1730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-124" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2230" y="1630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-124" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2025" y="1610" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-125" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Modify&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1855" y="1630" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-126" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="1730" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-129" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2065" y="1585" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-133" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2205" y="1799.9999999999995" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2240" y="1800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-133" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2025" y="1780" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-134" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Add&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1825" y="1800" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-135" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2075" y="1750" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-136" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1815" y="1900" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="bm97h7jrbJDGAF3Q-0La-121" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2045" y="1820" as="sourcePoint" />
+            <mxPoint x="1805" y="1830" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2045" y="1900" />
+              <mxPoint x="1775" y="1900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-139" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Games&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1570" y="2010" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-142" target="bm97h7jrbJDGAF3Q-0La-144" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-142" target="bm97h7jrbJDGAF3Q-0La-148" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1800" y="2165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-142" value="Отображение списка игр" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1730" y="1965" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-144" target="bm97h7jrbJDGAF3Q-0La-142" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2050" y="2095" />
+              <mxPoint x="1820" y="2095" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-144" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2250" y="1995" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-144" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2030" y="1975" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-145" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Modify&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1860" y="1995" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-146" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1835" y="2095" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-147" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2070" y="1950" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-148" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2260" y="2165" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-148" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2030" y="2145" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-149" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Add&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="2165" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-150" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2080" y="2115" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-151" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="2265" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="bm97h7jrbJDGAF3Q-0La-142" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2050" y="2185" as="sourcePoint" />
+            <mxPoint x="1810" y="2195" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2050" y="2260" />
+              <mxPoint x="1780" y="2260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-156" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Payment methods&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1535" y="2390" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-159" target="bm97h7jrbJDGAF3Q-0La-161" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-159" target="bm97h7jrbJDGAF3Q-0La-165" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1785" y="2545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-159" value="Отображение списка методов платежа" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1715" y="2345" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-161" target="bm97h7jrbJDGAF3Q-0La-159" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2035" y="2475" />
+              <mxPoint x="1805" y="2475" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-161" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2270" y="2375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-161" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2015" y="2355" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-162" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Modify&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1845" y="2375" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-163" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="2475" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-164" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2055" y="2330" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2065" y="2545" as="sourcePoint" />
+            <mxPoint x="2280" y="1459.9999999999998" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2280" y="2545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-165" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2015" y="2525" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-166" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;ввёл новые данные и&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал &quot;Add&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1815" y="2545" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-167" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2065" y="2495" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-168" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1805" y="2645" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="bm97h7jrbJDGAF3Q-0La-159" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2035" y="2565" as="sourcePoint" />
+            <mxPoint x="1795" y="2575" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2035" y="2640" />
+              <mxPoint x="1765" y="2640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-173" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Goods&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа запросила&amp;nbsp;&lt;/div&gt;&lt;div&gt;данные с сервера&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1555" y="2745" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-176" target="bm97h7jrbJDGAF3Q-0La-178" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-176" value="Отображение списка товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1715" y="2700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-178" target="bm97h7jrbJDGAF3Q-0La-176" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2035" y="2830" />
+              <mxPoint x="1805" y="2830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-178" target="bm97h7jrbJDGAF3Q-0La-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2290" y="2730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-178" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="2015" y="2710" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-179" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Delete&quot;&lt;div&gt;под выбранной записью&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="2735" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-180" value="[Данные удалены успешно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="2835" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-181" value="[Данные введены&lt;div&gt;&amp;nbsp;некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="2055" y="2685" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-192" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-194" target="bm97h7jrbJDGAF3Q-0La-201" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="1400" />
+              <mxPoint x="720" y="1480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-193" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-194" target="bm97h7jrbJDGAF3Q-0La-204" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="1410" />
+              <mxPoint x="710" y="1550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-194" value="Отображение панели товаров" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="1370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-195" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-194" target="bm97h7jrbJDGAF3Q-0La-197" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="1420" as="sourcePoint" />
+            <mxPoint x="950" y="1450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="920" y="1390" />
+              <mxPoint x="920" y="1390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-196" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-194" target="bm97h7jrbJDGAF3Q-0La-198" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="1380" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="720" y="1380" />
+              <mxPoint x="720" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-197" value="В" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1370" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-198" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1300" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-199" value="Пользователь нажал на кнопку&amp;nbsp;&lt;div&gt;&quot;Refresh&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="780" y="1280" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-200" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Account&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="800" y="1350" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-201" value="Б" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1460" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-202" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Reconnect&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="805" y="1440" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-203" value="[Пользователь имеет&amp;nbsp;&lt;div&gt;роль продавца&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="370" y="1350" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-204" value="Д" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="1530" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-205" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Seller&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="775" y="1510" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-209" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-19" target="bm97h7jrbJDGAF3Q-0La-208" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="720" as="sourcePoint" />
+            <mxPoint x="530" y="1270" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-208" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1000" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-210" value="[Пользователь имеет&amp;nbsp;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;специальную роль]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="344" y="770" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-211" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-212" target="bm97h7jrbJDGAF3Q-0La-224" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="1999.9999999999995" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="1960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bm97h7jrbJDGAF3Q-0La-212" target="m3BnEM9Wv3MR3LP3NV7s-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="2195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-212" value="Отображение панели продавца" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="1790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-213" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-214" target="bm97h7jrbJDGAF3Q-0La-212" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-214" value="Д" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1800" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-215" value="[Програма запросила&amp;nbsp;&lt;div&gt;список товаров от&amp;nbsp;&lt;/div&gt;&lt;div&gt;учётной записи пользователя&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="165" y="1760" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-216" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="760" y="1800" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-217" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку &quot;Seller&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="570" y="1780" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-218" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-212" target="bm97h7jrbJDGAF3Q-0La-216" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="1730" as="sourcePoint" />
+            <mxPoint x="840" y="1730" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-219" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на один из товаров&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="490" y="1880" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-224" target="bm97h7jrbJDGAF3Q-0La-227" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-224" target="bm97h7jrbJDGAF3Q-0La-233" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="2130.032258064516" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="2130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-224" value="Отображение панели товара" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="1930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-225" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-227" target="bm97h7jrbJDGAF3Q-0La-224" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="2060" />
+              <mxPoint x="670" y="2060" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-226" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-227" target="bm97h7jrbJDGAF3Q-0La-231" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="1960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-227" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="880" y="1940" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-228" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Пользователь&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ввёл новые данные и&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="710" y="1965" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-229" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;изменила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="685" y="2060" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-230" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bm97h7jrbJDGAF3Q-0La-231" target="bm97h7jrbJDGAF3Q-0La-233" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-231" value="Отображение ошибки" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1110" y="1930" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-232" value="[Данные введены некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="900" y="1930" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-233" value="Д" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1321" y="2110" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-234" value="Пользователь закрыл&amp;nbsp;&lt;div&gt;панель ошибки&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="2020" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bm97h7jrbJDGAF3Q-0La-237" value="&lt;div&gt;Пользователь&amp;nbsp;&lt;/div&gt;&lt;div&gt;нажал на кнопку &quot;Delete&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;программа удалила запись&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="945" y="2070" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-17" value="Отображение панели добавления товара" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="2165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-19" value="Пользователь нажал&amp;nbsp;&lt;div&gt;на кнопку &quot;Add good&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="2030" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="m3BnEM9Wv3MR3LP3NV7s-25" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="2200" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="m3BnEM9Wv3MR3LP3NV7s-25" parent="1" target="m3BnEM9Wv3MR3LP3NV7s-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="2370" />
+            </Array>
+            <mxPoint x="670" y="2230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="m3BnEM9Wv3MR3LP3NV7s-25" target="m3BnEM9Wv3MR3LP3NV7s-29" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="2200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-25" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="880" y="2180" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-26" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Пользователь&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ввёл новые данные и&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;нажал &quot;Submit&quot;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="2205" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-27" value="[Данные корректны, программа&amp;nbsp;&lt;div&gt;добавила запись]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="910" y="2375" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="m3BnEM9Wv3MR3LP3NV7s-29" target="m3BnEM9Wv3MR3LP3NV7s-31" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-29" value="Отображение ошибки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="2170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-30" value="[Данные введены некорректно&lt;span style=&quot;background-color: initial;&quot;&gt;]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="900" y="2170" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-31" value="Д" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1321" y="2350" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-32" value="Пользователь закрыл&amp;nbsp;&lt;div&gt;панель ошибки&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="2260" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-35" value="Отображение панели товара" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="2510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="m3BnEM9Wv3MR3LP3NV7s-37" target="m3BnEM9Wv3MR3LP3NV7s-35" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-37" value="Е" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2520" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-38" value="[Програма запросила данные&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;о товаре]&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="165" y="2490" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-39" value="А" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="760" y="2520" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-40" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на кнопку выхода&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="2500" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="m3BnEM9Wv3MR3LP3NV7s-35" target="m3BnEM9Wv3MR3LP3NV7s-39" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="2450" as="sourcePoint" />
+            <mxPoint x="840" y="2450" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="m3BnEM9Wv3MR3LP3NV7s-48" parent="1" source="bm97h7jrbJDGAF3Q-0La-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="710" />
+              <mxPoint x="710" y="860" />
+            </Array>
+            <mxPoint x="650" y="800" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-48" value="Е" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="840" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-49" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на товар&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="820" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-50" value="Е" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1220" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-51" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на товар&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="775" y="1200" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="m3BnEM9Wv3MR3LP3NV7s-50" parent="1" source="bm97h7jrbJDGAF3Q-0La-50">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="1040" />
+              <mxPoint x="700" y="1240" />
+            </Array>
+            <mxPoint x="650" y="1100" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-53" value="Е" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1600" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-54" value="Пользователь нажал&lt;div&gt;&amp;nbsp;на товар&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="775" y="1580" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3BnEM9Wv3MR3LP3NV7s-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="m3BnEM9Wv3MR3LP3NV7s-53" parent="1" source="bm97h7jrbJDGAF3Q-0La-194">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="1420" />
+              <mxPoint x="700" y="1620" />
+            </Array>
+            <mxPoint x="650" y="1480" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
