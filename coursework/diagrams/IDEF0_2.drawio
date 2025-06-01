@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
   <diagram name="Страница — 1" id="Td8Fgm3Z-LBcwyla4mZC">
-    <mxGraphModel dx="1194" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,24 +14,25 @@
           <mxGeometry x="900" y="700" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-4" value="Координаты поражения" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="30" y="700" width="60" height="30" as="geometry" />
+          <mxGeometry x="200" y="696" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-5" value="Вид болезни" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="10" y="520" width="60" height="30" as="geometry" />
+          <mxGeometry x="180" y="516" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-6" value="Вид растения" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="10" y="480" width="60" height="30" as="geometry" />
+          <mxGeometry x="180" y="476" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="fMJvek8NVyRL-xTnjcHt-8" target="fMJvek8NVyRL-xTnjcHt-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="40" y="470" />
+              <mxPoint x="350" y="470" />
+              <mxPoint x="350" y="470" />
             </Array>
             <mxPoint x="210" y="575" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-8" value="Базы данных парника" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry y="448" width="80" height="30" as="geometry" />
+          <mxGeometry x="170" y="444" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fMJvek8NVyRL-xTnjcHt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="fMJvek8NVyRL-xTnjcHt-6" target="fMJvek8NVyRL-xTnjcHt-20" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -46,8 +47,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="211.44000000000005" y="655.04" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="120" y="525" />
-              <mxPoint x="120" y="525" />
+              <mxPoint x="320" y="531" />
+              <mxPoint x="320" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -55,7 +56,8 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="210.24" y="620.04" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="49" y="720" />
+              <mxPoint x="430" y="720" />
+              <mxPoint x="430" y="720" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -90,7 +92,7 @@
         <mxCell id="fMJvek8NVyRL-xTnjcHt-16" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Руководства по применению лекарственных препаратов&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="605" y="260" width="90" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="fMJvek8NVyRL-xTnjcHt-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="fMJvek8NVyRL-xTnjcHt-16" target="fMJvek8NVyRL-xTnjcHt-26" edge="1">
+        <mxCell id="fMJvek8NVyRL-xTnjcHt-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;jumpSize=14;" parent="1" source="fMJvek8NVyRL-xTnjcHt-16" target="fMJvek8NVyRL-xTnjcHt-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="650" y="420" as="targetPoint" />
             <Array as="points" />
@@ -179,7 +181,7 @@
             <mxPoint x="750" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KjGa1CwcBPG1PeXQLQia-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fMJvek8NVyRL-xTnjcHt-26" target="fMJvek8NVyRL-xTnjcHt-2">
+        <mxCell id="KjGa1CwcBPG1PeXQLQia-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="fMJvek8NVyRL-xTnjcHt-26" target="fMJvek8NVyRL-xTnjcHt-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="780" y="530" />
@@ -192,7 +194,7 @@
         <mxCell id="fMJvek8NVyRL-xTnjcHt-2" value="Рассчитать область обработки" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="810" y="655" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="KjGa1CwcBPG1PeXQLQia-5" value="3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="KjGa1CwcBPG1PeXQLQia-5" value="3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="910" y="705" width="60" height="30" as="geometry" />
         </mxCell>
       </root>

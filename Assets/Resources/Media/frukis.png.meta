@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      frukis_0: -7036246976447226258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
