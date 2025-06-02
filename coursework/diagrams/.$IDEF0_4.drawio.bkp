@@ -1,27 +1,27 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
   <diagram name="Страница — 1" id="oGmPVtbugTqvy4dVSNda">
-    <mxGraphModel dx="645" dy="383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="370" dy="268" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bD1nHJxSQEPsHtlY3_ja-16" target="bD1nHJxSQEPsHtlY3_ja-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="330" y="480" />
-              <mxPoint x="330" y="480" />
+              <mxPoint x="360" y="480" />
+              <mxPoint x="360" y="480" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bD1nHJxSQEPsHtlY3_ja-16" target="bD1nHJxSQEPsHtlY3_ja-30" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="330" y="400" />
+              <mxPoint x="360" y="400" />
               <mxPoint x="580" y="400" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-16" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Методология по лечению сельскохозяйственных культур&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="270" y="320" width="120" height="60" as="geometry" />
+          <mxGeometry x="300" y="320" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bD1nHJxSQEPsHtlY3_ja-18" target="bD1nHJxSQEPsHtlY3_ja-26" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -78,7 +78,7 @@
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-31" value="9" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="600" y="680" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bD1nHJxSQEPsHtlY3_ja-36" value="Список областей обработки" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="bD1nHJxSQEPsHtlY3_ja-36" value="Дополненный список областей обработки" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="480" y="460" width="60" height="50" as="geometry" />
         </mxCell>
         <mxCell id="bD1nHJxSQEPsHtlY3_ja-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bD1nHJxSQEPsHtlY3_ja-26" target="bD1nHJxSQEPsHtlY3_ja-30" edge="1">
