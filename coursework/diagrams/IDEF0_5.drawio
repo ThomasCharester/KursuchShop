@@ -87,12 +87,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="vzJ14QiML_fNVC9wTUTi-17" value="" style="endArrow=none;html=1;rounded=0;" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="480" y="430" as="sourcePoint" />
-            <mxPoint x="504.6153846153845" y="390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="vzJ14QiML_fNVC9wTUTi-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="vzJ14QiML_fNVC9wTUTi-13" target="vzJ14QiML_fNVC9wTUTi-19" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="880" y="640" as="sourcePoint" />
@@ -101,8 +95,17 @@
         <mxCell id="vzJ14QiML_fNVC9wTUTi-19" value="Инструкции к лечению растения" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="730" y="525" width="60" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="b8rdiyglEuU06S8kTR-f-1" value="Общий объём обработки" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="b8rdiyglEuU06S8kTR-f-1" value="Общий объём обработки" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="425" y="360" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uvpVKmMAK-09q5QkH7-8-1" value="" style="edgeStyle=isometricEdgeStyle;endArrow=none;html=1;rounded=0;entryX=0.484;entryY=1.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="b8rdiyglEuU06S8kTR-f-1">
+          <mxGeometry width="50" height="100" relative="1" as="geometry">
+            <mxPoint x="480" y="430" as="sourcePoint" />
+            <mxPoint x="490" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="410" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>

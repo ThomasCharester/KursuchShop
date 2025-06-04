@@ -48,7 +48,7 @@
         <mxCell id="eVBwNJqslw_1n1bbN_LB-8" value="Данные о выбранной дозировке" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="940" y="450" width="60" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="eVBwNJqslw_1n1bbN_LB-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="eVBwNJqslw_1n1bbN_LB-12" target="eVBwNJqslw_1n1bbN_LB-6" edge="1">
+        <mxCell id="eVBwNJqslw_1n1bbN_LB-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="eVBwNJqslw_1n1bbN_LB-12" target="eVBwNJqslw_1n1bbN_LB-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="250" y="490" as="targetPoint" />
             <mxPoint x="250" y="645" as="sourcePoint" />
@@ -58,11 +58,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="eVBwNJqslw_1n1bbN_LB-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="eVBwNJqslw_1n1bbN_LB-12" target="eVBwNJqslw_1n1bbN_LB-13" edge="1">
+        <mxCell id="eVBwNJqslw_1n1bbN_LB-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" parent="1" source="eVBwNJqslw_1n1bbN_LB-12" target="eVBwNJqslw_1n1bbN_LB-13" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="420" y="590" />
-              <mxPoint x="610" y="590" />
+              <mxPoint x="580" y="590" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -108,6 +108,14 @@
             <Array as="points">
               <mxPoint x="360" y="620" />
               <mxPoint x="360" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hiZAuayCNLf2iVF1aByq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;jumpStyle=arc;" edge="1" parent="1" source="hiZAuayCNLf2iVF1aByq-1" target="eVBwNJqslw_1n1bbN_LB-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="630" />
+              <mxPoint x="650" y="630" />
             </Array>
           </mxGeometry>
         </mxCell>
