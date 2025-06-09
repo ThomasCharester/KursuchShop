@@ -74,9 +74,10 @@ namespace Resources.Code
                                               + good.gameName.DBReadable() + ValueSplitter
                                               + good.description.DBReadable() + ValueSplitter
                                               + good.paymentMethod.DBReadable() + ValueSplitter
-                                              + good.price + ValueSplitter
-                                              + good.stock;
+                                              + good.stock + ValueSplitter
+                                              + good.price;
         }
+
         public static void StringToGood(this Good good, string goodStr)
         {
             var values = goodStr.Split(ValueSplitter);
@@ -85,8 +86,8 @@ namespace Resources.Code
             good.gameName = values[2];
             good.description = values[3];
             good.paymentMethod = values[4];
-            good.price = int.Parse(values[5]);
-            good.stock = int.Parse(values[6]);
+            good.price = int.Parse(values[6]);
+            good.stock = int.Parse(values[5]);
         }
     }
 }

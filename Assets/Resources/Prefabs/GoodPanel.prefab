@@ -2493,8 +2493,8 @@ MonoBehaviour:
   textGame: {fileID: 870454335263918205}
   textDescription: {fileID: 7966009626009367288}
   textPaymentMethod: {fileID: 7992745383706889984}
-  textPrice: {fileID: 1755248532438557733}
-  textStock: {fileID: 5609371231214171535}
+  textPrice: {fileID: 5609371231214171535}
+  textStock: {fileID: 1755248532438557733}
   dropdownGameName: {fileID: 6126455982421231761}
   dropdownPaymentMethodName: {fileID: 2551479461458728515}
   inputFieldName: {fileID: 1366911645296763461}

@@ -24,8 +24,8 @@ namespace Resources.Code
                 temp.good.gameName = good.Split(DataParsingExtension.ValueSplitter)[2];
                 temp.good.description = good.Split(DataParsingExtension.ValueSplitter)[3];
                 temp.good.paymentMethod = good.Split(DataParsingExtension.ValueSplitter)[4];
-                temp.good.price = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[5]);
-                temp.good.stock = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[6]);
+                temp.good.price = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[6]);
+                temp.good.stock = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[5]);
                 
                 temp.UpdateTextValues();
                 
@@ -46,8 +46,8 @@ namespace Resources.Code
                 temp.good.gameName = good.Split(DataParsingExtension.ValueSplitter)[2];
                 temp.good.description = good.Split(DataParsingExtension.ValueSplitter)[3];
                 temp.good.paymentMethod = good.Split(DataParsingExtension.ValueSplitter)[4];
-                temp.good.price = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[5]);
-                temp.good.stock = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[6]);
+                temp.good.price = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[6]);
+                temp.good.stock = int.Parse(good.Split(DataParsingExtension.ValueSplitter)[5]);
                 
                 temp.UpdateTextValues();
                 temp.Editable = true;
