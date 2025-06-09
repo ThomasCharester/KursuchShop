@@ -182,6 +182,8 @@ namespace Resources.Code
                                 }
                                     break;
                                 case 'g':
+                                    SessionService.UpdateGames(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                     UIQuerySender.Instance.AddCommand(new UICommand(
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowGamesList));
@@ -192,6 +194,8 @@ namespace Resources.Code
                                         UICommandType.ShowAccountList));
                                     break;
                                 case 'p':
+                                    SessionService.UpdatePaymentMethods(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
                                     UIQuerySender.Instance.AddCommand(new UICommand(
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowPaymentMethodsList));
@@ -297,6 +301,8 @@ namespace Resources.Code
                                             }
                                             break;
                                         case 'o':
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             UIQuerySender.Instance.AddCommand(
                                                 new UICommand(UICommandType.SendCartItemsRequest));
                                             break;

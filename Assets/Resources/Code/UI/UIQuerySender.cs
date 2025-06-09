@@ -84,6 +84,9 @@ public class UIQuerySender : MonoBehaviour
         goodsPanel.Show();
         controlPanel.Show();
         controlPanel.ToggleAccountMenu(true);
+        
+        SendGamesRequest();
+        SendPaymentMethodsRequest();
     }
 
     public void HidePanels()
@@ -100,7 +103,8 @@ public class UIQuerySender : MonoBehaviour
         if (accountPanel.Hidden)
         {
             adminPanel.Hide();
-            sellerPanel.Hide();
+            sellerPanel.Hide(); 
+            cartPanel.Hide();
         }
 
         accountPanel.Toggle(accountPanel.Hidden);
@@ -112,7 +116,8 @@ public class UIQuerySender : MonoBehaviour
         if (adminPanel.Hidden)
         {
             accountPanel.Hide();
-            sellerPanel.Hide();
+            sellerPanel.Hide(); 
+            cartPanel.Hide();
         }
 
         adminPanel.Toggle(adminPanel.Hidden);
@@ -124,7 +129,8 @@ public class UIQuerySender : MonoBehaviour
         if (sellerPanel.Hidden)
         {
             accountPanel.Hide();
-            adminPanel.Hide();
+            adminPanel.Hide(); 
+            cartPanel.Hide();
         }
 
         sellerPanel.Toggle(sellerPanel.Hidden);
@@ -180,6 +186,8 @@ public class UIQuerySender : MonoBehaviour
         goodPanel.ToggleEditMode(false);
         goodPanel.Show();
         goodPanel.UpdateTextValues();
+        
+        cartPanel.Hide();
     }
     public void ShowGoodEdit(Good good)
     {
@@ -194,6 +202,7 @@ public class UIQuerySender : MonoBehaviour
         goodPanel.ToggleEditMode(true);
         goodPanel.AddMode = true;
         goodPanel.Show();
+        goodPanel.UpdateInputFieldsValues();
     }
     public void ShowGoodsAP(String goods) => adminPanel.verticalContainer.ShowGoods(goods);
     public void ShowGoodsEdit(String goods) => sellerPanel.gridContainer.ShowGoodsEdit(goods);

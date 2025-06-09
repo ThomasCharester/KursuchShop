@@ -27,7 +27,30 @@ namespace Resources.Code
                         item.Split(DataParsingExtension.ValueSplitter)[2],
                         int.Parse(item.Split(DataParsingExtension.ValueSplitter)[3])));
         }
+        private static List<Game> _games = new();
+        public static List<Game> Games => _games;
 
+        public static void UpdateGames(string items)
+        {
+            _games.Clear();
+
+            if (items.Length != 0)
+                foreach (var item in items.Split(DataParsingExtension.AdditionalQuerySplitter))
+                    _games.Add(new Game(item));
+        }
+
+        private static List<PaymentMethod> _paymentMethods = new();
+        public static List<PaymentMethod> PaymentMethods => _paymentMethods;
+
+        public static void UpdatePaymentMethods(string items)
+        {
+            _paymentMethods.Clear();
+
+            if (items.Length != 0)
+                foreach (var item in items.Split(DataParsingExtension.AdditionalQuerySplitter))
+                    _paymentMethods.Add(new PaymentMethod(item));
+        }
+        
         private static Account _account;
 
         public static Account UserAccount

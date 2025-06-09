@@ -1,7 +1,9 @@
 using System;
+using System.Linq;
 using Resources.Code.DataStructures.LiSa;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Resources.Code.UI.Panels
 {
@@ -13,7 +15,7 @@ namespace Resources.Code.UI.Panels
 
         [SerializeField] private GameObject deleteButton;
         [SerializeField] private GameObject submitButton;
-        
+
         public bool AddMode;
 
         [SerializeField] private TMP_Text textName;
@@ -24,13 +26,19 @@ namespace Resources.Code.UI.Panels
         [SerializeField] private TMP_Text textPrice;
         [SerializeField] private TMP_Text textStock;
 
+        [SerializeField] private TMP_Dropdown dropdownGameName;
+
+        [SerializeField] private TMP_Dropdown dropdownPaymentMethodName;
+
         [SerializeField] private TMP_InputField inputFieldName;
-        [SerializeField] private TMP_InputField inputFieldGame;
+
+        // [SerializeField] private TMP_InputField inputFieldGame;
         [SerializeField] private TMP_InputField inputFieldDescription;
-        [SerializeField] private TMP_InputField inputFieldPaymentMethod;
+
+        // [SerializeField] private TMP_InputField inputFieldPaymentMethod;
         [SerializeField] private TMP_InputField inputFieldPrice;
         [SerializeField] private TMP_InputField inputFieldStock;
-        
+
         public void UpdateTextValues()
         {
             textName.text = good.goodName;
@@ -48,8 +56,14 @@ namespace Resources.Code.UI.Panels
             inputFieldName.text = good.goodName;
             inputFieldDescription.text = good.description;
             inputFieldPrice.text = good.price.ToString();
-            inputFieldGame.text = good.gameName;
-            inputFieldPaymentMethod.text = good.paymentMethod;
+            dropdownGameName.ClearOptions();
+            dropdownGameName.AddOptions(SessionService.Games.Select(x => x.gameName).ToList());
+            // dropdownGameName.RefreshShownValue();
+            dropdownPaymentMethodName.ClearOptions();
+            dropdownPaymentMethodName.AddOptions(SessionService.PaymentMethods.Select(x => x.methodName).ToList());
+            // dropdownPaymentMethodName.RefreshShownValue();
+            // inputFieldGame.text = good.gameName;
+            // inputFieldPaymentMethod.text = good.paymentMethod;
             inputFieldPrice.text = good.price.ToString();
             inputFieldStock.text = good.stock.ToString();
         }
@@ -60,7 +74,7 @@ namespace Resources.Code.UI.Panels
             outputPanel.SetActive(!edit);
 
             if (edit) deleteButton.SetActive(!AddMode);
-            
+
             ToggleInputs(edit);
         }
 
@@ -70,26 +84,26 @@ namespace Resources.Code.UI.Panels
                    + DataParsingExtension.ValueSplitter
                    + good.sellerName.DBReadable()
                    + DataParsingExtension.ValueSplitter
-                   + (inputFieldGame.text == "" ? good.gameName : inputFieldGame.text).DBReadable()
+                   + SessionService.Games[dropdownGameName.value].gameName.DBReadable()
                    + DataParsingExtension.ValueSplitter
                    + (inputFieldDescription.text == "" ? good.description : inputFieldDescription.text).DBReadable()
                    + DataParsingExtension.ValueSplitter
-                   + (inputFieldPaymentMethod.text == "" ? good.paymentMethod : inputFieldPaymentMethod.text)
-                   .DBReadable()
+                   + SessionService.PaymentMethods[dropdownPaymentMethodName.value].methodName.DBReadable()
                    + DataParsingExtension.ValueSplitter
                    + (inputFieldPrice.text == "" ? good.price : inputFieldPrice.text)
                    + DataParsingExtension.ValueSplitter
                    + (inputFieldStock.text == "" ? good.stock : inputFieldStock.text);
         }
+
         public String FormAddOutputValue()
         {
             return (inputFieldName.text == "" ? good.goodName : inputFieldName.text).DBReadable()
                    + DataParsingExtension.ValueSplitter
-                   + (inputFieldGame.text == "" ? good.gameName : inputFieldGame.text).DBReadable()
+                   + SessionService.Games[dropdownGameName.value].gameName.DBReadable()
                    + DataParsingExtension.ValueSplitter
                    + (inputFieldDescription.text == "" ? good.description : inputFieldDescription.text).DBReadable()
                    + DataParsingExtension.ValueSplitter
-                   + (inputFieldPaymentMethod.text == "" ? good.paymentMethod : inputFieldPaymentMethod.text).DBReadable()
+                   + SessionService.PaymentMethods[dropdownPaymentMethodName.value].methodName.DBReadable()
                    + DataParsingExtension.ValueSplitter
                    + (inputFieldPrice.text == "" ? good.price : inputFieldPrice.text)
                    + DataParsingExtension.ValueSplitter
@@ -100,7 +114,7 @@ namespace Resources.Code.UI.Panels
         {
             if (AddMode) SendAddQuery();
             else SendModifyQuery();
-            
+
             Hide();
         }
 
@@ -111,19 +125,20 @@ namespace Resources.Code.UI.Panels
                 $"gtsm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + good.GoodToString(),
                 UICommandType.SendQuery));
         }
+
         public void SendCartAddQuery()
         {
             // TODO Totally unsecure loL
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gcia;" + SessionService.UserAccount.Login.DBReadable() + DataParsingExtension.AdditionalQuerySplitter + good.goodName.DBReadable() + DataParsingExtension.ValueSplitter + '1',
+                $"gcia;" + SessionService.UserAccount.Login.DBReadable() +
+                DataParsingExtension.AdditionalQuerySplitter + good.goodName.DBReadable() +
+                DataParsingExtension.ValueSplitter + '1',
                 UICommandType.SendQuery));
         }
 
         public void SendAddQuery()
         {
             if (inputFieldName.text == "" ||
-                inputFieldGame.text == "" ||
-                inputFieldPaymentMethod.text == "" ||
                 inputFieldPrice.text == "" ||
                 inputFieldStock.text == "")
             {
@@ -133,9 +148,10 @@ namespace Resources.Code.UI.Panels
 
             // TODO Totally unsecure loL
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gtsa;" + SessionService.UserAccount.Login.DBReadable() + DataParsingExtension.AdditionalQuerySplitter + FormAddOutputValue(),
+                $"gtsa;" + SessionService.UserAccount.Login.DBReadable() +
+                DataParsingExtension.AdditionalQuerySplitter + FormAddOutputValue(),
                 UICommandType.SendQuery));
-            
+
             ToggleInputs(false);
         }
 
@@ -145,7 +161,7 @@ namespace Resources.Code.UI.Panels
             UIQuerySender.Instance.AddCommand(new UICommand(
                 $"gtsd;" + good.GoodToStringS(),
                 UICommandType.SendQuery));
-            
+
             Hide();
         }
 
@@ -174,9 +190,9 @@ namespace Resources.Code.UI.Panels
         public void Clear()
         {
             inputFieldName.text = "";
-            inputFieldGame.text = "";
+            dropdownGameName.value = 0;
             inputFieldDescription.text = "";
-            inputFieldPaymentMethod.text = "";
+            dropdownPaymentMethodName.value = 0;
             inputFieldPrice.text = "";
             inputFieldStock.text = "";
 
@@ -192,9 +208,9 @@ namespace Resources.Code.UI.Panels
         public void ToggleInputs(bool mode)
         {
             inputFieldName.enabled = mode;
-            inputFieldGame.enabled = mode;
+            dropdownGameName.enabled = mode;
             inputFieldDescription.enabled = mode;
-            inputFieldPaymentMethod.enabled = mode;
+            dropdownPaymentMethodName.enabled = mode;
             inputFieldPrice.enabled = mode;
             inputFieldStock.enabled = mode;
         }

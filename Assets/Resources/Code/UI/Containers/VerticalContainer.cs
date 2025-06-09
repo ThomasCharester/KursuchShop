@@ -51,13 +51,13 @@ namespace Resources.Code
         public void ShowGames(String games)
         {
             Clear();
-
-            if (games.Length == 0) return;
-
-            foreach (var gameName in games.Split(DataParsingExtension.AdditionalQuerySplitter))
+            
+            if (SessionService.Games.Count == 0) return;
+            
+            foreach (var game in SessionService.Games)
             {
                 GameElement temp = Instantiate(gamePrefab, transform);
-                temp.game.gameName = gameName;
+                temp.game.gameName = game.gameName;
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
@@ -78,12 +78,12 @@ namespace Resources.Code
         {
             Clear();
 
-            if (paymentMethods.Length == 0) return;
-
-            foreach (var methodName in paymentMethods.Split(DataParsingExtension.AdditionalQuerySplitter))
+            if (SessionService.PaymentMethods.Count == 0) return;
+            
+            foreach (var method in SessionService.PaymentMethods)
             {
                 PaymentMethodElement temp = Instantiate(pmPrefab, transform);
-                temp.paymentMethod.methodName = methodName;
+                temp.paymentMethod.methodName = method.methodName;
 
                 temp.ToggleEditMode(false);
                 temp.UpdateTextValues();
