@@ -12,9 +12,9 @@ namespace Resources.Code
 
         public void ShowGoods(String goods)
         {
-            if (goods.Length == 0) return;
-
             Clear();
+
+            if (goods.Length == 0) return;
 
             foreach (var good in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -34,9 +34,9 @@ namespace Resources.Code
         }
         public void ShowGoodsEdit(String goods)
         {
-            if (goods.Length == 0) return;
-
             Clear();
+
+            if (goods.Length == 0) return;
 
             foreach (var good in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {

@@ -34,6 +34,10 @@ namespace Resources.Code
         ContinueGoodsAdding,
         ShowGood,
         ShowGoodEdit,
-        ShowGoodAdd
+        ShowGoodAdd,
+        ShowLoadingPanel,
+        HideLoadingPanel,
+        ShowCartItems,
+        SendCartItemsRequest
     }
 }

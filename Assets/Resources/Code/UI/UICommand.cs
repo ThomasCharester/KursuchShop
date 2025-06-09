@@ -48,6 +48,7 @@ namespace Resources.Code
                     UIQuerySender.Instance.ContinueGoodsAdding();
                     break;
                 case UICommandType.SendQuery:
+                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ShowLoadingPanel));
                     UIQuerySender.Instance.SendQuery(Value);
                     break;
                 case UICommandType.ShowGoodList:
@@ -58,6 +59,12 @@ namespace Resources.Code
                     break;
                 case UICommandType.ShowGood:
                     UIQuerySender.Instance.ShowGood(Value);
+                    break;
+                case UICommandType.ShowCartItems:
+                    UIQuerySender.Instance.ShowCartItems();
+                    break;
+                case UICommandType.SendCartItemsRequest:
+                    UIQuerySender.Instance.SendCartItemsRequest();
                     break;
                 case UICommandType.ShowGoodEdit:
                     UIQuerySender.Instance.ShowGoodEdit(Value);
@@ -118,6 +125,12 @@ namespace Resources.Code
                     break;
                 case UICommandType.ContinueAdminKeysAdding:
                     UIQuerySender.Instance.ContinueAdminKeyAdding();
+                    break;
+                case UICommandType.ShowLoadingPanel:
+                    UIQuerySender.Instance.ShowLoadingPanel();
+                    break;
+                case UICommandType.HideLoadingPanel:
+                    UIQuerySender.Instance.HideLoadingPanel();
                     break;
             }
         }

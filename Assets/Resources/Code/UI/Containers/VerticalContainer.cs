@@ -19,12 +19,13 @@ namespace Resources.Code
         [SerializeField] private AdminKeyElement adminKeyPrefab;
         [SerializeField] private AdminKeyAddElement adminKeyAddPrefab;
         [SerializeField] private GoodElementAP goodPrefab;
+        [SerializeField] private CartItemElement cartItemPrefab;
 
         public void ShowAccounts(String accounts)
         {
-            if (accounts.Length == 0) return;
-
             Clear();
+
+            if (accounts.Length == 0) return;
 
             foreach (var account in accounts.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -49,9 +50,9 @@ namespace Resources.Code
         public void ContinueAccountsEdit() => children.Add(Instantiate(accountAddPrefab, transform));
         public void ShowGames(String games)
         {
-            if (games.Length == 0) return;
-
             Clear();
+
+            if (games.Length == 0) return;
 
             foreach (var gameName in games.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -75,9 +76,9 @@ namespace Resources.Code
         public void ContinueGamesEdit() => children.Add(Instantiate(gameAddPrefab, transform));
         public void ShowPaymentMethods(String paymentMethods)
         {
-            if (paymentMethods.Length == 0) return;
-
             Clear();
+
+            if (paymentMethods.Length == 0) return;
 
             foreach (var methodName in paymentMethods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -102,9 +103,9 @@ namespace Resources.Code
 
         public void ShowSellers(String sellers)
         {
-            if (sellers.Length == 0) return;
-
             Clear();
+
+            if (sellers.Length == 0) return;
 
             foreach (var seller in sellers.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -130,9 +131,9 @@ namespace Resources.Code
         public void ContinueSellersEdit() => children.Add(Instantiate(sellerAddPrefab, transform));
         public void ShowAdminKey(String adminKeys)
         {
-            if (adminKeys.Length == 0) return;
-
             Clear();
+
+            if (adminKeys.Length == 0) return;
 
             foreach (var adminKey in adminKeys.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -156,9 +157,9 @@ namespace Resources.Code
         public void ContinueAdminKeyEdit() => children.Add(Instantiate(adminKeyAddPrefab, transform));
         public void ShowGoods(String goods)
         {
-            if (goods.Length == 0) return;
-
             Clear();
+
+            if (goods.Length == 0) return;
 
             foreach (var seller in goods.Split(DataParsingExtension.AdditionalQuerySplitter))
             {
@@ -166,6 +167,26 @@ namespace Resources.Code
                 temp.good.goodName = seller.Split(DataParsingExtension.ValueSplitter)[0];
                 temp.good.sellerName = seller.Split(DataParsingExtension.ValueSplitter)[1];
                 temp.good.gameName = seller.Split(DataParsingExtension.ValueSplitter)[2];
+
+                temp.UpdateTextValues();
+
+                children.Add(temp);
+            }
+        }
+        public void ShowCartItems()
+        {
+
+            Clear();
+
+            if (SessionService.CartItems.Count == 0) return;
+            
+            foreach (var itemInfo in SessionService.CartItems)
+            {
+                CartItemElement temp = Instantiate(cartItemPrefab, transform);
+                temp.cartItem.GoodName = itemInfo.GoodName;
+                temp.cartItem.CartId = itemInfo.CartId;
+                temp.cartItem.Quantity = itemInfo.Quantity;
+                temp.cartItem.ItemId = itemInfo.ItemId;
 
                 temp.UpdateTextValues();
 

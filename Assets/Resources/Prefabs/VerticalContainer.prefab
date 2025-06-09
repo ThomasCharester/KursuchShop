@@ -100,6 +100,7 @@ MonoBehaviour:
   adminKeyPrefab: {fileID: 4767694376127882309, guid: 4efbfffb1738b854c9a22df0dc3105b7, type: 3}
   adminKeyAddPrefab: {fileID: 3588914857806349708, guid: 14053c9193f0f034780176a4b4ab75ea, type: 3}
   goodPrefab: {fileID: 8684661860063686716, guid: 9cf97126df0d2e54ab58069c00a6ef41, type: 3}
+  cartItemPrefab: {fileID: 1458658023912473729, guid: 86233a27426efb74189c0962050a21f4, type: 3}
 --- !u!114 &1045802624487583746
 MonoBehaviour:
   m_ObjectHideFlags: 0

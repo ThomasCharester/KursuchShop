@@ -602,11 +602,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8464d8d8c69423db94d6c9291fd8c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _uiScaling: {fileID: 8667654621793698384}
   inputPanel: {fileID: 3489333235714400066}
   outputPanel: {fileID: 8852490669569745414}
   inputFieldMethodName: {fileID: 7094357342766635405}
   textMethodName: {fileID: 7815844312916616351}
-  _uiScaling: {fileID: 8667654621793698384}
 --- !u!1 &3109262336533142027
 GameObject:
   m_ObjectHideFlags: 0

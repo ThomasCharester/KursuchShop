@@ -21,6 +21,8 @@ public class UIQuerySender : MonoBehaviour
     [SerializeField] private AdminPanel adminPanel;
     [SerializeField] private SellerPanel sellerPanel;
     [SerializeField] private GoodPanel goodPanel;
+    [SerializeField] private CartPanel cartPanel;
+    [SerializeField] private LoadingPanel loadingPanel;
 
     [Header("Misc")] [SerializeField] private SimpleTCPClient client;
 
@@ -128,7 +130,22 @@ public class UIQuerySender : MonoBehaviour
         sellerPanel.Toggle(sellerPanel.Hidden);
         goodsPanel.Toggle(sellerPanel.Hidden);
     }
-
+    public void ToggleCartPanel()
+    {
+        cartPanel.Toggle();
+    }
+    public void ToggleLoadingPanel()
+    {
+        loadingPanel.Toggle();
+    }
+    public void ShowLoadingPanel()
+    {
+        loadingPanel.Show();
+    }
+    public void HideLoadingPanel()
+    {
+        loadingPanel.Hide();
+    }
     public void ContinueAccountsAdding() => adminPanel.verticalContainer.ContinueAccountsEdit();
     public void ContinueGamesAdding() => adminPanel.verticalContainer.ContinueGamesEdit();
     public void ContinuePaymentMethods() => adminPanel.verticalContainer.ContinuePaymentMethodsEdit();
@@ -141,6 +158,7 @@ public class UIQuerySender : MonoBehaviour
     }
 
     public void ShowGoods(String goods) => goodsPanel.gridContainer.ShowGoods(goods);
+    public void ShowCartItems() => cartPanel.verticalContainer.ShowCartItems();
     public void ShowGood(String goodStr)
     {
         goodPanel.good.StringToGood(goodStr);
@@ -192,10 +210,12 @@ public class UIQuerySender : MonoBehaviour
     public void SendGoodsAPRequest() => AddCommand(new UICommand("gtpl;", UICommandType.SendQuery));
 
     public void SendGoodsEditRequest() =>
-        AddCommand(new UICommand("gtsl;" + UserSessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
+        AddCommand(new UICommand("gtsl;" + SessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
 
     public void SendSellersRequest() => AddCommand(new UICommand("gsl;", UICommandType.SendQuery));
     public void SendAccountsRequest() => AddCommand(new UICommand("al;", UICommandType.SendQuery));
+    public void SendCartItemsRequest() => AddCommand(new UICommand("gcil;" + SessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
+    public void SendCheckOutRequest() => AddCommand(new UICommand("gco;" + SessionService.UserAccount.Login.DBReadable(), UICommandType.SendQuery));
     public void SendPaymentMethodsRequest() => AddCommand(new UICommand("gpl;", UICommandType.SendQuery));
     public void SendAdminKeysRequest() => AddCommand(new UICommand("akl;", UICommandType.SendQuery));
 }

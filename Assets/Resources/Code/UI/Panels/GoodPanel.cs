@@ -111,6 +111,13 @@ namespace Resources.Code.UI.Panels
                 $"gtsm;" + FormOutputValue() + DataParsingExtension.AdditionalQuerySplitter + good.GoodToString(),
                 UICommandType.SendQuery));
         }
+        public void SendCartAddQuery()
+        {
+            // TODO Totally unsecure loL
+            UIQuerySender.Instance.AddCommand(new UICommand(
+                $"gcia;" + SessionService.UserAccount.Login.DBReadable() + DataParsingExtension.AdditionalQuerySplitter + good.goodName.DBReadable() + DataParsingExtension.ValueSplitter + '1',
+                UICommandType.SendQuery));
+        }
 
         public void SendAddQuery()
         {
@@ -126,7 +133,7 @@ namespace Resources.Code.UI.Panels
 
             // TODO Totally unsecure loL
             UIQuerySender.Instance.AddCommand(new UICommand(
-                $"gtsa;" + UserSessionService.UserAccount.Login.DBReadable() + DataParsingExtension.AdditionalQuerySplitter + FormAddOutputValue(),
+                $"gtsa;" + SessionService.UserAccount.Login.DBReadable() + DataParsingExtension.AdditionalQuerySplitter + FormAddOutputValue(),
                 UICommandType.SendQuery));
             
             ToggleInputs(false);

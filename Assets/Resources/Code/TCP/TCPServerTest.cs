@@ -110,6 +110,9 @@ namespace Resources.Code
 
                     string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                     Debug.Log($"Received: {receivedMessage}");
+
+                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.HideLoadingPanel));
+
                     var queryType = receivedMessage.Split(DataParsingExtension.QuerySplitter)[0];
                     switch (queryType[0])
                     {
@@ -126,34 +129,38 @@ namespace Resources.Code
                                                 UICommandType.ShowException));
                                             break;
                                         case 'a':
-                                            UserSessionService.UserAccount.sv_cheats = true;
+                                            SessionService.UserAccount.sv_cheats = true;
 
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
                                             UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.MakeAdmin));
                                             break;
                                         case 'd':
-                                            UserSessionService.UserAccount.IsSeller = true;
+                                            SessionService.UserAccount.IsSeller = true;
 
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
                                             UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.MakeSeller));
                                             break;
                                         case 'v':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
                                             break;
                                         case 's':
-                                            UserSessionService.SetAccount(
+                                            SessionService.SetAccount(
                                                 receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
                                                     .StringSToAccount());
-                                            
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.AuthoriseDeactivate));
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ActivateShop));
+
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.AuthoriseDeactivate));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.ActivateShop));
                                             break;
                                     }
 
                                     break;
                                 case 't':
                                 {
-                                    
                                     switch (queryType[2])
                                     {
                                         case 'd':
@@ -199,6 +206,11 @@ namespace Resources.Code
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1],
                                         UICommandType.ShowAdminKeysList));
                                     break;
+                                case 'c':
+                                    SessionService.UpdateCartItems(
+                                        receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]);
+                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.ShowCartItems));
+                                    break;
                             }
                         }
                             break;
@@ -226,10 +238,10 @@ namespace Resources.Code
                             switch (queryType[1])
                             {
                                 case 's':
-                                    UserSessionService.UserAccount.Login =
+                                    SessionService.UserAccount.Login =
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
                                             .Split(DataParsingExtension.ValueSplitter)[0];
-                                    UserSessionService.UserAccount.Password =
+                                    SessionService.UserAccount.Password =
                                         receivedMessage.Split(DataParsingExtension.QuerySplitter)[1]
                                             .Split(DataParsingExtension.ValueSplitter)[1];
 
@@ -248,15 +260,19 @@ namespace Resources.Code
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendAdminKeysRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendAdminKeysRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendAdminKeysRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendAdminKeysRequest));
                                             break;
                                     }
+
                                     break;
                             }
 
@@ -264,83 +280,128 @@ namespace Resources.Code
                         case 'g':
                             switch (queryType[1])
                             {
+                                case 'c':
+                                    switch (queryType[2])
+                                    {
+                                        case 'i':
+                                            switch (queryType[3])
+                                            {
+                                                case 'd':
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendCartItemsRequest));
+                                                    break;
+                                                case 'a':
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendCartItemsRequest));
+                                                    break;
+                                            }
+                                            break;
+                                        case 'o':
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendCartItemsRequest));
+                                            break;
+                                    }
+
+                                    break;
                                 case 'g':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGamesRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGamesRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGamesRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGamesRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGamesRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGamesRequest));
                                             break;
                                     }
+
                                     break;
                                 case 'p':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPaymentMethodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendPaymentMethodsRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPaymentMethodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendPaymentMethodsRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendPaymentMethodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendPaymentMethodsRequest));
                                             break;
                                     }
+
                                     break;
                                 case 's':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendSellersRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendSellersRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendSellersRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendSellersRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendSellersRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendSellersRequest));
                                             break;
                                     }
+
                                     break;
                                 case 't':
                                     switch (queryType[2])
                                     {
                                         case 'm':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'a':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'd':
-                                            UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsRequest));
+                                            UIQuerySender.Instance.AddCommand(
+                                                new UICommand(UICommandType.SendGoodsRequest));
                                             break;
                                         case 'p':
                                             switch (queryType[3])
                                             {
                                                 case 'd':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsAPRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsAPRequest));
                                                     break;
                                             }
+
                                             break;
                                         case 's':
                                             switch (queryType[3])
                                             {
                                                 case 'd':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                                 case 'm':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                                 case 'a':
-                                                    UIQuerySender.Instance.AddCommand(new UICommand(UICommandType.SendGoodsEditRequest));
+                                                    UIQuerySender.Instance.AddCommand(
+                                                        new UICommand(UICommandType.SendGoodsEditRequest));
                                                     break;
                                             }
+
                                             break;
                                     }
+
                                     break;
                             }
 

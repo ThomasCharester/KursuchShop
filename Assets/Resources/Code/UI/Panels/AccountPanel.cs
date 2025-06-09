@@ -21,10 +21,10 @@ namespace Resources.Code
             UIQuerySender.Instance.AddCommand(new UICommand(
                 "as;" + (inputFieldLogin.text != ""
                     ? inputFieldLogin.text.DBReadable()
-                    : UserSessionService.UserAccount.Login.DBReadable()) + DataParsingExtension.ValueSplitter +
+                    : SessionService.UserAccount.Login.DBReadable()) + DataParsingExtension.ValueSplitter +
                 (inputFieldPassword.text != ""
                     ? inputFieldPassword.text.DBReadable()
-                    : UserSessionService.UserAccount.Password.DBReadable()),
+                    : SessionService.UserAccount.Password.DBReadable()),
                 UICommandType.SendQuery));
 
             inputFieldLogin.text = "";
@@ -55,9 +55,9 @@ namespace Resources.Code
 
         public void Clear()
         {
-            login.text = UserSessionService.UserAccount.Login;
-            admin.text = UserSessionService.UserAccount.IsSeller ? "Seller" :
-                UserSessionService.UserAccount.sv_cheats ? "Admin" : "User";
+            login.text = SessionService.UserAccount.Login;
+            admin.text = SessionService.UserAccount.IsSeller ? "Seller" :
+                SessionService.UserAccount.sv_cheats ? "Admin" : "User";
         }
     }
 }
